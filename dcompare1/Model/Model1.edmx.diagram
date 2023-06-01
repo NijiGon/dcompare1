@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9aeff422412145d0835e47d572281fa5" Name="Diagram1" ZoomLevel="73">
+        <EntityTypeShape EntityType="MainModel.Audio" Width="1.5" PointX="1.25" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MainModel.Battery" Width="1.5" PointX="1.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MainModel.Comment" Width="1.5" PointX="7.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MainModel.Connectivity" Width="1.5" PointX="12.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="MainModel.Device" Width="1.5" PointX="3.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MainModel.Dimension" Width="1.5" PointX="1.125" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MainModel.Display" Width="1.5" PointX="6" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MainModel.Graphic" Width="1.5" PointX="8.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MainModel.Included" Width="1.5" PointX="8" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MainModel.ltKeyboard" Width="1.5" PointX="6.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MainModel.Memory" Width="1.5" PointX="12.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MainModel.Port" Width="1.5" PointX="12.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MainModel.Processor" Width="1.5" PointX="10.125" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MainModel.Security" Width="1.5" PointX="5.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MainModel.Storage" Width="1.5" PointX="10" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MainModel.User" Width="1.5" PointX="9.875" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="MainModel.FK_Device_Audio" ManuallyRouted="false" />
+        <AssociationConnector Association="MainModel.FK_Device_Battery" ManuallyRouted="false" />
+        <AssociationConnector Association="MainModel.FK_Comment_ToDevice" ManuallyRouted="false" />
+        <AssociationConnector Association="MainModel.FK_Comment_ToUser" ManuallyRouted="false" />
+        <AssociationConnector Association="MainModel.FK_Device_Connectivity" ManuallyRouted="false" />
+        <AssociationConnector Association="MainModel.FK_Device_Dimension" ManuallyRouted="false" />
+        <AssociationConnector Association="MainModel.FK_Device_Display" ManuallyRouted="false" />
+        <AssociationConnector Association="MainModel.FK_Device_Graphics" ManuallyRouted="false" />
+        <AssociationConnector Association="MainModel.FK_Device_Included" ManuallyRouted="false" />
+        <AssociationConnector Association="MainModel.FK_Device_Port" ManuallyRouted="false" />
+        <AssociationConnector Association="MainModel.FK_Device_Processor" ManuallyRouted="false" />
+        <AssociationConnector Association="MainModel.FK_Device_Security" ManuallyRouted="false" />
+        <AssociationConnector Association="MainModel.FK_Device_Storage" ManuallyRouted="true" >
+          <ConnectorPoint PointX="10.75" PointY="5.8552864583333317" />
+          <ConnectorPoint PointX="10.75" PointY="6.7374644230057186" />
+          <ConnectorPoint PointX="5.4476535" PointY="6.7374644230057186" />
+          <ConnectorPoint PointX="5.4476535" PointY="6.541284041067092" />
+          <ConnectorPoint PointX="5.25" PointY="6.541284041067092" />
+        </AssociationConnector>
+        <AssociationConnector Association="MainModel.FK_Laptop_Keyboard" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
