@@ -18,10 +18,10 @@ namespace dcompare1.Repository
             db.SaveChanges();
         }
 
-        public static List<Review> GetReviews()
+        public static List<Review> GetReviews(int id)
         {
-            return (from r in db.Reviews select r).ToList();
-            // return (from r in db.Reviews where r.id == id select r).ToList();
+            //return (from r in db.Reviews select r).ToList();
+            return (from r in db.Reviews where r.user == id select r).ToList();
         }
     }
 }

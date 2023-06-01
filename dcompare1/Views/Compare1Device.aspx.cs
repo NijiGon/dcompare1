@@ -15,9 +15,9 @@ namespace dcompare1.Views
         public Device d = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-            review = CommentRepo.GetReviews();
             string id = Request.QueryString["id"];
             d = DeviceRepo.FindById(Convert.ToInt32(id));
+            review = CommentRepo.GetReviews(Convert.ToInt32(id));
         }
     }
 }

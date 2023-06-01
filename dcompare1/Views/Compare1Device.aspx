@@ -106,7 +106,7 @@
               <p class="me-5">Sertifikasi Resistan</p>
             </div>
             <div>
-              <p>78.1 mm ˣ 163.4 mm ˣ 8.9 mm </p>
+              <p><%=d.Dimension1.length + " mm * " +  d.Dimension1.width + " mm * " + d.Dimension1.height + " mm"%></p>
               <p> 233 gram</p>
               <p>Glass, Aluminium, Corning Gorilla Glass Victus 2</p>
               <p>IP68</p>
