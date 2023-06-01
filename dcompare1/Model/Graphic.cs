@@ -23,9 +23,9 @@ namespace dcompare1.Model
         public int Id { get; set; }
         public string type { get; set; }
         public string manufacturer { get; set; }
-        public int wattage { get; set; }
-        public double clock_speed { get; set; }
-        public int vram { get; set; }
+        public Nullable<int> wattage { get; set; }
+        public Nullable<double> clock_speed { get; set; }
+        public Nullable<int> vram { get; set; }
         public string data_rate { get; set; }
         public string name { get; set; }
     

@@ -21,12 +21,13 @@ namespace dcompare1.Model
         }
     
         public int Id { get; set; }
-        public int capacity { get; set; }
-        public int wattage { get; set; }
-        public int output { get; set; }
-        public int input { get; set; }
-        public int current { get; set; }
-        public int life_hours { get; set; }
+        public Nullable<int> capacity { get; set; }
+        public Nullable<int> wattage { get; set; }
+        public Nullable<int> output { get; set; }
+        public Nullable<int> input { get; set; }
+        public Nullable<int> current { get; set; }
+        public Nullable<int> life_hours { get; set; }
+        public string name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Device> Devices { get; set; }

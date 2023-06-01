@@ -12,13 +12,8 @@ namespace dcompare1.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Memory
+    public partial class Table
     {
         public int Id { get; set; }
-        public Nullable<int> size { get; set; }
-        public string data_rate { get; set; }
-        public Nullable<int> channel { get; set; }
-        public Nullable<int> slot { get; set; }
-        public Nullable<int> max_capacity { get; set; }
     }
 }

@@ -12,15 +12,14 @@ namespace dcompare1.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Comment
+    public partial class Review
     {
-        public int Id { get; set; }
         public int user { get; set; }
-        public int rating { get; set; }
         public int device { get; set; }
-        public int likes { get; set; }
-        public int dislikes { get; set; }
-        public string review { get; set; }
+        public Nullable<int> likes { get; set; }
+        public Nullable<int> dislikes { get; set; }
+        public string comment { get; set; }
+        public int rating { get; set; }
     
         public virtual Device Device1 { get; set; }
         public virtual User User1 { get; set; }

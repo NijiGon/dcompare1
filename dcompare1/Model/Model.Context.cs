@@ -13,10 +13,10 @@ namespace dcompare1.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MainEntities3 : DbContext
+    public partial class MainEntities10 : DbContext
     {
-        public MainEntities3()
-            : base("name=MainEntities3")
+        public MainEntities10()
+            : base("name=MainEntities10")
         {
         }
     
@@ -27,7 +27,6 @@ namespace dcompare1.Model
     
         public virtual DbSet<Audio> Audios { get; set; }
         public virtual DbSet<Battery> Batteries { get; set; }
-        public virtual DbSet<Comment> Comments { get; set; }
         public virtual DbSet<Connectivity> Connectivities { get; set; }
         public virtual DbSet<Device> Devices { get; set; }
         public virtual DbSet<Dimension> Dimensions { get; set; }
@@ -38,8 +37,10 @@ namespace dcompare1.Model
         public virtual DbSet<Memory> Memories { get; set; }
         public virtual DbSet<Port> Ports { get; set; }
         public virtual DbSet<Processor> Processors { get; set; }
+        public virtual DbSet<Review> Reviews { get; set; }
         public virtual DbSet<Security> Securities { get; set; }
         public virtual DbSet<Storage> Storages { get; set; }
+        public virtual DbSet<Table> Tables { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }
 }

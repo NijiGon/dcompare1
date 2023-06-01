@@ -17,7 +17,7 @@ namespace dcompare1.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
-            this.Comments = new HashSet<Comment>();
+            this.Reviews = new HashSet<Review>();
         }
     
         public int Id { get; set; }
@@ -27,6 +27,6 @@ namespace dcompare1.Model
         public string email { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Comment> Comments { get; set; }
+        public virtual ICollection<Review> Reviews { get; set; }
     }
 }

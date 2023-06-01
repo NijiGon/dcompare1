@@ -9,7 +9,7 @@ namespace dcompare1.Repository
 {
     public class UserRepo
     {
-        static MainEntities3 db = DatabaseSingleton.getInstance();
+        static MainEntities10 db = DatabaseSingleton.getInstance();
 
         public static void addUser(string first, string last, string password, string email)
         {

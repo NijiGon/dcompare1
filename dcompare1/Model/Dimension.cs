@@ -21,9 +21,9 @@ namespace dcompare1.Model
         }
     
         public int Id { get; set; }
-        public double length { get; set; }
-        public double width { get; set; }
-        public double heigh { get; set; }
+        public Nullable<double> length { get; set; }
+        public Nullable<double> width { get; set; }
+        public Nullable<double> height { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Device> Devices { get; set; }

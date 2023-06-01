@@ -24,9 +24,9 @@ namespace dcompare1.Model
         public string name { get; set; }
         public string type { get; set; }
         public string manufacturer { get; set; }
-        public double clock_speed { get; set; }
-        public int cores { get; set; }
-        public int threads { get; set; }
+        public Nullable<double> clock_speed { get; set; }
+        public Nullable<int> cores { get; set; }
+        public Nullable<int> threads { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Device> Devices { get; set; }

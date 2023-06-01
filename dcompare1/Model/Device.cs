@@ -17,28 +17,28 @@ namespace dcompare1.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Device()
         {
-            this.Comments = new HashSet<Comment>();
+            this.Reviews = new HashSet<Review>();
         }
     
         public int Id { get; set; }
-        public int audio { get; set; }
-        public int battery { get; set; }
-        public int connectivity { get; set; }
-        public int dimension { get; set; }
-        public int display { get; set; }
-        public int graphics { get; set; }
-        public int memory { get; set; }
-        public int port { get; set; }
-        public int processor { get; set; }
-        public int security { get; set; }
-        public int storage { get; set; }
-        public int included { get; set; }
+        public Nullable<int> audio { get; set; }
+        public Nullable<int> battery { get; set; }
+        public Nullable<int> connectivity { get; set; }
+        public Nullable<int> dimension { get; set; }
+        public Nullable<int> display { get; set; }
+        public Nullable<int> graphics { get; set; }
+        public Nullable<int> memory { get; set; }
+        public Nullable<int> port { get; set; }
+        public Nullable<int> processor { get; set; }
+        public Nullable<int> security { get; set; }
+        public Nullable<int> storage { get; set; }
+        public Nullable<int> included { get; set; }
         public Nullable<int> keyboard { get; set; }
+        public string name { get; set; }
+        public string image { get; set; }
     
         public virtual Audio Audio1 { get; set; }
         public virtual Battery Battery1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Comment> Comments { get; set; }
         public virtual Connectivity Connectivity1 { get; set; }
         public virtual Dimension Dimension1 { get; set; }
         public virtual Display Display1 { get; set; }
@@ -49,5 +49,7 @@ namespace dcompare1.Model
         public virtual Security Security1 { get; set; }
         public virtual Storage Storage1 { get; set; }
         public virtual ltKeyboard ltKeyboard { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Review> Reviews { get; set; }
     }
 }

@@ -18,7 +18,7 @@ namespace dcompare1.Views
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            MainEntities3 db = DatabaseSingleton.getInstance();
+            MainEntities10 db = DatabaseSingleton.getInstance();
 
             User u = (from user in db.Users where tbEmail.Text == user.email && tbPass.Text == user.password select user).FirstOrDefault();
 

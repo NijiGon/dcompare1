@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="dcompare1.Views.Login1" %>
+﻿﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="dcompare1.Views.Login1" %>
 
 <!DOCTYPE html>
 
@@ -13,7 +13,7 @@
         <div class="container-fluid m-4 w-50 d-flex justify-content-center align-items-center">
             <div>
                 <form runat="server">
-                    <img src="../Asset/logo.png" class="w-75 mb-3" alt="Alternate Text" />
+                    <img src="../Asset/logo/WELCOME.png" class="w-75 mb-3" alt="Alternate Text" />
                     <div class="mb-3">
                         <label for="e-mail" class="form-label">Email</label>
                         <asp:TextBox ID="tbEmail" class="form-control" runat="server"></asp:TextBox>

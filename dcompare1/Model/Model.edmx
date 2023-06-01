@@ -10,93 +10,85 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="type" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="quantity" Type="int" Nullable="false" />
-          <Property Name="microphone" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="type" Type="varchar" MaxLength="50" />
+          <Property Name="quantity" Type="int" />
+          <Property Name="microphone" Type="varchar" MaxLength="50" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Battery">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="capacity" Type="int" Nullable="false" />
-          <Property Name="wattage" Type="int" Nullable="false" />
-          <Property Name="output" Type="int" Nullable="false" />
-          <Property Name="input" Type="int" Nullable="false" />
-          <Property Name="current" Type="int" Nullable="false" />
-          <Property Name="life_hours" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Comment">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="user" Type="int" Nullable="false" />
-          <Property Name="rating" Type="int" Nullable="false" />
-          <Property Name="device" Type="int" Nullable="false" />
-          <Property Name="likes" Type="int" Nullable="false" />
-          <Property Name="dislikes" Type="int" Nullable="false" />
-          <Property Name="review" Type="varchar" MaxLength="255" />
+          <Property Name="capacity" Type="int" />
+          <Property Name="wattage" Type="int" />
+          <Property Name="output" Type="int" />
+          <Property Name="input" Type="int" />
+          <Property Name="current" Type="int" />
+          <Property Name="life_hours" Type="int" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Connectivity">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="wifi" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="bluetooth" Type="float" Nullable="false" />
+          <Property Name="wifi" Type="varchar" MaxLength="50" />
+          <Property Name="bluetooth" Type="float" />
         </EntityType>
         <EntityType Name="Device">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="audio" Type="int" Nullable="false" />
-          <Property Name="battery" Type="int" Nullable="false" />
-          <Property Name="connectivity" Type="int" Nullable="false" />
-          <Property Name="dimension" Type="int" Nullable="false" />
-          <Property Name="display" Type="int" Nullable="false" />
-          <Property Name="graphics" Type="int" Nullable="false" />
-          <Property Name="memory" Type="int" Nullable="false" />
-          <Property Name="port" Type="int" Nullable="false" />
-          <Property Name="processor" Type="int" Nullable="false" />
-          <Property Name="security" Type="int" Nullable="false" />
-          <Property Name="storage" Type="int" Nullable="false" />
-          <Property Name="included" Type="int" Nullable="false" />
+          <Property Name="audio" Type="int" />
+          <Property Name="battery" Type="int" />
+          <Property Name="connectivity" Type="int" />
+          <Property Name="dimension" Type="int" />
+          <Property Name="display" Type="int" />
+          <Property Name="graphics" Type="int" />
+          <Property Name="memory" Type="int" />
+          <Property Name="port" Type="int" />
+          <Property Name="processor" Type="int" />
+          <Property Name="security" Type="int" />
+          <Property Name="storage" Type="int" />
+          <Property Name="included" Type="int" />
           <Property Name="keyboard" Type="int" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
+          <Property Name="image" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Dimension">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="length" Type="float" Nullable="false" />
-          <Property Name="width" Type="float" Nullable="false" />
-          <Property Name="heigh" Type="float" Nullable="false" />
+          <Property Name="length" Type="float" />
+          <Property Name="width" Type="float" />
+          <Property Name="height" Type="float" />
         </EntityType>
         <EntityType Name="Display">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="height" Type="int" Nullable="false" />
-          <Property Name="width" Type="int" Nullable="false" />
-          <Property Name="refresh_rate" Type="int" Nullable="false" />
-          <Property Name="color_gamut" Type="float" Nullable="false" />
-          <Property Name="size" Type="float" Nullable="false" />
+          <Property Name="height" Type="int" />
+          <Property Name="width" Type="int" />
+          <Property Name="refresh_rate" Type="int" />
+          <Property Name="color_gamut" Type="float" />
+          <Property Name="size" Type="float" />
         </EntityType>
         <EntityType Name="Graphics">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="type" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="manufacturer" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="wattage" Type="int" Nullable="false" />
-          <Property Name="clock_speed" Type="float" Nullable="false" />
-          <Property Name="vram" Type="int" Nullable="false" />
-          <Property Name="data_rate" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="type" Type="varchar" MaxLength="50" />
+          <Property Name="manufacturer" Type="varchar" MaxLength="50" />
+          <Property Name="wattage" Type="int" />
+          <Property Name="clock_speed" Type="float" />
+          <Property Name="vram" Type="int" />
+          <Property Name="data_rate" Type="varchar" MaxLength="50" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Included">
           <Key>
@@ -110,18 +102,18 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="backlit" Type="int" Nullable="false" />
-          <Property Name="feature" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="backlit" Type="int" />
+          <Property Name="feature" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Memory">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="size" Type="int" Nullable="false" />
-          <Property Name="data_rate" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="channel" Type="int" Nullable="false" />
-          <Property Name="slot" Type="int" Nullable="false" />
+          <Property Name="size" Type="int" />
+          <Property Name="data_rate" Type="varchar" MaxLength="50" />
+          <Property Name="channel" Type="int" />
+          <Property Name="slot" Type="int" />
           <Property Name="max_capacity" Type="int" />
         </EntityType>
         <EntityType Name="Port">
@@ -141,29 +133,48 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="type" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="manufacturer" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="clock_speed" Type="float" Nullable="false" />
-          <Property Name="cores" Type="int" Nullable="false" />
-          <Property Name="threads" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
+          <Property Name="type" Type="varchar" MaxLength="50" />
+          <Property Name="manufacturer" Type="varchar" MaxLength="50" />
+          <Property Name="clock_speed" Type="float" />
+          <Property Name="cores" Type="int" />
+          <Property Name="threads" Type="int" />
+        </EntityType>
+        <EntityType Name="Review">
+          <Key>
+            <PropertyRef Name="user" />
+            <PropertyRef Name="device" />
+          </Key>
+          <Property Name="user" Type="int" Nullable="false" />
+          <Property Name="device" Type="int" Nullable="false" />
+          <Property Name="likes" Type="int" />
+          <Property Name="dislikes" Type="int" />
+          <Property Name="comment" Type="varchar" MaxLength="255" />
+          <Property Name="rating" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Security">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="slot" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="firmware" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="firmware" Type="varchar" MaxLength="50" />
+          <Property Name="slot" Type="varchar" MaxLength="50" />
+          <Property Name="feature" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Storage">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="size" Type="int" Nullable="false" />
-          <Property Name="type" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="max_caoacity" Type="int" Nullable="false" />
+          <Property Name="size" Type="int" />
+          <Property Name="type" Type="varchar" MaxLength="50" />
+          <Property Name="max_caoacity" Type="int" />
+        </EntityType>
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -175,32 +186,8 @@
           <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <Association Name="FK_Comment_ToDevice">
-          <End Role="Device" Type="Self.Device" Multiplicity="1" />
-          <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Device">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Comment">
-              <PropertyRef Name="user" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Comment_ToUser">
-          <End Role="User" Type="Self.User" Multiplicity="1" />
-          <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Comment">
-              <PropertyRef Name="user" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Device_Audio">
-          <End Role="Audio" Type="Self.Audio" Multiplicity="1" />
+          <End Role="Audio" Type="Self.Audio" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Audio">
@@ -212,7 +199,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Device_Battery">
-          <End Role="Battery" Type="Self.Battery" Multiplicity="1" />
+          <End Role="Battery" Type="Self.Battery" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Battery">
@@ -224,7 +211,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Device_Connectivity">
-          <End Role="Connectivity" Type="Self.Connectivity" Multiplicity="1" />
+          <End Role="Connectivity" Type="Self.Connectivity" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Connectivity">
@@ -236,7 +223,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Device_Dimension">
-          <End Role="Dimension" Type="Self.Dimension" Multiplicity="1" />
+          <End Role="Dimension" Type="Self.Dimension" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Dimension">
@@ -248,7 +235,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Device_Display">
-          <End Role="Display" Type="Self.Display" Multiplicity="1" />
+          <End Role="Display" Type="Self.Display" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Display">
@@ -260,7 +247,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Device_Graphics">
-          <End Role="Graphics" Type="Self.Graphics" Multiplicity="1" />
+          <End Role="Graphics" Type="Self.Graphics" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Graphics">
@@ -272,7 +259,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Device_Included">
-          <End Role="Included" Type="Self.Included" Multiplicity="1" />
+          <End Role="Included" Type="Self.Included" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Included">
@@ -284,7 +271,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Device_Port">
-          <End Role="Port" Type="Self.Port" Multiplicity="1" />
+          <End Role="Port" Type="Self.Port" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Port">
@@ -296,7 +283,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Device_Processor">
-          <End Role="Processor" Type="Self.Processor" Multiplicity="1" />
+          <End Role="Processor" Type="Self.Processor" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Processor">
@@ -308,7 +295,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Device_Security">
-          <End Role="Security" Type="Self.Security" Multiplicity="1" />
+          <End Role="Security" Type="Self.Security" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Security">
@@ -320,7 +307,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Device_Storage">
-          <End Role="Storage" Type="Self.Storage" Multiplicity="1" />
+          <End Role="Storage" Type="Self.Storage" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Storage">
@@ -343,10 +330,33 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Review_ToDevice">
+          <End Role="Device" Type="Self.Device" Multiplicity="1" />
+          <End Role="Review" Type="Self.Review" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Device">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Review">
+              <PropertyRef Name="device" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Review_ToUser">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="Review" Type="Self.Review" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Review">
+              <PropertyRef Name="user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="MainModelStoreContainer">
           <EntitySet Name="Audio" EntityType="Self.Audio" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Battery" EntityType="Self.Battery" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Comment" EntityType="Self.Comment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Connectivity" EntityType="Self.Connectivity" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Device" EntityType="Self.Device" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Dimension" EntityType="Self.Dimension" Schema="dbo" store:Type="Tables" />
@@ -357,17 +367,11 @@
           <EntitySet Name="Memory" EntityType="Self.Memory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Port" EntityType="Self.Port" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Processor" EntityType="Self.Processor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Review" EntityType="Self.Review" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Security" EntityType="Self.Security" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Storage" EntityType="Self.Storage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Comment_ToDevice" Association="Self.FK_Comment_ToDevice">
-            <End Role="Device" EntitySet="Device" />
-            <End Role="Comment" EntitySet="Comment" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Comment_ToUser" Association="Self.FK_Comment_ToUser">
-            <End Role="User" EntitySet="User" />
-            <End Role="Comment" EntitySet="Comment" />
-          </AssociationSet>
           <AssociationSet Name="FK_Device_Audio" Association="Self.FK_Device_Audio">
             <End Role="Audio" EntitySet="Audio" />
             <End Role="Device" EntitySet="Device" />
@@ -416,6 +420,14 @@
             <End Role="ltKeyboard" EntitySet="ltKeyboard" />
             <End Role="Device" EntitySet="Device" />
           </AssociationSet>
+          <AssociationSet Name="FK_Review_ToDevice" Association="Self.FK_Review_ToDevice">
+            <End Role="Device" EntitySet="Device" />
+            <End Role="Review" EntitySet="Review" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Review_ToUser" Association="Self.FK_Review_ToUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="Review" EntitySet="Review" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -427,9 +439,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="quantity" Type="Int32" Nullable="false" />
-          <Property Name="microphone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="quantity" Type="Int32" />
+          <Property Name="microphone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Devices" Relationship="Self.FK_Device_Audio" FromRole="Audio" ToRole="Device" />
         </EntityType>
         <EntityType Name="Battery">
@@ -437,35 +450,22 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="capacity" Type="Int32" Nullable="false" />
-          <Property Name="wattage" Type="Int32" Nullable="false" />
-          <Property Name="output" Type="Int32" Nullable="false" />
-          <Property Name="input" Type="Int32" Nullable="false" />
-          <Property Name="current" Type="Int32" Nullable="false" />
-          <Property Name="life_hours" Type="Int32" Nullable="false" />
+          <Property Name="capacity" Type="Int32" />
+          <Property Name="wattage" Type="Int32" />
+          <Property Name="output" Type="Int32" />
+          <Property Name="input" Type="Int32" />
+          <Property Name="current" Type="Int32" />
+          <Property Name="life_hours" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Devices" Relationship="Self.FK_Device_Battery" FromRole="Battery" ToRole="Device" />
-        </EntityType>
-        <EntityType Name="Comment">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="user" Type="Int32" Nullable="false" />
-          <Property Name="rating" Type="Int32" Nullable="false" />
-          <Property Name="device" Type="Int32" Nullable="false" />
-          <Property Name="likes" Type="Int32" Nullable="false" />
-          <Property Name="dislikes" Type="Int32" Nullable="false" />
-          <Property Name="review" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Device1" Relationship="Self.FK_Comment_ToDevice" FromRole="Comment" ToRole="Device" />
-          <NavigationProperty Name="User1" Relationship="Self.FK_Comment_ToUser" FromRole="Comment" ToRole="User" />
         </EntityType>
         <EntityType Name="Connectivity">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="wifi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="bluetooth" Type="Double" Nullable="false" />
+          <Property Name="wifi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="bluetooth" Type="Double" />
           <NavigationProperty Name="Devices" Relationship="Self.FK_Device_Connectivity" FromRole="Connectivity" ToRole="Device" />
         </EntityType>
         <EntityType Name="Device">
@@ -473,22 +473,23 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="audio" Type="Int32" Nullable="false" />
-          <Property Name="battery" Type="Int32" Nullable="false" />
-          <Property Name="connectivity" Type="Int32" Nullable="false" />
-          <Property Name="dimension" Type="Int32" Nullable="false" />
-          <Property Name="display" Type="Int32" Nullable="false" />
-          <Property Name="graphics" Type="Int32" Nullable="false" />
-          <Property Name="memory" Type="Int32" Nullable="false" />
-          <Property Name="port" Type="Int32" Nullable="false" />
-          <Property Name="processor" Type="Int32" Nullable="false" />
-          <Property Name="security" Type="Int32" Nullable="false" />
-          <Property Name="storage" Type="Int32" Nullable="false" />
-          <Property Name="included" Type="Int32" Nullable="false" />
+          <Property Name="audio" Type="Int32" />
+          <Property Name="battery" Type="Int32" />
+          <Property Name="connectivity" Type="Int32" />
+          <Property Name="dimension" Type="Int32" />
+          <Property Name="display" Type="Int32" />
+          <Property Name="graphics" Type="Int32" />
+          <Property Name="memory" Type="Int32" />
+          <Property Name="port" Type="Int32" />
+          <Property Name="processor" Type="Int32" />
+          <Property Name="security" Type="Int32" />
+          <Property Name="storage" Type="Int32" />
+          <Property Name="included" Type="Int32" />
           <Property Name="keyboard" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="image" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Audio1" Relationship="Self.FK_Device_Audio" FromRole="Device" ToRole="Audio" />
           <NavigationProperty Name="Battery1" Relationship="Self.FK_Device_Battery" FromRole="Device" ToRole="Battery" />
-          <NavigationProperty Name="Comments" Relationship="Self.FK_Comment_ToDevice" FromRole="Device" ToRole="Comment" />
           <NavigationProperty Name="Connectivity1" Relationship="Self.FK_Device_Connectivity" FromRole="Device" ToRole="Connectivity" />
           <NavigationProperty Name="Dimension1" Relationship="Self.FK_Device_Dimension" FromRole="Device" ToRole="Dimension" />
           <NavigationProperty Name="Display1" Relationship="Self.FK_Device_Display" FromRole="Device" ToRole="Display" />
@@ -499,15 +500,16 @@
           <NavigationProperty Name="Security1" Relationship="Self.FK_Device_Security" FromRole="Device" ToRole="Security" />
           <NavigationProperty Name="Storage1" Relationship="Self.FK_Device_Storage" FromRole="Device" ToRole="Storage" />
           <NavigationProperty Name="ltKeyboard" Relationship="Self.FK_Laptop_Keyboard" FromRole="Device" ToRole="ltKeyboard" />
+          <NavigationProperty Name="Reviews" Relationship="Self.FK_Review_ToDevice" FromRole="Device" ToRole="Review" />
         </EntityType>
         <EntityType Name="Dimension">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="length" Type="Double" Nullable="false" />
-          <Property Name="width" Type="Double" Nullable="false" />
-          <Property Name="heigh" Type="Double" Nullable="false" />
+          <Property Name="length" Type="Double" />
+          <Property Name="width" Type="Double" />
+          <Property Name="height" Type="Double" />
           <NavigationProperty Name="Devices" Relationship="Self.FK_Device_Dimension" FromRole="Dimension" ToRole="Device" />
         </EntityType>
         <EntityType Name="Display">
@@ -515,11 +517,11 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="height" Type="Int32" Nullable="false" />
-          <Property Name="width" Type="Int32" Nullable="false" />
-          <Property Name="refresh_rate" Type="Int32" Nullable="false" />
-          <Property Name="color_gamut" Type="Double" Nullable="false" />
-          <Property Name="size" Type="Double" Nullable="false" />
+          <Property Name="height" Type="Int32" />
+          <Property Name="width" Type="Int32" />
+          <Property Name="refresh_rate" Type="Int32" />
+          <Property Name="color_gamut" Type="Double" />
+          <Property Name="size" Type="Double" />
           <NavigationProperty Name="Devices" Relationship="Self.FK_Device_Display" FromRole="Display" ToRole="Device" />
         </EntityType>
         <EntityType Name="Graphic">
@@ -527,13 +529,13 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="manufacturer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="wattage" Type="Int32" Nullable="false" />
-          <Property Name="clock_speed" Type="Double" Nullable="false" />
-          <Property Name="vram" Type="Int32" Nullable="false" />
-          <Property Name="data_rate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="manufacturer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="wattage" Type="Int32" />
+          <Property Name="clock_speed" Type="Double" />
+          <Property Name="vram" Type="Int32" />
+          <Property Name="data_rate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Devices" Relationship="Self.FK_Device_Graphics" FromRole="Graphics" ToRole="Device" />
         </EntityType>
         <EntityType Name="Included">
@@ -549,8 +551,8 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="backlit" Type="Int32" Nullable="false" />
-          <Property Name="feature" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="backlit" Type="Int32" />
+          <Property Name="feature" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Devices" Relationship="Self.FK_Laptop_Keyboard" FromRole="ltKeyboard" ToRole="Device" />
         </EntityType>
         <EntityType Name="Memory">
@@ -558,10 +560,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="size" Type="Int32" Nullable="false" />
-          <Property Name="data_rate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="channel" Type="Int32" Nullable="false" />
-          <Property Name="slot" Type="Int32" Nullable="false" />
+          <Property Name="size" Type="Int32" />
+          <Property Name="data_rate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="channel" Type="Int32" />
+          <Property Name="slot" Type="Int32" />
           <Property Name="max_capacity" Type="Int32" />
         </EntityType>
         <EntityType Name="Port">
@@ -582,21 +584,36 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="manufacturer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="clock_speed" Type="Double" Nullable="false" />
-          <Property Name="cores" Type="Int32" Nullable="false" />
-          <Property Name="threads" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="manufacturer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="clock_speed" Type="Double" />
+          <Property Name="cores" Type="Int32" />
+          <Property Name="threads" Type="Int32" />
           <NavigationProperty Name="Devices" Relationship="Self.FK_Device_Processor" FromRole="Processor" ToRole="Device" />
+        </EntityType>
+        <EntityType Name="Review">
+          <Key>
+            <PropertyRef Name="user" />
+            <PropertyRef Name="device" />
+          </Key>
+          <Property Name="user" Type="Int32" Nullable="false" />
+          <Property Name="device" Type="Int32" Nullable="false" />
+          <Property Name="likes" Type="Int32" />
+          <Property Name="dislikes" Type="Int32" />
+          <Property Name="comment" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="rating" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Device1" Relationship="Self.FK_Review_ToDevice" FromRole="Review" ToRole="Device" />
+          <NavigationProperty Name="User1" Relationship="Self.FK_Review_ToUser" FromRole="Review" ToRole="User" />
         </EntityType>
         <EntityType Name="Security">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="slot" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="firmware" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="firmware" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="slot" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="feature" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Devices" Relationship="Self.FK_Device_Security" FromRole="Security" ToRole="Device" />
         </EntityType>
         <EntityType Name="Storage">
@@ -604,10 +621,16 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="size" Type="Int32" Nullable="false" />
-          <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="max_caoacity" Type="Int32" Nullable="false" />
+          <Property Name="size" Type="Int32" />
+          <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="max_caoacity" Type="Int32" />
           <NavigationProperty Name="Devices" Relationship="Self.FK_Device_Storage" FromRole="Storage" ToRole="Device" />
+        </EntityType>
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -618,10 +641,10 @@
           <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Comments" Relationship="Self.FK_Comment_ToUser" FromRole="User" ToRole="Comment" />
+          <NavigationProperty Name="Reviews" Relationship="Self.FK_Review_ToUser" FromRole="User" ToRole="Review" />
         </EntityType>
         <Association Name="FK_Device_Audio">
-          <End Role="Audio" Type="Self.Audio" Multiplicity="1" />
+          <End Role="Audio" Type="Self.Audio" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Audio">
@@ -633,7 +656,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Device_Battery">
-          <End Role="Battery" Type="Self.Battery" Multiplicity="1" />
+          <End Role="Battery" Type="Self.Battery" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Battery">
@@ -644,32 +667,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Comment_ToDevice">
-          <End Role="Device" Type="Self.Device" Multiplicity="1" />
-          <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Device">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Comment">
-              <PropertyRef Name="user" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Comment_ToUser">
-          <End Role="User" Type="Self.User" Multiplicity="1" />
-          <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Comment">
-              <PropertyRef Name="user" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Device_Connectivity">
-          <End Role="Connectivity" Type="Self.Connectivity" Multiplicity="1" />
+          <End Role="Connectivity" Type="Self.Connectivity" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Connectivity">
@@ -681,7 +680,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Device_Dimension">
-          <End Role="Dimension" Type="Self.Dimension" Multiplicity="1" />
+          <End Role="Dimension" Type="Self.Dimension" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Dimension">
@@ -693,7 +692,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Device_Display">
-          <End Role="Display" Type="Self.Display" Multiplicity="1" />
+          <End Role="Display" Type="Self.Display" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Display">
@@ -705,7 +704,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Device_Graphics">
-          <End Role="Graphics" Type="Self.Graphic" Multiplicity="1" />
+          <End Role="Graphics" Type="Self.Graphic" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Graphics">
@@ -717,7 +716,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Device_Included">
-          <End Role="Included" Type="Self.Included" Multiplicity="1" />
+          <End Role="Included" Type="Self.Included" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Included">
@@ -729,7 +728,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Device_Port">
-          <End Role="Port" Type="Self.Port" Multiplicity="1" />
+          <End Role="Port" Type="Self.Port" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Port">
@@ -741,7 +740,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Device_Processor">
-          <End Role="Processor" Type="Self.Processor" Multiplicity="1" />
+          <End Role="Processor" Type="Self.Processor" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Processor">
@@ -753,7 +752,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Device_Security">
-          <End Role="Security" Type="Self.Security" Multiplicity="1" />
+          <End Role="Security" Type="Self.Security" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Security">
@@ -765,7 +764,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Device_Storage">
-          <End Role="Storage" Type="Self.Storage" Multiplicity="1" />
+          <End Role="Storage" Type="Self.Storage" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Storage">
@@ -788,10 +787,33 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="MainEntities3" annotation:LazyLoadingEnabled="true">
+        <Association Name="FK_Review_ToDevice">
+          <End Role="Device" Type="Self.Device" Multiplicity="1" />
+          <End Role="Review" Type="Self.Review" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Device">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Review">
+              <PropertyRef Name="device" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Review_ToUser">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="Review" Type="Self.Review" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Review">
+              <PropertyRef Name="user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MainEntities10" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Audios" EntityType="Self.Audio" />
           <EntitySet Name="Batteries" EntityType="Self.Battery" />
-          <EntitySet Name="Comments" EntityType="Self.Comment" />
           <EntitySet Name="Connectivities" EntityType="Self.Connectivity" />
           <EntitySet Name="Devices" EntityType="Self.Device" />
           <EntitySet Name="Dimensions" EntityType="Self.Dimension" />
@@ -802,8 +824,10 @@
           <EntitySet Name="Memories" EntityType="Self.Memory" />
           <EntitySet Name="Ports" EntityType="Self.Port" />
           <EntitySet Name="Processors" EntityType="Self.Processor" />
+          <EntitySet Name="Reviews" EntityType="Self.Review" />
           <EntitySet Name="Securities" EntityType="Self.Security" />
           <EntitySet Name="Storages" EntityType="Self.Storage" />
+          <EntitySet Name="Tables" EntityType="Self.Table" />
           <EntitySet Name="Users" EntityType="Self.User" />
           <AssociationSet Name="FK_Device_Audio" Association="Self.FK_Device_Audio">
             <End Role="Audio" EntitySet="Audios" />
@@ -812,14 +836,6 @@
           <AssociationSet Name="FK_Device_Battery" Association="Self.FK_Device_Battery">
             <End Role="Battery" EntitySet="Batteries" />
             <End Role="Device" EntitySet="Devices" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Comment_ToDevice" Association="Self.FK_Comment_ToDevice">
-            <End Role="Device" EntitySet="Devices" />
-            <End Role="Comment" EntitySet="Comments" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Comment_ToUser" Association="Self.FK_Comment_ToUser">
-            <End Role="User" EntitySet="Users" />
-            <End Role="Comment" EntitySet="Comments" />
           </AssociationSet>
           <AssociationSet Name="FK_Device_Connectivity" Association="Self.FK_Device_Connectivity">
             <End Role="Connectivity" EntitySet="Connectivities" />
@@ -861,13 +877,21 @@
             <End Role="ltKeyboard" EntitySet="ltKeyboards" />
             <End Role="Device" EntitySet="Devices" />
           </AssociationSet>
+          <AssociationSet Name="FK_Review_ToDevice" Association="Self.FK_Review_ToDevice">
+            <End Role="Device" EntitySet="Devices" />
+            <End Role="Review" EntitySet="Reviews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Review_ToUser" Association="Self.FK_Review_ToUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Review" EntitySet="Reviews" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="MainModelStoreContainer" CdmEntityContainer="MainEntities3">
+        <EntityContainerMapping StorageEntityContainer="MainModelStoreContainer" CdmEntityContainer="MainEntities10">
           <EntitySetMapping Name="Audios">
             <EntityTypeMapping TypeName="MainModel.Audio">
               <MappingFragment StoreEntitySet="Audio">
@@ -875,6 +899,7 @@
                 <ScalarProperty Name="type" ColumnName="type" />
                 <ScalarProperty Name="quantity" ColumnName="quantity" />
                 <ScalarProperty Name="microphone" ColumnName="microphone" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -888,19 +913,7 @@
                 <ScalarProperty Name="input" ColumnName="input" />
                 <ScalarProperty Name="current" ColumnName="current" />
                 <ScalarProperty Name="life_hours" ColumnName="life_hours" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Comments">
-            <EntityTypeMapping TypeName="MainModel.Comment">
-              <MappingFragment StoreEntitySet="Comment">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="user" ColumnName="user" />
-                <ScalarProperty Name="rating" ColumnName="rating" />
-                <ScalarProperty Name="device" ColumnName="device" />
-                <ScalarProperty Name="likes" ColumnName="likes" />
-                <ScalarProperty Name="dislikes" ColumnName="dislikes" />
-                <ScalarProperty Name="review" ColumnName="review" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -930,6 +943,8 @@
                 <ScalarProperty Name="storage" ColumnName="storage" />
                 <ScalarProperty Name="included" ColumnName="included" />
                 <ScalarProperty Name="keyboard" ColumnName="keyboard" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="image" ColumnName="image" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -939,7 +954,7 @@
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="length" ColumnName="length" />
                 <ScalarProperty Name="width" ColumnName="width" />
-                <ScalarProperty Name="heigh" ColumnName="heigh" />
+                <ScalarProperty Name="height" ColumnName="height" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1024,12 +1039,25 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Reviews">
+            <EntityTypeMapping TypeName="MainModel.Review">
+              <MappingFragment StoreEntitySet="Review">
+                <ScalarProperty Name="user" ColumnName="user" />
+                <ScalarProperty Name="device" ColumnName="device" />
+                <ScalarProperty Name="likes" ColumnName="likes" />
+                <ScalarProperty Name="dislikes" ColumnName="dislikes" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="rating" ColumnName="rating" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Securities">
             <EntityTypeMapping TypeName="MainModel.Security">
               <MappingFragment StoreEntitySet="Security">
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="slot" ColumnName="slot" />
                 <ScalarProperty Name="firmware" ColumnName="firmware" />
+                <ScalarProperty Name="slot" ColumnName="slot" />
+                <ScalarProperty Name="feature" ColumnName="feature" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1040,6 +1068,13 @@
                 <ScalarProperty Name="size" ColumnName="size" />
                 <ScalarProperty Name="type" ColumnName="type" />
                 <ScalarProperty Name="max_caoacity" ColumnName="max_caoacity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tables">
+            <EntityTypeMapping TypeName="MainModel.Table">
+              <MappingFragment StoreEntitySet="Table">
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

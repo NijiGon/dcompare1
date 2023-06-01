@@ -22,7 +22,7 @@ namespace dcompare1.Model
     
         public int Id { get; set; }
         public string wifi { get; set; }
-        public double bluetooth { get; set; }
+        public Nullable<double> bluetooth { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Device> Devices { get; set; }
