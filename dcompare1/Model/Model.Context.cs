@@ -41,6 +41,7 @@ namespace dcompare1.Model
         public virtual DbSet<Security> Securities { get; set; }
         public virtual DbSet<Storage> Storages { get; set; }
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<Camera> Cameras { get; set; }
+        public virtual DbSet<fCamera> fCameras { get; set; }
+        public virtual DbSet<rCamera> rCameras { get; set; }
     }
 }

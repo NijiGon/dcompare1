@@ -36,7 +36,8 @@ namespace dcompare1.Model
         public Nullable<int> keyboard { get; set; }
         public string name { get; set; }
         public string image { get; set; }
-        public Nullable<int> camera { get; set; }
+        public Nullable<int> fcamera { get; set; }
+        public Nullable<int> rcamera { get; set; }
     
         public virtual Audio Audio1 { get; set; }
         public virtual Battery Battery1 { get; set; }
@@ -53,6 +54,7 @@ namespace dcompare1.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Review> Reviews { get; set; }
         public virtual Memory Memory1 { get; set; }
-        public virtual Camera Camera1 { get; set; }
+        public virtual fCamera fCamera1 { get; set; }
+        public virtual rCamera rCamera1 { get; set; }
     }
 }

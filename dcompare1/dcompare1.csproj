@@ -108,6 +108,7 @@
     </Content>
     <Content Include="Views\Compare1.aspx" />
     <Content Include="Views\Compare1Device.aspx" />
+    <Content Include="Views\Compare2.aspx" />
     <Content Include="Views\HomeView.aspx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\Register.aspx" />
@@ -129,9 +130,6 @@
     <Compile Include="Model\Battery.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Camera.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\Connectivity.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -142,6 +140,9 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Display.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\fCamera.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Graphic.cs">
@@ -177,6 +178,9 @@
     <Compile Include="Model\Processor.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\rCamera.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Review.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -208,6 +212,13 @@
     </Compile>
     <Compile Include="Views\Compare1Device.aspx.designer.cs">
       <DependentUpon>Compare1Device.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Compare2.aspx.cs">
+      <DependentUpon>Compare2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Compare2.aspx.designer.cs">
+      <DependentUpon>Compare2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\HomeView.aspx.cs">
       <DependentUpon>HomeView.aspx</DependentUpon>

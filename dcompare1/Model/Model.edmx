@@ -28,15 +28,6 @@
           <Property Name="life_hours" Type="int" />
           <Property Name="name" Type="varchar" MaxLength="50" />
         </EntityType>
-        <EntityType Name="Camera">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="resolution" Type="int" />
-          <Property Name="megapixels" Type="int" />
-          <Property Name="frame_rate" Type="int" />
-        </EntityType>
         <EntityType Name="Connectivity">
           <Key>
             <PropertyRef Name="Id" />
@@ -65,7 +56,8 @@
           <Property Name="keyboard" Type="int" />
           <Property Name="name" Type="varchar" MaxLength="50" />
           <Property Name="image" Type="varchar" MaxLength="50" />
-          <Property Name="camera" Type="int" />
+          <Property Name="fcamera" Type="int" />
+          <Property Name="rcamera" Type="int" />
         </EntityType>
         <EntityType Name="Dimension">
           <Key>
@@ -86,6 +78,15 @@
           <Property Name="refresh_rate" Type="int" />
           <Property Name="color_gamut" Type="float" />
           <Property Name="size" Type="float" />
+        </EntityType>
+        <EntityType Name="fCamera">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="resolution" Type="int" />
+          <Property Name="megapixels" Type="int" />
+          <Property Name="frame_rate" Type="int" />
         </EntityType>
         <EntityType Name="Graphics">
           <Key>
@@ -149,6 +150,15 @@
           <Property Name="clock_speed" Type="float" />
           <Property Name="cores" Type="int" />
           <Property Name="threads" Type="int" />
+        </EntityType>
+        <EntityType Name="rCamera">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="resolution" Type="int" />
+          <Property Name="megapixels" Type="int" />
+          <Property Name="frame_rate" Type="int" />
         </EntityType>
         <EntityType Name="Review">
           <Key>
@@ -214,18 +224,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Device_Camera">
-          <End Role="Camera" Type="Self.Camera" Multiplicity="0..1" />
-          <End Role="Device" Type="Self.Device" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Camera">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Device">
-              <PropertyRef Name="camera" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Device_Connectivity">
           <End Role="Connectivity" Type="Self.Connectivity" Multiplicity="0..1" />
           <End Role="Device" Type="Self.Device" Multiplicity="*" />
@@ -259,6 +257,18 @@
             </Principal>
             <Dependent Role="Device">
               <PropertyRef Name="display" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Device_fCamera">
+          <End Role="fCamera" Type="Self.fCamera" Multiplicity="0..1" />
+          <End Role="Device" Type="Self.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fCamera">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="fcamera" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -319,6 +329,18 @@
             </Principal>
             <Dependent Role="Device">
               <PropertyRef Name="processor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Device_rCamera">
+          <End Role="rCamera" Type="Self.rCamera" Multiplicity="0..1" />
+          <End Role="Device" Type="Self.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rCamera">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="rcamera" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -385,17 +407,18 @@
         <EntityContainer Name="MainModelStoreContainer">
           <EntitySet Name="Audio" EntityType="Self.Audio" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Battery" EntityType="Self.Battery" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Camera" EntityType="Self.Camera" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Connectivity" EntityType="Self.Connectivity" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Device" EntityType="Self.Device" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Dimension" EntityType="Self.Dimension" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Display" EntityType="Self.Display" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fCamera" EntityType="Self.fCamera" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Graphics" EntityType="Self.Graphics" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Included" EntityType="Self.Included" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ltKeyboard" EntityType="Self.ltKeyboard" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Memory" EntityType="Self.Memory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Port" EntityType="Self.Port" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Processor" EntityType="Self.Processor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="rCamera" EntityType="Self.rCamera" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Review" EntityType="Self.Review" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Security" EntityType="Self.Security" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Storage" EntityType="Self.Storage" Schema="dbo" store:Type="Tables" />
@@ -408,10 +431,6 @@
             <End Role="Battery" EntitySet="Battery" />
             <End Role="Device" EntitySet="Device" />
           </AssociationSet>
-          <AssociationSet Name="FK_Device_Camera" Association="Self.FK_Device_Camera">
-            <End Role="Camera" EntitySet="Camera" />
-            <End Role="Device" EntitySet="Device" />
-          </AssociationSet>
           <AssociationSet Name="FK_Device_Connectivity" Association="Self.FK_Device_Connectivity">
             <End Role="Connectivity" EntitySet="Connectivity" />
             <End Role="Device" EntitySet="Device" />
@@ -422,6 +441,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_Device_Display" Association="Self.FK_Device_Display">
             <End Role="Display" EntitySet="Display" />
+            <End Role="Device" EntitySet="Device" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Device_fCamera" Association="Self.FK_Device_fCamera">
+            <End Role="fCamera" EntitySet="fCamera" />
             <End Role="Device" EntitySet="Device" />
           </AssociationSet>
           <AssociationSet Name="FK_Device_Graphics" Association="Self.FK_Device_Graphics">
@@ -442,6 +465,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_Device_Processor" Association="Self.FK_Device_Processor">
             <End Role="Processor" EntitySet="Processor" />
+            <End Role="Device" EntitySet="Device" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Device_rCamera" Association="Self.FK_Device_rCamera">
+            <End Role="rCamera" EntitySet="rCamera" />
             <End Role="Device" EntitySet="Device" />
           </AssociationSet>
           <AssociationSet Name="FK_Device_Security" Association="Self.FK_Device_Security">
@@ -537,8 +564,10 @@
           <NavigationProperty Name="ltKeyboard" Relationship="Self.FK_Laptop_Keyboard" FromRole="Device" ToRole="ltKeyboard" />
           <NavigationProperty Name="Reviews" Relationship="Self.FK_Review_ToDevice" FromRole="Device" ToRole="Review" />
           <NavigationProperty Name="Memory1" Relationship="MainModel.FK_Device_Memory" FromRole="Device" ToRole="Memory" />
-          <Property Name="camera" Type="Int32" />
-          <NavigationProperty Name="Camera1" Relationship="MainModel.FK_Device_Camera" FromRole="Device" ToRole="Camera" />
+          <Property Name="fcamera" Type="Int32" />
+          <Property Name="rcamera" Type="Int32" />
+          <NavigationProperty Name="fCamera1" Relationship="MainModel.FK_Device_fCamera" FromRole="Device" ToRole="fCamera" />
+          <NavigationProperty Name="rCamera1" Relationship="MainModel.FK_Device_rCamera" FromRole="Device" ToRole="rCamera" />
         </EntityType>
         <EntityType Name="Dimension">
           <Key>
@@ -921,9 +950,14 @@
             <End Role="Memory" EntitySet="Memories" />
             <End Role="Device" EntitySet="Devices" />
           </AssociationSet>
-          <EntitySet Name="Cameras" EntityType="MainModel.Camera" />
-          <AssociationSet Name="FK_Device_Camera" Association="MainModel.FK_Device_Camera">
-            <End Role="Camera" EntitySet="Cameras" />
+          <EntitySet Name="fCameras" EntityType="MainModel.fCamera" />
+          <EntitySet Name="rCameras" EntityType="MainModel.rCamera" />
+          <AssociationSet Name="FK_Device_fCamera" Association="MainModel.FK_Device_fCamera">
+            <End Role="fCamera" EntitySet="fCameras" />
+            <End Role="Device" EntitySet="Devices" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Device_rCamera" Association="MainModel.FK_Device_rCamera">
+            <End Role="rCamera" EntitySet="rCameras" />
             <End Role="Device" EntitySet="Devices" />
           </AssociationSet>
         </EntityContainer>
@@ -939,7 +973,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="Camera">
+        <EntityType Name="fCamera">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -947,17 +981,39 @@
           <Property Name="resolution" Type="Int32" />
           <Property Name="megapixels" Type="Int32" />
           <Property Name="frame_rate" Type="Int32" />
-          <NavigationProperty Name="Devices" Relationship="MainModel.FK_Device_Camera" FromRole="Camera" ToRole="Device" />
+          <NavigationProperty Name="Devices" Relationship="MainModel.FK_Device_fCamera" FromRole="fCamera" ToRole="Device" />
         </EntityType>
-        <Association Name="FK_Device_Camera">
-          <End Type="MainModel.Camera" Role="Camera" Multiplicity="0..1" />
+        <EntityType Name="rCamera">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="resolution" Type="Int32" />
+          <Property Name="megapixels" Type="Int32" />
+          <Property Name="frame_rate" Type="Int32" />
+          <NavigationProperty Name="Devices" Relationship="MainModel.FK_Device_rCamera" FromRole="rCamera" ToRole="Device" />
+        </EntityType>
+        <Association Name="FK_Device_fCamera">
+          <End Type="MainModel.fCamera" Role="fCamera" Multiplicity="0..1" />
           <End Type="MainModel.Device" Role="Device" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Camera">
+            <Principal Role="fCamera">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Device">
-              <PropertyRef Name="camera" />
+              <PropertyRef Name="fcamera" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Device_rCamera">
+          <End Type="MainModel.rCamera" Role="rCamera" Multiplicity="0..1" />
+          <End Type="MainModel.Device" Role="Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rCamera">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="rcamera" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1004,7 +1060,8 @@
           <EntitySetMapping Name="Devices">
             <EntityTypeMapping TypeName="MainModel.Device">
               <MappingFragment StoreEntitySet="Device">
-                <ScalarProperty Name="camera" ColumnName="camera" />
+                <ScalarProperty Name="rcamera" ColumnName="rcamera" />
+                <ScalarProperty Name="fcamera" ColumnName="fcamera" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="audio" ColumnName="audio" />
                 <ScalarProperty Name="battery" ColumnName="battery" />
@@ -1158,9 +1215,19 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Cameras">
-            <EntityTypeMapping TypeName="MainModel.Camera">
-              <MappingFragment StoreEntitySet="Camera">
+          <EntitySetMapping Name="fCameras">
+            <EntityTypeMapping TypeName="MainModel.fCamera">
+              <MappingFragment StoreEntitySet="fCamera">
+                <ScalarProperty Name="frame_rate" ColumnName="frame_rate" />
+                <ScalarProperty Name="megapixels" ColumnName="megapixels" />
+                <ScalarProperty Name="resolution" ColumnName="resolution" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rCameras">
+            <EntityTypeMapping TypeName="MainModel.rCamera">
+              <MappingFragment StoreEntitySet="rCamera">
                 <ScalarProperty Name="frame_rate" ColumnName="frame_rate" />
                 <ScalarProperty Name="megapixels" ColumnName="megapixels" />
                 <ScalarProperty Name="resolution" ColumnName="resolution" />

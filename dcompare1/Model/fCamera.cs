@@ -12,10 +12,10 @@ namespace dcompare1.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Camera
+    public partial class fCamera
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Camera()
+        public fCamera()
         {
             this.Devices = new HashSet<Device>();
         }

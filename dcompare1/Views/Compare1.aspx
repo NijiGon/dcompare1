@@ -1,46 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Site1.Master" AutoEventWireup="true" CodeBehind="Compare1.aspx.cs" Inherits="dcompare1.Views.Compare1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
-        #login{
-            margin-left: 390px;
-        }
-
-        @media screen and (max-width: 991px) {
-            #login{
-                margin-left: 0px;
-            }
-            #line{
-                visibility: hidden;
-            }
-        }
-
-        .crown-hid{
-            visibility: hidden;
-        }
-        .mb-minus5{
-            margin-bottom: -5%;
-        }
-        .mb-minus2{
-            margin-bottom: -2%;
-        }
-        .star-hid{
-            visibility: hidden;
-        }
-
-        @font-face {
-            font-family: Nexa-bold;
-            src: url("../Asset/Font/Nexa-Font/Nexa Bold.otf");
-        }
-        @font-face {
-            font-family: Nexa-reg;
-            src: url("../Asset/Font/Nexa-Font/Nexa Regular.otf");
-        }
-        #homeBtn, #deviceBtn, #compareBtn, #banner, #search p, thead, #spec-subgrup, #label-sub, #nb{
-            font-family: Nexa-bold;
-        }
-        th, td, #footer, .dropdown-menu a, #nr{
-            font-family: Nexa-reg;
-        }
+        
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -277,20 +238,35 @@
         <p id="nb" class="h2 mt-4 text-white rounded-4 rounded-bottom-0 ps-3" style="background-color: #353535; padding-bottom: 25px; margin-bottom: -15px; padding-top: 10px;">KAMERA</p>
         
         <div class="border border-secondary rounded-4 bg-white p-4 mb-2 shadow" style="">
-          <p id="nb" class="fw-bold fs-5">Kualitas</p>
-          <div class="d-flex">
+            <p id="nb" class="fw-bold fs-5">Front Camera</p>
+            <div class="d-flex">
             <div id="nr">
                 <p class="me-5">Resolusi</p>
                 <p class="me-5">Megapixel</p>
                 <p class="me-5">Frame Rate</p>
             </div>
             <div id="nr">
-                <p><%= d.Camera1.resolution %></p>
-                <p><%= d.Camera1.megapixels %></p>
-                <p><%= d.Camera1.frame_rate %></p>
+                <p><%= d.fCamera1.resolution %></p>
+                <p><%= d.fCamera1.megapixels %></p>
+                <p><%= d.fCamera1.frame_rate %></p>
             </div>
-          </div>
+            </div>
         </div>
+        <div class="border border-secondary rounded-4 bg-white p-4 mb-2 shadow" style="">
+        <p id="nb" class="fw-bold fs-5">Back Camera</p>
+        <div class="d-flex">
+        <div id="nr">
+            <p class="me-5">Resolusi</p>
+            <p class="me-5">Megapixel</p>
+            <p class="me-5">Frame Rate</p>
+        </div>
+        <div id="nr">
+            <p><%= d.rCamera1.resolution %></p>
+            <p><%= d.rCamera1.megapixels %></p>
+            <p><%= d.rCamera1.frame_rate %></p>
+        </div>
+        </div>
+    </div>
       </div>
     </div>
 
@@ -298,12 +274,12 @@
     <div class="d-flex flex-column h-50 rounded mt-4" style="background-color: #353535; padding: 30px; width: 35%;">
       <p class="text-white h5 mb-3">Rekomendasi</p>
         <% int lim = 0; %>
-        <%foreach(var d in devices){ %>
+        <%foreach(var dev in devices){ %>
         <%if (lim == 4) break; %>
-      <button class="btn btn-light text-start fw-bold fs-5 mb-2">
-        <img src="../Asset/devices/phones/<%= d.image %>" alt="gambar iphone" class="me-3" style="width: 5%;">
-        <%= d.name %>
-      </button>
+      <a class="btn btn-light text-start fw-bold fs-5 mb-2" href="Compare2.aspx?id=<%= d.Id %>&id2=<%= dev.Id %>">
+        <img src="../Asset/devices/phones/<%= dev.image %>" alt="gambar iphone" class="me-3" style="width: 5%;">
+        <%= dev.name %>
+      </a>
         <%lim = lim + 1; %>
         <%} %>
     </div>
@@ -598,7 +574,7 @@
             </defs>
           </svg>
             <%} %>
-          <p id="nb" class="fw-bold h3 ms-2" style="margin-top: -3px;">5</p>
+          <p id="nb" class="fw-bold h3 ms-2" style="margin-top: -3px;"><%= r.rating %></p>
         </div>
       </div>
     </div>

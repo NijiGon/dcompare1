@@ -88,6 +88,33 @@
         color:#aaa;
         margin-bottom:0;
     }
+    .crown-hid{
+        visibility: hidden;
+    }
+    .mb-minus5{
+        margin-bottom: -5%;
+    }
+    .mb-minus2{
+        margin-bottom: -2%;
+    }
+    .star-hid{
+        visibility: hidden;
+    }
+
+    @font-face {
+        font-family: Nexa-bold;
+        src: url("../Asset/Font/Nexa-Font/Nexa Bold.otf");
+    }
+    @font-face {
+        font-family: Nexa-reg;
+        src: url("../Asset/Font/Nexa-Font/Nexa Regular.otf");
+    }
+    #homeBtn, #deviceBtn, #compareBtn, #banner, #search p, thead, #spec-subgrup, #label-sub, #nb{
+        font-family: Nexa-bold;
+    }
+    th, td, #footer, .dropdown-menu a, #nr{
+        font-family: Nexa-reg;
+    }
     </style>
 </head>
 <body>

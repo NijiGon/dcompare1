@@ -36,8 +36,10 @@
         <AssociationConnector Association="MainModel.FK_Review_ToDevice" ManuallyRouted="false" />
         <AssociationConnector Association="MainModel.FK_Review_ToUser" ManuallyRouted="false" />
         <AssociationConnector Association="MainModel.FK_Device_Memory" />
-        <EntityTypeShape EntityType="MainModel.Camera" Width="1.5" PointX="1.125" PointY="0.75" />
-        <AssociationConnector Association="MainModel.FK_Device_Camera" />
+        <EntityTypeShape EntityType="MainModel.fCamera" Width="1.5" PointX="1.125" PointY="40.875" />
+        <EntityTypeShape EntityType="MainModel.rCamera" Width="1.5" PointX="7.375" PointY="0.875" />
+        <AssociationConnector Association="MainModel.FK_Device_fCamera" />
+        <AssociationConnector Association="MainModel.FK_Device_rCamera" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
