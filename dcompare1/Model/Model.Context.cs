@@ -40,7 +40,7 @@ namespace dcompare1.Model
         public virtual DbSet<Review> Reviews { get; set; }
         public virtual DbSet<Security> Securities { get; set; }
         public virtual DbSet<Storage> Storages { get; set; }
-        public virtual DbSet<Table> Tables { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Camera> Cameras { get; set; }
     }
 }

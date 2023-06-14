@@ -12,20 +12,18 @@ namespace dcompare1.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Memory
+    public partial class Camera
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Memory()
+        public Camera()
         {
             this.Devices = new HashSet<Device>();
         }
     
         public int Id { get; set; }
-        public Nullable<int> size { get; set; }
-        public string data_rate { get; set; }
-        public Nullable<int> channel { get; set; }
-        public Nullable<int> slot { get; set; }
-        public Nullable<int> max_capacity { get; set; }
+        public Nullable<int> resolution { get; set; }
+        public Nullable<int> megapixels { get; set; }
+        public Nullable<int> frame_rate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Device> Devices { get; set; }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MainModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="MainModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Audio">
           <Key>
             <PropertyRef Name="Id" />
@@ -27,6 +27,15 @@
           <Property Name="current" Type="int" />
           <Property Name="life_hours" Type="int" />
           <Property Name="name" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Camera">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="resolution" Type="int" />
+          <Property Name="megapixels" Type="int" />
+          <Property Name="frame_rate" Type="int" />
         </EntityType>
         <EntityType Name="Connectivity">
           <Key>
@@ -56,6 +65,7 @@
           <Property Name="keyboard" Type="int" />
           <Property Name="name" Type="varchar" MaxLength="50" />
           <Property Name="image" Type="varchar" MaxLength="50" />
+          <Property Name="camera" Type="int" />
         </EntityType>
         <EntityType Name="Dimension">
           <Key>
@@ -170,12 +180,6 @@
           <Property Name="type" Type="varchar" MaxLength="50" />
           <Property Name="max_caoacity" Type="int" />
         </EntityType>
-        <EntityType Name="Table">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
-        </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="Id" />
@@ -207,6 +211,18 @@
             </Principal>
             <Dependent Role="Device">
               <PropertyRef Name="battery" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Device_Camera">
+          <End Role="Camera" Type="Self.Camera" Multiplicity="0..1" />
+          <End Role="Device" Type="Self.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Camera">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="camera" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -267,6 +283,18 @@
             </Principal>
             <Dependent Role="Device">
               <PropertyRef Name="included" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Device_Memory">
+          <End Role="Memory" Type="Self.Memory" Multiplicity="0..1" />
+          <End Role="Device" Type="Self.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Memory">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="memory" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -357,6 +385,7 @@
         <EntityContainer Name="MainModelStoreContainer">
           <EntitySet Name="Audio" EntityType="Self.Audio" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Battery" EntityType="Self.Battery" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Camera" EntityType="Self.Camera" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Connectivity" EntityType="Self.Connectivity" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Device" EntityType="Self.Device" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Dimension" EntityType="Self.Dimension" Schema="dbo" store:Type="Tables" />
@@ -370,7 +399,6 @@
           <EntitySet Name="Review" EntityType="Self.Review" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Security" EntityType="Self.Security" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Storage" EntityType="Self.Storage" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Device_Audio" Association="Self.FK_Device_Audio">
             <End Role="Audio" EntitySet="Audio" />
@@ -378,6 +406,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_Device_Battery" Association="Self.FK_Device_Battery">
             <End Role="Battery" EntitySet="Battery" />
+            <End Role="Device" EntitySet="Device" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Device_Camera" Association="Self.FK_Device_Camera">
+            <End Role="Camera" EntitySet="Camera" />
             <End Role="Device" EntitySet="Device" />
           </AssociationSet>
           <AssociationSet Name="FK_Device_Connectivity" Association="Self.FK_Device_Connectivity">
@@ -398,6 +430,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_Device_Included" Association="Self.FK_Device_Included">
             <End Role="Included" EntitySet="Included" />
+            <End Role="Device" EntitySet="Device" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Device_Memory" Association="Self.FK_Device_Memory">
+            <End Role="Memory" EntitySet="Memory" />
             <End Role="Device" EntitySet="Device" />
           </AssociationSet>
           <AssociationSet Name="FK_Device_Port" Association="Self.FK_Device_Port">
@@ -429,8 +465,7 @@
             <End Role="Review" EntitySet="Review" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MainModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -501,6 +536,9 @@
           <NavigationProperty Name="Storage1" Relationship="Self.FK_Device_Storage" FromRole="Device" ToRole="Storage" />
           <NavigationProperty Name="ltKeyboard" Relationship="Self.FK_Laptop_Keyboard" FromRole="Device" ToRole="ltKeyboard" />
           <NavigationProperty Name="Reviews" Relationship="Self.FK_Review_ToDevice" FromRole="Device" ToRole="Review" />
+          <NavigationProperty Name="Memory1" Relationship="MainModel.FK_Device_Memory" FromRole="Device" ToRole="Memory" />
+          <Property Name="camera" Type="Int32" />
+          <NavigationProperty Name="Camera1" Relationship="MainModel.FK_Device_Camera" FromRole="Device" ToRole="Camera" />
         </EntityType>
         <EntityType Name="Dimension">
           <Key>
@@ -565,6 +603,7 @@
           <Property Name="channel" Type="Int32" />
           <Property Name="slot" Type="Int32" />
           <Property Name="max_capacity" Type="Int32" />
+          <NavigationProperty Name="Devices" Relationship="MainModel.FK_Device_Memory" FromRole="Memory" ToRole="Device" />
         </EntityType>
         <EntityType Name="Port">
           <Key>
@@ -625,12 +664,6 @@
           <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="max_caoacity" Type="Int32" />
           <NavigationProperty Name="Devices" Relationship="Self.FK_Device_Storage" FromRole="Storage" ToRole="Device" />
-        </EntityType>
-        <EntityType Name="Table">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -827,7 +860,6 @@
           <EntitySet Name="Reviews" EntityType="Self.Review" />
           <EntitySet Name="Securities" EntityType="Self.Security" />
           <EntitySet Name="Storages" EntityType="Self.Storage" />
-          <EntitySet Name="Tables" EntityType="Self.Table" />
           <EntitySet Name="Users" EntityType="Self.User" />
           <AssociationSet Name="FK_Device_Audio" Association="Self.FK_Device_Audio">
             <End Role="Audio" EntitySet="Audios" />
@@ -885,7 +917,50 @@
             <End Role="User" EntitySet="Users" />
             <End Role="Review" EntitySet="Reviews" />
           </AssociationSet>
+          <AssociationSet Name="FK_Device_Memory" Association="MainModel.FK_Device_Memory">
+            <End Role="Memory" EntitySet="Memories" />
+            <End Role="Device" EntitySet="Devices" />
+          </AssociationSet>
+          <EntitySet Name="Cameras" EntityType="MainModel.Camera" />
+          <AssociationSet Name="FK_Device_Camera" Association="MainModel.FK_Device_Camera">
+            <End Role="Camera" EntitySet="Cameras" />
+            <End Role="Device" EntitySet="Devices" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK_Device_Memory">
+          <End Type="MainModel.Memory" Role="Memory" Multiplicity="0..1" />
+          <End Type="MainModel.Device" Role="Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Memory">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="memory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Camera">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="resolution" Type="Int32" />
+          <Property Name="megapixels" Type="Int32" />
+          <Property Name="frame_rate" Type="Int32" />
+          <NavigationProperty Name="Devices" Relationship="MainModel.FK_Device_Camera" FromRole="Camera" ToRole="Device" />
+        </EntityType>
+        <Association Name="FK_Device_Camera">
+          <End Type="MainModel.Camera" Role="Camera" Multiplicity="0..1" />
+          <End Type="MainModel.Device" Role="Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Camera">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="camera" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -929,6 +1004,7 @@
           <EntitySetMapping Name="Devices">
             <EntityTypeMapping TypeName="MainModel.Device">
               <MappingFragment StoreEntitySet="Device">
+                <ScalarProperty Name="camera" ColumnName="camera" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="audio" ColumnName="audio" />
                 <ScalarProperty Name="battery" ColumnName="battery" />
@@ -1071,13 +1147,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Tables">
-            <EntityTypeMapping TypeName="MainModel.Table">
-              <MappingFragment StoreEntitySet="Table">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="MainModel.User">
               <MappingFragment StoreEntitySet="User">
@@ -1086,6 +1155,16 @@
                 <ScalarProperty Name="last_name" ColumnName="last_name" />
                 <ScalarProperty Name="password" ColumnName="password" />
                 <ScalarProperty Name="email" ColumnName="email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cameras">
+            <EntityTypeMapping TypeName="MainModel.Camera">
+              <MappingFragment StoreEntitySet="Camera">
+                <ScalarProperty Name="frame_rate" ColumnName="frame_rate" />
+                <ScalarProperty Name="megapixels" ColumnName="megapixels" />
+                <ScalarProperty Name="resolution" ColumnName="resolution" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

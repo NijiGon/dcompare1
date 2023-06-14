@@ -7,9 +7,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace dcompare1
+namespace dcompare1.Views
 {
-    public partial class Home : System.Web.UI.Page
+    public partial class HomeView : System.Web.UI.Page
     {
         public List<Device> devices = new List<Device>();
         protected void Page_Load(object sender, EventArgs e)

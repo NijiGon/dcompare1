@@ -4,11 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9e70fe57a3944e83b5be80c422c2c5ff" Name="Diagram1">
+      <Diagram DiagramId="9e70fe57a3944e83b5be80c422c2c5ff" Name="Diagram1" ZoomLevel="74">
         <EntityTypeShape EntityType="MainModel.Audio" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="MainModel.Battery" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
         <EntityTypeShape EntityType="MainModel.Connectivity" Width="1.5" PointX="0.75" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="MainModel.Device" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MainModel.Device" Width="1.5" PointX="3.375" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MainModel.Dimension" Width="1.5" PointX="0.75" PointY="14" IsExpanded="true" />
         <EntityTypeShape EntityType="MainModel.Display" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MainModel.Graphic" Width="1.5" PointX="0.75" PointY="19.875" IsExpanded="true" />
@@ -20,7 +20,6 @@
         <EntityTypeShape EntityType="MainModel.Review" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MainModel.Security" Width="1.5" PointX="0.75" PointY="34.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MainModel.Storage" Width="1.5" PointX="0.75" PointY="37.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="MainModel.Table" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MainModel.User" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
         <AssociationConnector Association="MainModel.FK_Device_Audio" ManuallyRouted="false" />
         <AssociationConnector Association="MainModel.FK_Device_Battery" ManuallyRouted="false" />
@@ -36,6 +35,9 @@
         <AssociationConnector Association="MainModel.FK_Laptop_Keyboard" ManuallyRouted="false" />
         <AssociationConnector Association="MainModel.FK_Review_ToDevice" ManuallyRouted="false" />
         <AssociationConnector Association="MainModel.FK_Review_ToUser" ManuallyRouted="false" />
+        <AssociationConnector Association="MainModel.FK_Device_Memory" />
+        <EntityTypeShape EntityType="MainModel.Camera" Width="1.5" PointX="1.125" PointY="0.75" />
+        <AssociationConnector Association="MainModel.FK_Device_Camera" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

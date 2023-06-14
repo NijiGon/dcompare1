@@ -106,7 +106,9 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\Compare1.aspx" />
     <Content Include="Views\Compare1Device.aspx" />
+    <Content Include="Views\HomeView.aspx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\Register.aspx" />
     <Content Include="Views\Home.aspx" />
@@ -125,6 +127,9 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Battery.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Camera.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Connectivity.cs">
@@ -181,9 +186,6 @@
     <Compile Include="Model\Storage.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Table.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\User.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -193,12 +195,26 @@
     <Compile Include="Factory\UserFactory.cs" />
     <Compile Include="Repository\DatabaseSingleton.cs" />
     <Compile Include="Repository\UserRepo.cs" />
+    <Compile Include="Views\Compare1.aspx.cs">
+      <DependentUpon>Compare1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Compare1.aspx.designer.cs">
+      <DependentUpon>Compare1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Compare1Device.aspx.cs">
       <DependentUpon>Compare1Device.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Compare1Device.aspx.designer.cs">
       <DependentUpon>Compare1Device.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HomeView.aspx.cs">
+      <DependentUpon>HomeView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\HomeView.aspx.designer.cs">
+      <DependentUpon>HomeView.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
