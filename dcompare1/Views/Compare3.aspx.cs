@@ -20,7 +20,11 @@ namespace dcompare1.Views
         public double rating2;
         public double rating3;
         public int dimensionWinner, displayWinner, audioWinner, processorWinner, graphicsWinner, ramWinner, storageWinner, fcameraWinner, rcameraWinner;
-
+        public string type1 = "";
+        public string type2 = "border-end";
+        public string type3 = "border border-4 border-bottom-0 border-top-0";
+        public string type4 = "border border-4 border-top-0";
+        public string type5 = "border border-4 border-bottom-0";
         public int winner;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -28,6 +32,7 @@ namespace dcompare1.Views
             int id = Convert.ToInt32(Request.QueryString["id"]);
             int id2 = Convert.ToInt32(Request.QueryString["id2"]);
             int id3 = Convert.ToInt32(Request.QueryString["id3"]);
+            
             devices = DeviceRepo.GetDevices();
             d = DeviceRepo.FindById(id);
             d2 = DeviceRepo.FindById(id2);

@@ -16,30 +16,165 @@ namespace dcompare1.Algo
             if (dimensionWinner == 1) count++;
             else if (dimensionWinner == 2) count2++;
             else if (dimensionWinner == 3) count3++;
+            else if (dimensionWinner == 12)
+            {
+                count++;
+                count2++;
+            }
+            else if (dimensionWinner == 13)
+            {
+                count++;
+                count3++;
+            }
+            else if (dimensionWinner == 23)
+            {
+                count2++;
+                count3++;
+            }
             if (displayWinner == 1) count++;
             else if (displayWinner == 2) count2++;
             else if (displayWinner == 3) count3++;
+            else if (displayWinner == 12)
+            {
+                count++;
+                count2++;
+            }
+            else if (displayWinner == 13)
+            {
+                count++;
+                count3++;
+            }
+            else if (displayWinner == 23)
+            {
+                count2++;
+                count3++;
+            }
             if (audioWinner == 1) count++;
             else if (audioWinner == 2) count2++;
             else if (audioWinner == 3) count3++;
+            else if (audioWinner == 12)
+            {
+                count++;
+                count2++;
+            }
+            else if (audioWinner == 13)
+            {
+                count++;
+                count3++;
+            }
+            else if (audioWinner == 23)
+            {
+                count2++;
+                count3++;
+            }
             if (processorWinner == 1) count++;
             else if (processorWinner == 2) count2++;
             else if (processorWinner == 3) count3++;
+            else if (processorWinner == 12)
+            {
+                count++;
+                count2++;
+            }
+            else if (processorWinner == 13)
+            {
+                count++;
+                count3++;
+            }
+            else if (processorWinner == 23)
+            {
+                count2++;
+                count3++;
+            }
             if (graphicsWinner == 1) count++;
             else if (graphicsWinner == 2) count2++;
             else if (graphicsWinner == 3) count3++;
+            else if (graphicsWinner == 12)
+            {
+                count++;
+                count2++;
+            }
+            else if (graphicsWinner == 13)
+            {
+                count++;
+                count3++;
+            }
+            else if (graphicsWinner == 23)
+            {
+                count2++;
+                count3++;
+            }
             if (ramWinner == 1) count++;
             else if (ramWinner == 2) count2++;
             else if (ramWinner == 3) count3++;
+            else if (ramWinner == 12)
+            {
+                count++;
+                count2++;
+            }
+            else if (ramWinner == 13)
+            {
+                count++;
+                count3++;
+            }
+            else if (ramWinner == 23)
+            {
+                count2++;
+                count3++;
+            }
             if (storageWinner == 1) count++;
             else if (storageWinner == 2) count2++;
             else if (storageWinner == 3) count3++;
+            else if (storageWinner == 12)
+            {
+                count++;
+                count2++;
+            }
+            else if (storageWinner == 13)
+            {
+                count++;
+                count3++;
+            }
+            else if (storageWinner == 23)
+            {
+                count2++;
+                count3++;
+            }
             if (fcameraWinner == 1) count++;
             else if (fcameraWinner == 2) count2++;
             else if (fcameraWinner == 3) count3++;
+            else if (fcameraWinner == 12)
+            {
+                count++;
+                count2++;
+            }
+            else if (fcameraWinner == 13)
+            {
+                count++;
+                count3++;
+            }
+            else if (fcameraWinner == 23)
+            {
+                count2++;
+                count3++;
+            }
             if (rcameraWinner == 1) count++;
             else if (rcameraWinner == 2) count2++;
             else if (rcameraWinner == 3) count3++;
+            else if (rcameraWinner == 12)
+            {
+                count++;
+                count2++;
+            }
+            else if (rcameraWinner == 13)
+            {
+                count++;
+                count3++;
+            }
+            else if (rcameraWinner == 23)
+            {
+                count2++;
+                count3++;
+            }
             return chooseWinner3Device(count, count2, count3);
         }
         public static int chooseWinner3Device(double? n1, double? n2, double? n3)
@@ -185,7 +320,7 @@ namespace dcompare1.Algo
             conditional(temp, ref sub1, ref sub2, ref sub3);
             temp = chooseWinner3Device(d.Memory1.max_capacity, d2.Memory1.max_capacity, d3.Memory1.max_capacity);
             conditional(temp, ref sub1, ref sub2, ref sub3);
-            return chooseWinner3Device(sub1, sub2, sub3);
+            return 23;
         }
         public static int compareStorage(Device d, Device d2, Device d3)
         {

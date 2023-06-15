@@ -156,7 +156,7 @@
 
                     <li id="login" class="nav-item me-auto d-flex">
                         <div id="line" class="vr my-2"></div>
-                        <a class="nav-link fw-bold">Login</a>
+                        <a class="nav-link fw-bold"><%= uname %></a>
                     </li>
                 </ul>                  
             </div>               

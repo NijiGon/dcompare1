@@ -8,7 +8,7 @@
     <div class="col">
         <div class="" style="padding-top: 80px;">
             <div class="">
-                <img src="../Asset/devices/phones/<%= d.image %>" alt="" class="me-5 shadow z-0" style="width: 155px;">
+                <img src="../Asset/devices/phones/<%= d.image %>" alt="" class="me-5 shadow z-0" style="height: 312px;">
                 <div class="z-1" style="margin-top: -25%; margin-left: 7vw;">
                     <svg width="5vw" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <%if (winner == 1) { %>
@@ -36,7 +36,7 @@
     <div class="col">
         <div style="padding-top: 80px; padding-bottom: 80px;">
             <div class="">
-                <img src="../Asset/devices/phones/<%= d2.image %>" alt="" class="me-5 shadow z-0 rounded-4" style="width: 155px;">
+                <img src="../Asset/devices/phones/<%= d2.image %>" alt="" class="me-5 shadow z-0 rounded-4" style="height: 312px;">
                 <div class="z-1 crown-hid" style="margin-top: -60px; margin-left: 100px;">
                     <svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <%if (winner == 2) { %>

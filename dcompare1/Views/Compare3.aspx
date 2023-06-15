@@ -8,10 +8,10 @@
         <div class="col">
         <div class="" style="padding-top: 80px;">
             <div class="">
-                <img src="../Asset/devices/phones/<%= d.image %>" alt="" class="me-5 shadow z-0" style="width: 155px;">
+                <img src="../Asset/devices/phones/<%= d.image %>" alt="" class="me-5 shadow z-0 rounded-4" style="height: 312px">
                 <div class="z-1" style="margin-top: -25%; margin-left: 7vw;">
                     <svg width="5vw" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <% if (winner == 1) { %>
+                        <% if (winner == 1 || winner == 12 || winner == 13) { %>
                         <circle cx="38" cy="38" r="38" fill="white"/>
                         <path d="M38 0C16.986 0 0 17.1 0 38C0 58.9 17.1 76 38 76C58.9 76 76 58.9 76 38C76 17.1 58.9 0 38 0ZM53.2 51.072C53.2 52.364 52.364 53.2 51.072 53.2H24.928C23.636 53.2 22.8 52.364 22.8 51.072V49.4H53.2V51.072ZM53.2 45.6H22.8L19 22.8L30.4 30.4L38 19L45.6 30.4L57 22.8L53.2 45.6Z" fill="#6300E1"/>
                         <%} %>
@@ -21,7 +21,7 @@
 
             <div class="z-1" style="max-width: 70%;">
                 <p class="fw-medium h3 lh-1">
-                    <%=processorWinner %>
+                    <%= d.name %>
                 </p>
             </div>            
     
@@ -36,10 +36,10 @@
         <div class="col">
         <div style="padding-top: 80px; padding-bottom: 80px;">
             <div class="">
-                <img src="../Asset/devices/phones/<%= d2.image %>" alt="" class="me-5 shadow z-0 rounded-4" style="width: 155px;">
+                <img src="../Asset/devices/phones/<%= d2.image %>" alt="" class="me-5 shadow z-0 rounded-4" style="height: 312px">
                 <div class="z-1 crown-hid" style="margin-top: -60px; margin-left: 100px;">
                     <svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <% if (winner == 2) { %>
+                        <% if (winner == 2 || winner == 12 || winner == 23) { %>
                         <circle cx="38" cy="38" r="38" fill="white"/>
                         <path d="M38 0C16.986 0 0 17.1 0 38C0 58.9 17.1 76 38 76C58.9 76 76 58.9 76 38C76 17.1 58.9 0 38 0ZM53.2 51.072C53.2 52.364 52.364 53.2 51.072 53.2H24.928C23.636 53.2 22.8 52.364 22.8 51.072V49.4H53.2V51.072ZM53.2 45.6H22.8L19 22.8L30.4 30.4L38 19L45.6 30.4L57 22.8L53.2 45.6Z" fill="#6300E1"/>
                         <%} %>
@@ -64,10 +64,10 @@
         <div class="col">
         <div class="" style="padding-top: 80px; padding-bottom: 80px;">
             <div class="">
-                <img src="../Asset/devices/phones/<%= d3.image %>" alt="" class="me-5 shadow z-0" style="width: 148px;">
+                <img src="../Asset/devices/phones/<%= d3.image %>" alt="" class="me-5 shadow z-0 rounded-4" style="height: 312px">
                 <div class="z-1" style="margin-top: -60px; margin-left: 100px;">
-                    <svg class="crown-hid" width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <% if (winner == 3) { %>
+                    <svg class="" width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <% if (winner == 3 || winner == 13 || winner == 23) { %>
                         <circle cx="38" cy="38" r="38" fill="white"/>
                         <path d="M38 0C16.986 0 0 17.1 0 38C0 58.9 17.1 76 38 76C58.9 76 76 58.9 76 38C76 17.1 58.9 0 38 0ZM53.2 51.072C53.2 52.364 52.364 53.2 51.072 53.2H24.928C23.636 53.2 22.8 52.364 22.8 51.072V49.4H53.2V51.072ZM53.2 45.6H22.8L19 22.8L30.4 30.4L38 19L45.6 30.4L57 22.8L53.2 45.6Z" fill="#6300E1"/>
                         <%} %>
@@ -90,7 +90,7 @@
         </div>
         </div>
         <div class="col">
-        <div class="" style="margin-top: 110%;">
+        <div class="" style="margin-top: 160%;">
             <a href="">
                 <button class="" style="background-color: #E8E8E8; border-color: transparent;">
                 <svg width="90" height="90" viewBox="0 0 97 97" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -129,7 +129,7 @@
                     <p class="h5 fw-bold"><%= d.name %></p>
                   
                     <div class="mb-4">
-                        <button class="btn rounded-4 fw-bold" style="width: 25rem; padding: 1.5%; background-color: #353535; color: white;">ulasan anda</button>
+                        <a href="Compare1.aspx?id=<%= d.Id %>" class="btn rounded-4 fw-bold" style="width: 25rem; padding: 1.5%; background-color: #353535; color: white;">ulasan anda</a>
                     </div>
                 </div>
             </th>
@@ -137,7 +137,7 @@
                 <div class="d-flex flex-column align-items-start">
                     <p class="h5 fw-bold"><%= d2.name %></p>
                     <div class="mb-4">
-                        <button class="btn rounded-4 fw-bold" style="width: 25rem; padding: 1.5%; background-color: #353535; color: white;">ulasan anda</button>
+                        <a href="Compare1.aspx?id=<%= d2.Id %>" class="btn rounded-4 fw-bold" style="width: 25rem; padding: 1.5%; background-color: #353535; color: white;">ulasan anda</a>
                     </div>
                 </div>
             </th>
@@ -145,7 +145,7 @@
                 <div class="d-flex flex-column align-items-start">
                     <p class="h5 fw-bold"><%= d3.name %></p>
                     <div class="mb-4">
-                        <button class="btn rounded-4 fw-bold" style="width: 25rem; padding: 1.5%; background-color: #353535; color: white;">ulasan anda</button>
+                        <a href="Compare1.aspx?id=<%= d3.Id %>" class="btn rounded-4 fw-bold" style="width: 25rem; padding: 1.5%; background-color: #353535; color: white;">ulasan anda</a>
                     </div>
                 </div>
             </th>
@@ -161,74 +161,32 @@
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Panjang</p>    
             </th>
-            <% if (dimensionWinner == 1 || dimensionWinner == 13 || dimensionWinner == 12) { %>
-            <td class="border border-4 border-bottom-0"><%= d.Dimension1.length %> </td>
-            <td class="border-end"><%= d2.Dimension1.length %> </td>
-            <td class=""><%= d3.Dimension1.length %> </td>
-            <%} else if (dimensionWinner == 2 || dimensionWinner == 23 || dimensionWinner == 12) {%>
-            <td class="border-end"><%= d.Dimension1.length %> </td>
-            <td class="border border-4 border-bottom-0"><%= d2.Dimension1.length %> </td>
-            <td class=""><%= d3.Dimension1.length %> </td>
-            <%} else if (dimensionWinner == 3 || dimensionWinner == 13 || dimensionWinner == 23) {%>
-            <td class="border-end"><%= d.Dimension1.length %> </td>
-            <td class="border-end"><%= d2.Dimension1.length %> </td>
-            <td class="border border-4 border-bottom-0"><%= d3.Dimension1.length %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Dimension1.length %> </td>
-            <td class="border-end"><%= d2.Dimension1.length %> </td>
-            <td class=""><%= d3.Dimension1.length %> </td>
-            <%} %>
+            <td class="<% if (dimensionWinner == 1 || dimensionWinner == 12 || dimensionWinner == 13) Response.Write(type5); else Response.Write(type2);  %>"><%= d.Dimension1.length %> </td>
+            <td class="<% if (dimensionWinner == 2 || dimensionWinner == 12 || dimensionWinner == 23) Response.Write(type5); else Response.Write(type2);  %>"><%= d2.Dimension1.length %> </td>
+            <td class="<% if (dimensionWinner == 3 || dimensionWinner == 23 || dimensionWinner == 13) Response.Write(type5); else Response.Write(type1);  %>"><%= d3.Dimension1.length %> </td>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Lebar</p>    
             </th>
-            <% if (dimensionWinner == 1 || dimensionWinner == 13 || dimensionWinner == 12) { %>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Dimension1.width %> </td>
-            <td class="border-end"><%= d2.Dimension1.width %> </td>
-            <td class=""><%= d3.Dimension1.width %> </td>
-            <%} else if (dimensionWinner == 2 || dimensionWinner == 23 || dimensionWinner == 12) {%>
-            <td class="border-end"><%= d.Dimension1.width %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Dimension1.width %> </td>
-            <td class=""><%= d3.Dimension1.width %> </td>
-            <%} else if (dimensionWinner == 3 || dimensionWinner == 13 || dimensionWinner == 23) {%>
-            <td class="border-end"><%= d.Dimension1.width %> </td>
-            <td class="border-end"><%= d2.Dimension1.width %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Dimension1.width %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Dimension1.width %> </td>
-            <td class="border-end"><%= d2.Dimension1.width %> </td>
-            <td class=""><%= d3.Dimension1.width %> </td>
-            <%} %>
+            <td class="<% if (dimensionWinner == 1 || dimensionWinner == 12 || dimensionWinner == 13) Response.Write(type3); else Response.Write(type2);  %>"><%= d.Dimension1.width %> </td>
+            <td class="<% if (dimensionWinner == 2 || dimensionWinner == 12 || dimensionWinner == 23) Response.Write(type3); else Response.Write(type2);  %>"><%= d2.Dimension1.width %> </td>
+            <td class="<% if (dimensionWinner == 3 || dimensionWinner == 23 || dimensionWinner == 13) Response.Write(type3); else Response.Write(type1);  %>"><%= d3.Dimension1.width %> </td>
         </tr>
         <tr class="">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Tinggi</p>    
             </th>
-            <% if (dimensionWinner == 1 || dimensionWinner == 13 || dimensionWinner == 12) { %>
-            <td class="border border-4 border-top-0"><%= d.Dimension1.height %> </td>
-            <td class="border-end"><%= d2.Dimension1.height %> </td>
-            <td class=""><%= d3.Dimension1.height %> </td>
-            <%} else if (dimensionWinner == 2 || dimensionWinner == 23 || dimensionWinner == 12) {%>
-            <td class="border-end"><%= d.Dimension1.height %> </td>
-            <td class="border border-4 border-top-0"><%= d2.Dimension1.height %> </td>
-            <td class=""><%= d3.Dimension1.height %> </td>
-            <%} else if (dimensionWinner == 3 || dimensionWinner == 13 || dimensionWinner == 23) {%>
-            <td class="border-end"><%= d.Dimension1.height %> </td>
-            <td class="border-end"><%= d2.Dimension1.height %> </td>
-            <td class="border border-4 border-top-0"><%= d3.Dimension1.height %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Dimension1.height %> </td>
-            <td class="border-end"><%= d2.Dimension1.height %> </td>
-            <td class=""><%= d3.Dimension1.height %> </td>
-            <%} %>
+            <td class="<% if (dimensionWinner == 1 || dimensionWinner == 12 || dimensionWinner == 13) Response.Write(type4); else Response.Write(type2);  %>"><%= d.Dimension1.height %> </td>
+            <td class="<% if (dimensionWinner == 2 || dimensionWinner == 12 || dimensionWinner == 23) Response.Write(type4); else Response.Write(type2);  %>"><%= d2.Dimension1.height %> </td>
+            <td class="<% if (dimensionWinner == 3 || dimensionWinner == 23 || dimensionWinner == 13) Response.Write(type4); else Response.Write(type1);  %>"><%= d3.Dimension1.height %> </td>
         </tr>
 
         <tr>
             <th scope="row" class="fs-5">
                 <p id="spec-subgrup" class="mb-minus2" style="margin-top: 10px;">Layar</p>    
             </th>
-            <%if (dimensionWinner != 0) { %>
+            <%if (dimensionWinner >= 1 && dimensionWinner <=3) { %>
             <%if (dimensionWinner == 2) { %>
             <td></td>
             <%} %>
@@ -251,118 +209,48 @@
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Panjang</p>    
             </th>
-            <% if (displayWinner == 1 || displayWinner == 12 || displayWinner == 13) { %>
-            <td class="border border-4 border-bottom-0 "><%= d.Display1.height %> </td>
-            <td class="border-end"><%= d2.Display1.height %> </td>
-            <td class=""><%= d3.Display1.height %> </td>
-            <%} else if (displayWinner == 2 || displayWinner == 12 || displayWinner == 23) {%>
-            <td class="border-end"><%= d.Display1.height %> </td>
-            <td class="border border-4 border-bottom-0"><%= d2.Display1.height %> </td>
-            <td class=""><%= d3.Display1.height %> </td>
-            <%} else if (displayWinner == 3 || displayWinner == 13 || displayWinner == 23) {%>
-            <td class="border-end"><%= d.Display1.height %> </td>
-            <td class="border-end"><%= d2.Display1.height %> </td>
-            <td class="border border-4 border-bottom-0"><%= d3.Display1.height %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Display1.height %> </td>
-            <td class="border-end"><%= d2.Display1.height %> </td>
-            <td class=""><%= d3.Display1.height %> </td>
-            <%} %>
+            <td class="<% if (displayWinner == 1 || displayWinner == 12 || displayWinner == 13) Response.Write(type5); else Response.Write(type2);  %>"><%= d.Display1.height %> </td>
+            <td class="<% if (displayWinner == 2 || displayWinner == 12 || displayWinner == 23) Response.Write(type5); else Response.Write(type2);  %>"><%= d2.Display1.height %> </td>
+            <td class="<% if (displayWinner == 3 || displayWinner == 23 || displayWinner == 13) Response.Write(type5); else Response.Write(type1);  %>"><%= d3.Display1.height %> </td>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Lebar</p>    
             </th>
-            <% if (displayWinner == 1 || displayWinner == 12 || displayWinner == 13) { %>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Display1.width %> </td>
-            <td class="border-end"><%= d2.Display1.width %> </td>
-            <td class=""><%= d3.Display1.width %> </td>
-            <%} else if (displayWinner == 2 || displayWinner == 12 || displayWinner == 23) {%>
-            <td class="border-end"><%= d.Display1.width %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Display1.width %> </td>
-            <td class=""><%= d3.Display1.width %> </td>
-            <%} else if (displayWinner == 3 || displayWinner == 13 || displayWinner == 23) {%>
-            <td class="border-end"><%= d.Display1.width %> </td>
-            <td class="border-end"><%= d2.Display1.width %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Display1.width %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Display1.width %> </td>
-            <td class="border-end"><%= d2.Display1.width %> </td>
-            <td class=""><%= d3.Display1.width %> </td>
-            <%} %>
+            <td class="<% if (displayWinner == 1 || displayWinner == 12 || displayWinner == 13) Response.Write(type3); else Response.Write(type2);  %>"><%= d.Display1.width %> </td>
+            <td class="<% if (displayWinner == 2 || displayWinner == 12 || displayWinner == 23) Response.Write(type3); else Response.Write(type2);  %>"><%= d2.Display1.width %> </td>
+            <td class="<% if (displayWinner == 3 || displayWinner == 23 || displayWinner == 13) Response.Write(type3); else Response.Write(type1);  %>"><%= d3.Display1.width %> </td>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Refresh Rate</p>    
             </th>
-            <% if (displayWinner == 1 || displayWinner == 12 || displayWinner == 13) { %>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Display1.refresh_rate %> </td>
-            <td class="border-end"><%= d2.Display1.refresh_rate %> </td>
-            <td class=""><%= d3.Display1.refresh_rate %> </td>
-            <%} else if (displayWinner == 2 || displayWinner == 12 || displayWinner == 23) {%>
-            <td class="border-end"><%= d.Display1.refresh_rate %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Display1.refresh_rate %> </td>
-            <td class=""><%= d3.Display1.refresh_rate %> </td>
-            <%} else if (displayWinner == 3 || displayWinner == 13 || displayWinner == 23) {%>
-            <td class="border-end"><%= d.Display1.refresh_rate %> </td>
-            <td class="border-end"><%= d2.Display1.refresh_rate %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Display1.refresh_rate %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Display1.refresh_rate %> </td>
-            <td class="border-end"><%= d2.Display1.refresh_rate %> </td>
-            <td class=""><%= d3.Display1.refresh_rate %> </td>
-            <%} %>
+            <td class="<% if (displayWinner == 1 || displayWinner == 12 || displayWinner == 13) Response.Write(type3); else Response.Write(type2);  %>"><%= d.Display1.refresh_rate %> </td>
+            <td class="<% if (displayWinner == 2 || displayWinner == 12 || displayWinner == 23) Response.Write(type3); else Response.Write(type2);  %>"><%= d2.Display1.refresh_rate %> </td>
+            <td class="<% if (displayWinner == 3 || displayWinner == 23 || displayWinner == 13) Response.Write(type3); else Response.Write(type1);  %>"><%= d3.Display1.refresh_rate %> </td>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Gamut Warna</p>    
             </th>
-            <% if (displayWinner == 1 || displayWinner == 12 || displayWinner == 13) { %>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Display1.color_gamut %> </td>
-            <td class="border-end"><%= d2.Display1.color_gamut %> </td>
-            <td class=""><%= d3.Display1.color_gamut %> </td>
-            <%} else if (displayWinner == 2 || displayWinner == 12 || displayWinner == 23) {%>
-            <td class="border-end"><%= d.Display1.color_gamut %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Display1.color_gamut %> </td>
-            <td class=""><%= d3.Display1.color_gamut %> </td>
-            <%} else if (displayWinner == 3 || displayWinner == 13 || displayWinner == 23) {%>
-            <td class="border-end"><%= d.Display1.color_gamut %> </td>
-            <td class="border-end"><%= d2.Display1.color_gamut %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Display1.color_gamut %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Display1.color_gamut %> </td>
-            <td class="border-end"><%= d2.Display1.color_gamut %> </td>
-            <td class=""><%= d3.Display1.color_gamut %> </td>
-            <%} %>
+            <td class="<% if (displayWinner == 1 || displayWinner == 12 || displayWinner == 13) Response.Write(type3); else Response.Write(type2);  %>"><%= d.Display1.color_gamut %> </td>
+            <td class="<% if (displayWinner == 2 || displayWinner == 12 || displayWinner == 23) Response.Write(type3); else Response.Write(type2);  %>"><%= d2.Display1.color_gamut %> </td>
+            <td class="<% if (displayWinner == 3 || displayWinner == 23 || displayWinner == 13) Response.Write(type3); else Response.Write(type1);  %>"><%= d3.Display1.color_gamut %> </td>
         </tr>
         <tr class="">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Ukuran</p>    
             </th>
-            <% if (displayWinner == 1 || displayWinner == 12 || displayWinner == 13) { %>
-            <td class="border border-4 border-top-0"><%= d.Display1.size %> </td>
-            <td class="border-end"><%= d2.Display1.size %> </td>
-            <td class=""><%= d3.Display1.size %> </td>
-            <%} else if (displayWinner == 2 || displayWinner == 12 || displayWinner == 23) {%>
-            <td class="border-end"><%= d.Display1.size %> </td>
-            <td class="border border-4 border-top-0"><%= d2.Display1.size %> </td>
-            <td class=""><%= d3.Display1.size %> </td>
-            <%} else if (displayWinner == 3 || displayWinner == 13 || displayWinner == 23) {%>
-            <td class="border-end"><%= d.Display1.size %> </td>
-            <td class="border-end"><%= d2.Display1.size %> </td>
-            <td class="border border-4 border-top-0"><%= d3.Display1.size %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Display1.size %> </td>
-            <td class="border-end"><%= d2.Display1.size %> </td>
-            <td class=""><%= d3.Display1.size %> </td>
-            <%} %>
+            <td class="<% if (displayWinner == 1 || displayWinner == 12 || displayWinner == 13) Response.Write(type4); else Response.Write(type2);  %>"><%= d.Display1.size %> </td>
+            <td class="<% if (displayWinner == 2 || displayWinner == 12 || displayWinner == 23) Response.Write(type4); else Response.Write(type2);  %>"><%= d2.Display1.size %> </td>
+            <td class="<% if (displayWinner == 3 || displayWinner == 23 || displayWinner == 13) Response.Write(type4); else Response.Write(type1);  %>"><%= d3.Display1.size %> </td>
         </tr>
 
         <tr>
             <th scope="row" class="fs-5">
                 <p id="spec-subgrup" class="mb-minus5" style="margin-top: 10px;">Suara</p>    
             </th>
-            <%if (displayWinner != 0) { %>
+            <%if (displayWinner >= 1 && displayWinner <=3) { %>
             <%if (displayWinner == 2) { %>
             <td></td>
             <%} %>
@@ -384,95 +272,38 @@
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Nama</p>    
             </th>
-            <% if (audioWinner == 1 || audioWinner == 12 || audioWinner == 13) { %>
-            <td class="border border-4 border-bottom-0"><%= d.Audio1.name %> </td>
-            <td class="border-end"><%= d2.Audio1.name %> </td>
-            <td class=""><%= d3.Audio1.name %> </td>
-            <%} else if (audioWinner == 2 || audioWinner == 12 || audioWinner == 23) {%>
-            <td class="border-end"><%= d.Audio1.name %> </td>
-            <td class="border border-4 border-bottom-0"><%= d2.Audio1.name %> </td>
-            <td class=""><%= d3.Audio1.name %> </td>
-            <%} else if (audioWinner == 3 || audioWinner == 13 || audioWinner == 23) {%>
-            <td class="border-end"><%= d.Audio1.name %> </td>
-            <td class="border-end"><%= d2.Audio1.name %> </td>
-            <td class="border border-4 border-bottom-0"><%= d3.Audio1.name %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Audio1.name %> </td>
-            <td class="border-end"><%= d2.Audio1.name %> </td>
-            <td class=""><%= d3.Audio1.name %> </td>
-            <%} %>
+            <td class="<% if (audioWinner == 1 || audioWinner == 12 || audioWinner == 13) Response.Write(type5); else Response.Write(type2);  %>"><%= d.Audio1.name %> </td>
+            <td class="<% if (audioWinner == 2 || audioWinner == 12 || audioWinner == 23) Response.Write(type5); else Response.Write(type2);  %>"><%= d2.Audio1.name %> </td>
+            <td class="<% if (audioWinner == 3 || audioWinner == 23 || audioWinner == 13) Response.Write(type5); else Response.Write(type1);  %>"><%= d3.Audio1.name %> </td>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Tipe</p>    
             </th>
-            <% if (audioWinner == 1 || audioWinner == 12 || audioWinner == 13) { %>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Audio1.type %> </td>
-            <td class="border-end"><%= d2.Audio1.type %> </td>
-            <td class=""><%= d3.Audio1.type %> </td>
-            <%} else if (audioWinner == 2 || audioWinner == 12 || audioWinner == 23) {%>
-            <td class="border-end"><%= d.Audio1.type %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Audio1.type %> </td>
-            <td class=""><%= d3.Audio1.type %> </td>
-            <%} else if (audioWinner == 3 || audioWinner == 13 || audioWinner == 23) {%>
-            <td class="border-end"><%= d.Audio1.type %> </td>
-            <td class="border-end"><%= d2.Audio1.type %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Audio1.type %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Audio1.type %> </td>
-            <td class="border-end"><%= d2.Audio1.type %> </td>
-            <td class=""><%= d3.Audio1.type %> </td>
-            <%} %>
-        </tr>
+            <td class="<% if (audioWinner == 1 || audioWinner == 12 || audioWinner == 13) Response.Write(type3); else Response.Write(type2);  %>"><%= d.Audio1.type %> </td>
+            <td class="<% if (audioWinner == 2 || audioWinner == 12 || audioWinner == 23) Response.Write(type3); else Response.Write(type2);  %>"><%= d2.Audio1.type %> </td>
+            <td class="<% if (audioWinner == 3 || audioWinner == 23 || audioWinner == 13) Response.Write(type3); else Response.Write(type1);  %>"><%= d3.Audio1.type %> </td>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Mikrofon</p>    
             </th>
-            <% if (audioWinner == 1 || audioWinner == 12 || audioWinner == 13) { %>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Audio1.microphone %> </td>
-            <td class="border-end"><%= d2.Audio1.microphone %> </td>
-            <td class=""><%= d3.Audio1.microphone %> </td>
-            <%} else if (audioWinner == 2 || audioWinner == 12 || audioWinner == 23) {%>
-            <td class="border-end"><%= d.Audio1.microphone %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Audio1.microphone %> </td>
-            <td class=""><%= d3.Audio1.microphone %> </td>
-            <%} else if (audioWinner == 3 || audioWinner == 13 || audioWinner == 23) {%>
-            <td class="border-end"><%= d.Audio1.microphone %> </td>
-            <td class="border-end"><%= d2.Audio1.microphone %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Audio1.microphone %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Audio1.microphone %> </td>
-            <td class="border-end"><%= d2.Audio1.microphone %> </td>
-            <td class=""><%= d3.Audio1.microphone %> </td>
-            <%} %>
+            <td class="<% if (audioWinner == 1 || audioWinner == 12 || audioWinner == 13) Response.Write(type3); else Response.Write(type2);  %>"><%= d.Audio1.microphone %> </td>
+            <td class="<% if (audioWinner == 2 || audioWinner == 12 || audioWinner == 23) Response.Write(type3); else Response.Write(type2);  %>"><%= d2.Audio1.microphone %> </td>
+            <td class="<% if (audioWinner == 3 || audioWinner == 23 || audioWinner == 13) Response.Write(type3); else Response.Write(type1);  %>"><%= d3.Audio1.microphone %> </td>
         </tr>
         <tr class="">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Jumlah Speaker</p>    
             </th>
-            <% if (audioWinner == 1 || audioWinner == 12 || audioWinner == 13) { %>
-            <td class="border border-4 border-top-0"><%= d.Audio1.quantity %> </td>
-            <td class="border-end"><%= d2.Audio1.quantity %> </td>
-            <td class=""><%= d3.Audio1.quantity %> </td>
-            <%} else if (audioWinner == 2 || audioWinner == 12 || audioWinner == 23) {%>
-            <td class="border-end"><%= d.Audio1.quantity %> </td>
-            <td class="border border-4 border-top-0"><%= d2.Audio1.quantity %> </td>
-            <td class=""><%= d3.Audio1.quantity %> </td>
-            <%} else if (audioWinner == 3 || audioWinner == 13 || audioWinner == 23) {%>
-            <td class="border-end"><%= d.Audio1.quantity %> </td>
-            <td class="border-end"><%= d2.Audio1.quantity %> </td>
-            <td class="border border-4 border-top-0"><%= d3.Audio1.quantity %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Audio1.quantity %> </td>
-            <td class="border-end"><%= d2.Audio1.quantity %> </td>
-            <td class=""><%= d3.Audio1.quantity %> </td>
-            <%} %>
+            <td class="<% if (audioWinner == 1 || audioWinner == 12 || audioWinner == 13) Response.Write(type4); else Response.Write(type2);  %>"><%= d.Audio1.quantity %> </td>
+            <td class="<% if (audioWinner == 2 || audioWinner == 12 || audioWinner == 23) Response.Write(type4); else Response.Write(type2);  %>"><%= d2.Audio1.quantity %> </td>
+            <td class="<% if (audioWinner == 3 || audioWinner == 23 || audioWinner == 13) Response.Write(type4); else Response.Write(type1);  %>"><%= d3.Audio1.quantity %> </td>
         </tr>
         <tr>
             <th scope="row" class="">
                 <p class="h4 text-white rounded-4 text-center" style="background-color: #353535; padding-bottom: 10px; padding-top: 10px; width: 120%;">PERFORMA</p>   
             </th>
-            <%if (audioWinner != 0) { %>
+            <%if (audioWinner >= 1 && audioWinner <=3) { %>
             <%if (audioWinner == 2) { %>
             <td></td>
             <%} %>
@@ -499,139 +330,55 @@
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Nama</p>    
             </th>
-            <% if (processorWinner == 1 || processorWinner == 12 || processorWinner == 13) { %>
-            <td class="border border-4 border-bottom-0"><%= d.Processor1.name %> </td>
-            <td class="border-end"><%= d2.Processor1.name %> </td>
-            <td class=""><%= d3.Processor1.name %> </td>
-            <%} else if (processorWinner == 2 || processorWinner == 12 || processorWinner == 23) {%>
-            <td class="border-end"><%= d.Processor1.name %> </td>
-            <td class="border border-4 border-bottom-0"><%= d2.Processor1.name %> </td>
-            <td class=""><%= d3.Processor1.name %> </td>
-            <%} else if (processorWinner == 3 || processorWinner == 13 || processorWinner == 23) {%>
-            <td class="border-end"><%= d.Processor1.name %> </td>
-            <td class="border-end"><%= d2.Processor1.name %> </td>
-            <td class="border border-4 border-bottom-0"><%= d3.Processor1.name %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Processor1.name %> </td>
-            <td class="border-end"><%= d2.Processor1.name %> </td>
-            <td class=""><%= d3.Processor1.name %> </td>
-            <%} %>
+            <td class="<% if (processorWinner == 1 || processorWinner == 12 || processorWinner == 13) Response.Write(type5); else Response.Write(type2);  %>"><%= d.Processor1.name %> </td>
+            <td class="<% if (processorWinner == 2 || processorWinner == 12 || processorWinner == 23) Response.Write(type5); else Response.Write(type2);  %>"><%= d2.Processor1.name %> </td>
+            <td class="<% if (processorWinner == 3 || processorWinner == 23 || processorWinner == 13) Response.Write(type5); else Response.Write(type1);  %>"><%= d3.Processor1.name %> </td>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Tipe</p>    
             </th>
-            <% if (processorWinner == 1 || processorWinner == 12 || processorWinner == 13) { %>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Processor1.type %> </td>
-            <td class="border-end"><%= d2.Processor1.type %> </td>
-            <td class=""><%= d3.Processor1.type %> </td>
-            <%} else if (processorWinner == 2 || processorWinner == 12 || processorWinner == 23) {%>
-            <td class="border-end"><%= d.Processor1.type %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Processor1.type %> </td>
-            <td class=""><%= d3.Processor1.type %> </td>
-            <%} else if (processorWinner == 3 || processorWinner == 13 || processorWinner == 23) {%>
-            <td class="border-end"><%= d.Processor1.type %> </td>
-            <td class="border-end"><%= d2.Processor1.type %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Processor1.type %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Processor1.type %> </td>
-            <td class="border-end"><%= d2.Processor1.type %> </td>
-            <td class=""><%= d3.Processor1.type %> </td>
-            <%} %>
+            <td class="<% if (processorWinner == 1 || processorWinner == 12 || processorWinner == 13) Response.Write(type3); else Response.Write(type2);  %>"><%= d.Processor1.type %> </td>
+            <td class="<% if (processorWinner == 2 || processorWinner == 12 || processorWinner == 23) Response.Write(type3); else Response.Write(type2);  %>"><%= d2.Processor1.type %> </td>
+            <td class="<% if (processorWinner == 3 || processorWinner == 23 || processorWinner == 13) Response.Write(type3); else Response.Write(type1);  %>"><%= d3.Processor1.type %> </td>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Pabrikan</p>    
             </th>
-            <% if (processorWinner == 1 || processorWinner == 12 || processorWinner == 13) { %>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Processor1.manufacturer %> </td>
-            <td class="border-end"><%= d2.Processor1.manufacturer %> </td>
-            <td class=""><%= d3.Processor1.manufacturer %> </td>
-            <%} else if (processorWinner == 2 || processorWinner == 12 || processorWinner == 23) {%>
-            <td class="border-end"><%= d.Processor1.manufacturer %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Processor1.manufacturer %> </td>
-            <td class=""><%= d3.Processor1.manufacturer %> </td>
-            <%} else if (processorWinner == 3 || processorWinner == 13 || processorWinner == 23) {%>
-            <td class="border-end"><%= d.Processor1.manufacturer %> </td>
-            <td class="border-end"><%= d2.Processor1.manufacturer %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Processor1.manufacturer %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Processor1.manufacturer %> </td>
-            <td class="border-end"><%= d2.Processor1.manufacturer %> </td>
-            <td class=""><%= d3.Processor1.manufacturer %> </td>
-            <%} %>
+            <td class="<% if (processorWinner == 1 || processorWinner == 12 || processorWinner == 13) Response.Write(type3); else Response.Write(type2);  %>"><%= d.Processor1.manufacturer %> </td>
+            <td class="<% if (processorWinner == 2 || processorWinner == 12 || processorWinner == 23) Response.Write(type3); else Response.Write(type2);  %>"><%= d2.Processor1.manufacturer %> </td>
+            <td class="<% if (processorWinner == 3 || processorWinner == 23 || processorWinner == 13) Response.Write(type3); else Response.Write(type1);  %>"><%= d3.Processor1.manufacturer %> </td>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Kecepatan Clock</p>    
             </th>
-            <% if (processorWinner == 1 || processorWinner == 12 || processorWinner == 13) { %>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Processor1.clock_speed %> </td>
-            <td class="border-end"><%= d2.Processor1.clock_speed %> </td>
-            <td class=""><%= d3.Processor1.clock_speed %> </td>
-            <%} else if (processorWinner == 2 || processorWinner == 12 || processorWinner == 23) {%>
-            <td class="border-end"><%= d.Processor1.clock_speed %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Processor1.clock_speed %> </td>
-            <td class=""><%= d3.Processor1.clock_speed %> </td>
-            <%} else if (processorWinner == 3 || processorWinner == 13 || processorWinner == 23) {%>
-            <td class="border-end"><%= d.Processor1.clock_speed %> </td>
-            <td class="border-end"><%= d2.Processor1.clock_speed %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Processor1.clock_speed %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Processor1.clock_speed %> </td>
-            <td class="border-end"><%= d2.Processor1.clock_speed %> </td>
-            <td class=""><%= d3.Processor1.clock_speed %> </td>
-            <%} %>
+            <td class="<% if (processorWinner == 1 || processorWinner == 12 || processorWinner == 13) Response.Write(type3); else Response.Write(type2);  %>"><%= d.Processor1.clock_speed %> </td>
+            <td class="<% if (processorWinner == 2 || processorWinner == 12 || processorWinner == 23) Response.Write(type3); else Response.Write(type2);  %>"><%= d2.Processor1.clock_speed %> </td>
+            <td class="<% if (processorWinner == 3 || processorWinner == 23 || processorWinner == 13) Response.Write(type3); else Response.Write(type1);  %>"><%= d3.Processor1.clock_speed %> </td>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Jumlah Core</p>    
             </th>
-            <% if (processorWinner == 1 || processorWinner == 12 || processorWinner == 13) { %>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Processor1.cores %> </td>
-            <td class="border-end"><%= d2.Processor1.cores %> </td>
-            <td class=""><%= d3.Processor1.cores %> </td>
-            <%} else if (processorWinner == 2 || processorWinner == 12 || processorWinner == 23) {%>
-            <td class="border-end"><%= d.Processor1.cores %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Processor1.cores %> </td>
-            <td class=""><%= d3.Processor1.cores %> </td>
-            <%} else if (processorWinner == 3 || processorWinner == 13 || processorWinner == 23) {%>
-            <td class="border-end"><%= d.Processor1.cores %> </td>
-            <td class="border-end"><%= d2.Processor1.cores %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Processor1.cores %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Processor1.cores %> </td>
-            <td class="border-end"><%= d2.Processor1.cores %> </td>
-            <td class=""><%= d3.Processor1.cores %> </td>
-            <%} %>
+            <td class="<% if (processorWinner == 1 || processorWinner == 12 || processorWinner == 13) Response.Write(type3); else Response.Write(type2);  %>"><%= d.Processor1.cores %> </td>
+            <td class="<% if (processorWinner == 2 || processorWinner == 12 || processorWinner == 23) Response.Write(type3); else Response.Write(type2);  %>"><%= d2.Processor1.cores %> </td>
+            <td class="<% if (processorWinner == 3 || processorWinner == 23 || processorWinner == 13) Response.Write(type3); else Response.Write(type1);  %>"><%= d3.Processor1.cores %> </td>
         </tr>
         <tr>
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Jumlah Thread</p>    
             </th>
-            <% if (processorWinner == 1 || processorWinner == 12 || processorWinner == 13) { %>
-            <td class="border border-4 border-top-0"><%= d.Processor1.threads %> </td>
-            <td class="border-end"><%= d2.Processor1.threads %> </td>
-            <td class=""><%= d3.Processor1.threads %> </td>
-            <%} else if (processorWinner == 2 || processorWinner == 12 || processorWinner == 23) {%>
-            <td class="border-end"><%= d.Processor1.threads %> </td>
-            <td class="border border-4 border-top-0"><%= d2.Processor1.threads %> </td>
-            <td class=""><%= d3.Processor1.threads %> </td>
-            <%} else if (processorWinner == 3 || processorWinner == 13 || processorWinner == 23) {%>
-            <td class="border-end"><%= d.Processor1.threads %> </td>
-            <td class="border-end"><%= d2.Processor1.threads %> </td>
-            <td class="border border-4 border-top-0"><%= d3.Processor1.threads %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Processor1.threads %> </td>
-            <td class="border-end"><%= d2.Processor1.threads %> </td>
-            <td class=""><%= d3.Processor1.threads %> </td>
-            <%} %>
+            <td class="<% if (processorWinner == 1 || processorWinner == 12 || processorWinner == 13) Response.Write(type4); else Response.Write(type2);  %>"><%= d.Processor1.threads %> </td>
+            <td class="<% if (processorWinner == 2 || processorWinner == 12 || processorWinner == 23) Response.Write(type4); else Response.Write(type2);  %>"><%= d2.Processor1.threads %> </td>
+            <td class="<% if (processorWinner == 3 || processorWinner == 23 || processorWinner == 13) Response.Write(type4); else Response.Write(type1);  %>"><%= d3.Processor1.threads %> </td>
         </tr>
         <tr>
             <th scope="row" class="fs-5">
                 <p id="spec-subgrup" class="mb-minus2">Grafis</p>    
             </th>
-            <%if (processorWinner != 0) { %>
+            <%if (processorWinner >= 1 && processorWinner <=3) { %>
             <%if (processorWinner == 2) { %>
             <td></td>
             <%} %>
@@ -653,161 +400,62 @@
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Nama</p>    
             </th>
-            <% if (graphicsWinner == 1 || graphicsWinner == 12 || graphicsWinner == 13) { %>
-            <td class="border border-4 border-bottom-0"><%= d.Graphic.name %> </td>
-            <td class="border-end"><%= d2.Graphic.name %> </td>
-            <td class=""><%= d3.Graphic.name %> </td>
-            <%} else if (graphicsWinner == 2 || graphicsWinner == 12 || graphicsWinner == 23) {%>
-            <td class="border-end"><%= d.Graphic.name %> </td>
-            <td class="border border-4 border-bottom-0"><%= d2.Graphic.name %> </td>
-            <td class=""><%= d3.Graphic.name %> </td>
-            <%} else if (graphicsWinner == 3 || graphicsWinner == 13 || graphicsWinner == 23) {%>
-            <td class="border-end"><%= d.Graphic.name %> </td>
-            <td class="border-end"><%= d2.Graphic.name %> </td>
-            <td class="border border-4 border-bottom-0"><%= d3.Graphic.name %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Graphic.name %> </td>
-            <td class="border-end"><%= d2.Graphic.name %> </td>
-            <td class=""><%= d3.Graphic.name %> </td>
-            <%} %>
+            <td class="<% if (graphicsWinner == 1 || graphicsWinner == 12 || graphicsWinner == 13) Response.Write(type5); else Response.Write(type2);  %>"><%= d.Graphic.name %> </td>
+            <td class="<% if (graphicsWinner == 2 || graphicsWinner == 12 || graphicsWinner == 23) Response.Write(type5); else Response.Write(type2);  %>"><%= d2.Graphic.name %> </td>
+            <td class="<% if (graphicsWinner == 3 || graphicsWinner == 23 || graphicsWinner == 13) Response.Write(type5); else Response.Write(type1);  %>"><%= d3.Graphic.name %> </td>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Tipe</p>    
             </th>
-            <% if (graphicsWinner == 1 || graphicsWinner == 12 || graphicsWinner == 13) { %>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Graphic.type %> </td>
-            <td class="border-end"><%= d2.Graphic.type %> </td>
-            <td class=""><%= d3.Graphic.type %> </td>
-            <%} else if (graphicsWinner == 2 || graphicsWinner == 12 || graphicsWinner == 23) {%>
-            <td class="border-end"><%= d.Graphic.type %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Graphic.type %> </td>
-            <td class=""><%= d3.Graphic.type %> </td>
-            <%} else if (graphicsWinner == 3 || graphicsWinner == 13 || graphicsWinner == 23) {%>
-            <td class="border-end"><%= d.Graphic.type %> </td>
-            <td class="border-end"><%= d2.Graphic.type %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Graphic.type %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Graphic.type %> </td>
-            <td class="border-end"><%= d2.Graphic.type %> </td>
-            <td class=""><%= d3.Graphic.type %> </td>
-            <%} %>
+            <td class="<% if (graphicsWinner == 1 || graphicsWinner == 12 || graphicsWinner == 13) Response.Write(type3); else Response.Write(type2);  %>"><%= d.Graphic.type %> </td>
+            <td class="<% if (graphicsWinner == 2 || graphicsWinner == 12 || graphicsWinner == 23) Response.Write(type3); else Response.Write(type2);  %>"><%= d2.Graphic.type %> </td>
+            <td class="<% if (graphicsWinner == 2 || graphicsWinner == 12 || graphicsWinner == 23) Response.Write(type3); else Response.Write(type2);  %>"><%= d3.Graphic.type %> </td>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Pabrikan</p>    
             </th>
-            <% if (graphicsWinner == 1 || graphicsWinner == 12 || graphicsWinner == 13) { %>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Graphic.manufacturer %> </td>
-            <td class="border-end"><%= d2.Graphic.manufacturer %> </td>
-            <td class=""><%= d3.Graphic.manufacturer %> </td>
-            <%} else if (graphicsWinner == 2 || graphicsWinner == 12 || graphicsWinner == 23) {%>
-            <td class="border-end"><%= d.Graphic.manufacturer %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Graphic.manufacturer %> </td>
-            <td class=""><%= d3.Graphic.manufacturer %> </td>
-            <%} else if (graphicsWinner == 3 || graphicsWinner == 13 || graphicsWinner == 23) {%>
-            <td class="border-end"><%= d.Graphic.manufacturer %> </td>
-            <td class="border-end"><%= d2.Graphic.manufacturer %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Graphic.manufacturer %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Graphic.manufacturer %> </td>
-            <td class="border-end"><%= d2.Graphic.manufacturer %> </td>
-            <td class=""><%= d3.Graphic.manufacturer %> </td>
-            <%} %>
+            <td class="<% if (graphicsWinner == 1 || graphicsWinner == 12 || graphicsWinner == 13) Response.Write(type3); else Response.Write(type2);  %>"><%= d.Graphic.manufacturer %> </td>
+            <td class="<% if (graphicsWinner == 2 || graphicsWinner == 12 || graphicsWinner == 23) Response.Write(type3); else Response.Write(type2);  %>"><%= d2.Graphic.manufacturer %> </td>
+            <td class="<% if (graphicsWinner == 3 || graphicsWinner == 23 || graphicsWinner == 13) Response.Write(type3); else Response.Write(type1);  %>"><%= d3.Graphic.manufacturer %> </td>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Watt</p>    
             </th>
-            <% if (graphicsWinner == 1 || graphicsWinner == 12 || graphicsWinner == 13) { %>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Graphic.wattage %> </td>
-            <td class="border-end"><%= d2.Graphic.wattage %> </td>
-            <td class=""><%= d3.Graphic.wattage %> </td>
-            <%} else if (graphicsWinner == 2 || graphicsWinner == 12 || graphicsWinner == 23) {%>
-            <td class="border-end"><%= d.Graphic.wattage %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Graphic.wattage %> </td>
-            <td class=""><%= d3.Graphic.wattage %> </td>
-            <%} else if (graphicsWinner == 3 || graphicsWinner == 13 || graphicsWinner == 23) {%>
-            <td class="border-end"><%= d.Graphic.wattage %> </td>
-            <td class="border-end"><%= d2.Graphic.wattage %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Graphic.wattage %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Graphic.wattage %> </td>
-            <td class="border-end"><%= d2.Graphic.wattage %> </td>
-            <td class=""><%= d3.Graphic.wattage %> </td>
-            <%} %>
+            <td class="<% if (graphicsWinner == 1 || graphicsWinner == 12 || graphicsWinner == 13) Response.Write(type3); else Response.Write(type2);  %>"><%= d.Graphic.wattage %> </td>
+            <td class="<% if (graphicsWinner == 2 || graphicsWinner == 12 || graphicsWinner == 23) Response.Write(type3); else Response.Write(type2);  %>"><%= d2.Graphic.wattage %> </td>
+            <td class="<% if (graphicsWinner == 3 || graphicsWinner == 23 || graphicsWinner == 13) Response.Write(type3); else Response.Write(type1);  %>"><%= d3.Graphic.wattage %> </td>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Kecepatan Clock</p>    
             </th>
-            <% if (graphicsWinner == 1 || graphicsWinner == 12 || graphicsWinner == 13) { %>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Graphic.clock_speed %> </td>
-            <td class="border-end"><%= d2.Graphic.clock_speed %> </td>
-            <td class=""><%= d3.Graphic.clock_speed %> </td>
-            <%} else if (graphicsWinner == 2 || graphicsWinner == 12 || graphicsWinner == 23) {%>
-            <td class="border-end"><%= d.Graphic.clock_speed %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Graphic.clock_speed %> </td>
-            <td class=""><%= d3.Graphic.clock_speed %> </td>
-            <%} else if (graphicsWinner == 3 || graphicsWinner == 13 || graphicsWinner == 23) {%>
-            <td class="border-end"><%= d.Graphic.clock_speed %> </td>
-            <td class="border-end"><%= d2.Graphic.clock_speed %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Graphic.clock_speed %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Graphic.clock_speed %> </td>
-            <td class="border-end"><%= d2.Graphic.clock_speed %> </td>
-            <td class=""><%= d3.Graphic.clock_speed %> </td>
-            <%} %>
+            <td class="<% if (graphicsWinner == 1 || graphicsWinner == 12 || graphicsWinner == 13) Response.Write(type3); else Response.Write(type2);  %>"><%= d.Graphic.clock_speed %> </td>
+            <td class="<% if (graphicsWinner == 2 || graphicsWinner == 12 || graphicsWinner == 23) Response.Write(type3); else Response.Write(type2);  %>"><%= d2.Graphic.clock_speed %> </td>
+            <td class="<% if (graphicsWinner == 3 || graphicsWinner == 23 || graphicsWinner == 13) Response.Write(type3); else Response.Write(type1);  %>"><%= d3.Graphic.clock_speed %> </td>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">VRAM</p>    
             </th>
-            <% if (graphicsWinner == 1 || graphicsWinner == 12 || graphicsWinner == 13) { %>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Graphic.vram %> </td>
-            <td class="border-end"><%= d2.Graphic.vram %> </td>
-            <td class=""><%= d3.Graphic.vram %> </td>
-            <%} else if (graphicsWinner == 2 || graphicsWinner == 12 || graphicsWinner == 23) {%>
-            <td class="border-end"><%= d.Graphic.vram %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Graphic.vram %> </td>
-            <td class=""><%= d3.Graphic.vram %> </td>
-            <%} else if (graphicsWinner == 3 || graphicsWinner == 13 || graphicsWinner == 23) {%>
-            <td class="border-end"><%= d.Graphic.vram %> </td>
-            <td class="border-end"><%= d2.Graphic.vram %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Graphic.vram %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Graphic.vram %> </td>
-            <td class="border-end"><%= d2.Graphic.vram %> </td>
-            <td class=""><%= d3.Graphic.vram %> </td>
-            <%} %>
-        </tr>
+            <td class="<% if (graphicsWinner == 1 || graphicsWinner == 12 || graphicsWinner == 13) Response.Write(type3); else Response.Write(type2);  %>"><%= d.Graphic.vram %> </td>
+            <td class="<% if (graphicsWinner == 2 || graphicsWinner == 12 || graphicsWinner == 23) Response.Write(type3); else Response.Write(type2);  %>"><%= d2.Graphic.vram %> </td>
+            <td class="<% if (graphicsWinner == 3 || graphicsWinner == 23 || graphicsWinner == 13) Response.Write(type3); else Response.Write(type1);  %>"><%= d3.Graphic.vram %> </td>
         <tr class="">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Kecepatan Data</p>    
             </th>
-            <% if (graphicsWinner == 1 || graphicsWinner == 12 || graphicsWinner == 13) { %>
-            <td class="border border-4 border-top-0"><%= d.Graphic.data_rate %> </td>
-            <td class="border-end"><%= d2.Graphic.data_rate %> </td>
-            <td class=""><%= d3.Graphic.data_rate %> </td>
-            <%} else if (graphicsWinner == 2 || graphicsWinner == 12 || graphicsWinner == 23) {%>
-            <td class="border-end"><%= d.Graphic.data_rate %> </td>
-            <td class="border border-4 border-top-0"><%= d2.Graphic.data_rate %> </td>
-            <td class=""><%= d3.Graphic.data_rate %> </td>
-            <%} else if (graphicsWinner == 3 || graphicsWinner == 13 || graphicsWinner == 23) {%>
-            <td class="border-end"><%= d.Graphic.data_rate %> </td>
-            <td class="border-end"><%= d2.Graphic.data_rate %> </td>
-            <td class="border border-4 border-top-0"><%= d3.Graphic.data_rate %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Graphic.data_rate %> </td>
-            <td class="border-end"><%= d2.Graphic.data_rate %> </td>
-            <td class=""><%= d3.Graphic.data_rate %> </td>
-            <%} %>
+            <td class="<% if (graphicsWinner == 1 || graphicsWinner == 12 || graphicsWinner == 13) Response.Write(type4); else Response.Write(type2);  %>"><%= d.Graphic.data_rate %> </td>
+            <td class="<% if (graphicsWinner == 2 || graphicsWinner == 12 || graphicsWinner == 23) Response.Write(type4); else Response.Write(type2);  %>"><%= d2.Graphic.data_rate %> </td>
+            <td class="<% if (graphicsWinner == 3 || graphicsWinner == 23 || graphicsWinner == 13) Response.Write(type4); else Response.Write(type1);  %>"><%= d3.Graphic.data_rate %> </td>
         </tr>
         <tr>
             <th scope="row" class="fs-5">
                 <p id="spec-subgrup" class="mb-minus5" style="margin-top: 10px;">RAM</p>    
             </th>
-            <%if (graphicsWinner != 0) { %>
+            <%if (graphicsWinner >= 1 && graphicsWinner <=3) { %>
             <%if (graphicsWinner == 2) { %>
             <td></td>
             <%} %>
@@ -829,95 +477,39 @@
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Kapasitas</p>    
             </th>
-            <% if (ramWinner == 1 || ramWinner == 12 || ramWinner == 13) { %>
-            <td class="border border-4 border-bottom-0"><%= d.Memory1.size %> </td>
-            <td class="border-end"><%= d2.Memory1.size %> </td>
-            <td class=""><%= d3.Memory1.size %> </td>
-            <%} else if (ramWinner == 2 || ramWinner == 12 || ramWinner == 23) {%>
-            <td class="border-end"><%= d.Memory1.size %> </td>
-            <td class="border border-4 border-bottom-0"><%= d2.Memory1.size %> </td>
-            <td class=""><%= d3.Memory1.size %> </td>
-            <%} else if (ramWinner == 3 || ramWinner == 13 || ramWinner == 23) {%>
-            <td class="border-end"><%= d.Memory1.size %> </td>
-            <td class="border-end"><%= d2.Memory1.size %> </td>
-            <td class="border border-4 border-bottom-0"><%= d3.Memory1.size %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Memory1.size %> </td>
-            <td class="border-end"><%= d2.Memory1.size %> </td>
-            <td class=""><%= d3.Memory1.size %> </td>
-            <%} %>
+            <td class="<% if (ramWinner == 1 || ramWinner == 12 || ramWinner == 13) Response.Write(type5); else Response.Write(type2);  %>"><%= d.Memory1.size %> </td>
+            <td class="<% if (ramWinner == 2 || ramWinner == 12 || ramWinner == 23) Response.Write(type5); else Response.Write(type2);  %>"><%= d2.Memory1.size %> </td>
+            <td class="<% if (ramWinner == 3 || ramWinner == 23 || ramWinner == 13) Response.Write(type5); else Response.Write(type1);  %>"><%= d3.Memory1.size %> </td>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Kecepatan Data</p>    
             </th>
-            <% if (ramWinner == 1 || ramWinner == 12 || ramWinner == 13) { %>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Memory1.data_rate %> </td>
-            <td class="border-end"><%= d2.Memory1.data_rate %> </td>
-            <td class=""><%= d3.Memory1.data_rate %> </td>
-            <%} else if (ramWinner == 2 || ramWinner == 12 || ramWinner == 23) {%>
-            <td class="border-end"><%= d.Memory1.data_rate %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Memory1.data_rate %> </td>
-            <td class=""><%= d3.Memory1.data_rate %> </td>
-            <%} else if (ramWinner == 3 || ramWinner == 13 || ramWinner == 23) {%>
-            <td class="border-end"><%= d.Dimension1.length %> </td>
-            <td class="border-end"><%= d2.Dimension1.length %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Dimension1.length %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Dimension1.length %> </td>
-            <td class="border-end"><%= d2.Dimension1.length %> </td>
-            <td class=""><%= d3.Dimension1.length %> </td>
-            <%} %>
+            <td class="<% if (ramWinner == 1 || ramWinner == 12 || ramWinner == 13) Response.Write(type3); else Response.Write(type2);  %>"><%= d.Memory1.data_rate %> </td>
+            <td class="<% if (ramWinner == 2 || ramWinner == 12 || ramWinner == 23) Response.Write(type3); else Response.Write(type2);  %>"><%= d2.Memory1.data_rate %> </td>
+            <td class="<% if (ramWinner == 3 || ramWinner == 23 || ramWinner == 13) Response.Write(type3); else Response.Write(type1);  %>"><%= d3.Memory1.data_rate %> </td>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Channel</p>    
             </th>
-            <% if (ramWinner == 1 || ramWinner == 12 || ramWinner == 13) { %>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Memory1.channel %> </td>
-            <td class="border-end"><%= d2.Memory1.channel %> </td>
-            <td class=""><%= d3.Memory1.channel %> </td>
-            <%} else if (ramWinner == 2 || ramWinner == 12 || ramWinner == 23) {%>
-            <td class="border-end"><%= d.Memory1.channel %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Memory1.channel %> </td>
-            <td class=""><%= d3.Memory1.channel %> </td>
-            <%} else if (ramWinner == 3 || ramWinner == 13 || ramWinner == 23) {%>
-            <td class="border-end"><%= d.Dimension1.length %> </td>
-            <td class="border-end"><%= d2.Dimension1.length %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Dimension1.length %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Dimension1.length %> </td>
-            <td class="border-end"><%= d2.Dimension1.length %> </td>
-            <td class=""><%= d3.Dimension1.length %> </td>
-            <%} %>
+            <td class="<% if (ramWinner == 1 || ramWinner == 12 || ramWinner == 13) Response.Write(type3); else Response.Write(type2);  %>"><%= d.Memory1.channel %> </td>
+            <td class="<% if (ramWinner == 2 || ramWinner == 12 || ramWinner == 23) Response.Write(type3); else Response.Write(type2);  %>"><%= d2.Memory1.channel %> </td>
+            <td class="<% if (ramWinner == 3 || ramWinner == 23 || ramWinner == 13) Response.Write(type3); else Response.Write(type1);  %>"><%= d3.Memory1.channel %> </td>
         </tr>
         <tr>
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Kapasitas Maks</p>    
             </th>
-            <% if (ramWinner == 1 || ramWinner == 12 || ramWinner == 13) { %>
-            <td class="border border-4 border-top-0"><%= d.Memory1.max_capacity %> </td>
-            <td class="border-end"><%= d2.Memory1.max_capacity %> </td>
-            <td class=""><%= d3.Memory1.max_capacity %> </td>
-            <%} else if (ramWinner == 2 || ramWinner == 12 || ramWinner == 23) {%>
-            <td class="border-end"><%= d.Memory1.max_capacity %> </td>
-            <td class="border border-4 border-top-0"><%= d2.Memory1.max_capacity %> </td>
-            <td class=""><%= d3.Memory1.max_capacity %> </td>
-            <%} else if (ramWinner == 3 || ramWinner == 13 || ramWinner == 23) {%>
-            <td class="border-end"><%= d.Dimension1.length %> </td>
-            <td class="border-end"><%= d2.Dimension1.length %> </td>
-            <td class="border border-4 border-top-0"><%= d3.Dimension1.length %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Dimension1.length %> </td>
-            <td class="border-end"><%= d2.Dimension1.length %> </td>
-            <td class=""><%= d3.Dimension1.length %> </td>
-            <%} %>
+            <td class="<% if (ramWinner == 1 || ramWinner == 12 || ramWinner == 13) Response.Write(type4); else Response.Write(type2);  %>"><%= d.Memory1.max_capacity %> </td>
+            <td class="<% if (ramWinner == 2 || ramWinner == 12 || ramWinner == 23) Response.Write(type4); else Response.Write(type2);  %>"><%= d2.Memory1.max_capacity %> </td>
+            <td class="<% if (ramWinner == 3 || ramWinner == 23 || ramWinner == 13) Response.Write(type4); else Response.Write(type1);  %>"><%= d3.Memory1.max_capacity %> </td>
         </tr>
         <tr>
             <th scope="row" class="fs-5">
                 <p id="spec-subgrup" class="mb-minus5" style="margin-top: 10px;">Ruang Penyimpanan</p>    
             </th>
-            <%if (ramWinner != 0) { %>
+            <%if (ramWinner >= 1 && ramWinner <=3) { %>
             <%if (ramWinner == 2) { %>
             <td></td>
             <%} %>
@@ -939,73 +531,31 @@
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Kapasitas</p>    
             </th>
-            <% if (storageWinner == 1 || storageWinner == 12 || storageWinner == 13) { %>
-            <td class="border border-4 border-bottom-0"><%= d.Storage1.size %> </td>
-            <td class="border-end"><%= d2.Storage1.size %> </td>
-            <td class=""><%= d3.Storage1.size %> </td>
-            <%} else if (storageWinner == 2 || storageWinner == 12 || storageWinner == 23) {%>
-            <td class="border-end"><%= d.Storage1.size %> </td>
-            <td class="border border-4 border-bottom-0"><%= d2.Storage1.size %> </td>
-            <td class=""><%= d3.Storage1.size %> </td>
-            <%} else if (storageWinner == 3 || storageWinner == 13 || storageWinner == 23) {%>
-            <td class="border-end"><%= d.Storage1.size %> </td>
-            <td class="border-end"><%= d2.Storage1.size %> </td>
-            <td class="border border-4 border-bottom-0"><%= d3.Storage1.size %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Storage1.size %> </td>
-            <td class="border-end"><%= d2.Storage1.size %> </td>
-            <td class=""><%= d3.Storage1.size %> </td>
-            <%} %>
-        </tr>
+            <td class="<% if (storageWinner == 1 || storageWinner == 12 || storageWinner == 13) Response.Write(type5); else Response.Write(type2);  %>"><%= d.Storage1.size %> </td>
+            <td class="<% if (storageWinner == 2 || storageWinner == 12 || storageWinner == 23) Response.Write(type5); else Response.Write(type2);  %>"><%= d2.Storage1.size %> </td>
+            <td class="<% if (storageWinner == 3 || storageWinner == 23 || storageWinner == 13) Response.Write(type5); else Response.Write(type1);  %>"><%= d3.Storage1.size %> </td>
+        </tr>storageWinner
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Tipe</p>    
             </th>
-            <% if (storageWinner == 1 || storageWinner == 12 || storageWinner == 13) { %>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Storage1.type %> </td>
-            <td class="border-end"><%= d2.Storage1.type %> </td>
-            <td class=""><%= d3.Storage1.type %> </td>
-            <%} else if (storageWinner == 2 || storageWinner == 12 || storageWinner == 23) {%>
-            <td class="border-end"><%= d.Audio1.type %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Storage1.type %> </td>
-            <td class=""><%= d3.Storage1.type %> </td>
-            <%} else if (storageWinner == 3 || storageWinner == 13 || storageWinner == 23) {%>
-            <td class="border-end"><%= d.Storage1.type %> </td>
-            <td class="border-end"><%= d2.Storage1.type %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Storage1.type %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Storage1.type %> </td>
-            <td class="border-end"><%= d2.Storage1.type %> </td>
-            <td class=""><%= d3.Storage1.type %> </td>
-            <%} %>
+            <td class="<% if (storageWinner == 1 || storageWinner == 12 || storageWinner == 13) Response.Write(type3); else Response.Write(type2);  %>"><%= d.Storage1.type %> </td>
+            <td class="<% if (storageWinner == 2 || storageWinner == 12 || storageWinner == 23) Response.Write(type3); else Response.Write(type2);  %>"><%= d2.Storage1.type %> </td>
+            <td class="<% if (storageWinner == 3 || storageWinner == 23 || storageWinner == 13) Response.Write(type3); else Response.Write(type1);  %>"><%= d3.Storage1.type %> </td>
         </tr>
         <tr>
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Kapasitas Maks</p>    
             </th>
-            <% if (storageWinner == 1 || storageWinner == 12 || storageWinner == 13) { %>
-            <td class="border border-4 border-top-0"><%= d.Storage1.max_caoacity %> </td>
-            <td class="border-end"><%= d2.Storage1.max_caoacity %> </td>
-            <td class=""><%= d3.Storage1.max_caoacity %> </td>
-            <%} else if (storageWinner == 2 || storageWinner == 12 || storageWinner == 23) {%>
-            <td class="border-end"><%= d.Storage1.max_caoacity %> </td>
-            <td class="border border-4 border-top-0"><%= d2.Storage1.max_caoacity %> </td>
-            <td class=""><%= d3.Storage1.max_caoacity %> </td>
-            <%} else if (storageWinner == 3 || storageWinner == 13 || storageWinner == 23) {%>
-            <td class="border-end"><%= d.Storage1.max_caoacity %> </td>
-            <td class="border-end"><%= d2.Storage1.max_caoacity %> </td>
-            <td class="border border-4 border-top-0"><%= d3.Storage1.max_caoacity %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.Storage1.max_caoacity %> </td>
-            <td class="border-end"><%= d2.Storage1.max_caoacity %> </td>
-            <td class=""><%= d3.Storage1.max_caoacity %> </td>
-            <%} %>
+            <td class="<% if (storageWinner == 1 || storageWinner == 12 || storageWinner == 13) Response.Write(type4); else Response.Write(type2);  %>"><%= d.Storage1.max_caoacity %> </td>
+            <td class="<% if (storageWinner == 2 || storageWinner == 12 || storageWinner == 23) Response.Write(type4); else Response.Write(type2);  %>"><%= d2.Storage1.max_caoacity %> </td>
+            <td class="<% if (storageWinner == 3 || storageWinner == 23 || storageWinner == 13) Response.Write(type4); else Response.Write(type1);  %>"><%= d3.Storage1.max_caoacity %> </td>
         </tr>
         <tr>
             <th scope="row" class="">
                 <p class="h4 text-white rounded-4 text-center mb-minus2" style="background-color: #353535; padding-bottom: 10px; padding-top: 10px; margin-top: 20px;">KAMERA</p>   
             </th>
-            <%if (storageWinner != 0) { %>
+            <%if (storageWinner >= 1 && storageWinner <=3) { %>
             <%if (storageWinner == 2) { %>
             <td></td>
             <%} %>
@@ -1032,74 +582,32 @@
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Resolusi</p>    
             </th>
-            <% if (fcameraWinner == 1 || fcameraWinner == 12 || fcameraWinner == 13) { %>
-            <td class="border border-4 border-bottom-0"><%= d.fCamera1.resolution %> </td>
-            <td class="border-end"><%= d2.fCamera1.resolution %> </td>
-            <td class=""><%= d3.fCamera1.resolution %> </td>
-            <%} else if (fcameraWinner == 2 || fcameraWinner == 12 || fcameraWinner == 23) {%>
-            <td class="border-end"><%= d.fCamera1.resolution %> </td>
-            <td class="border border-4 border-bottom-0"><%= d2.fCamera1.resolution %> </td>
-            <td class=""><%= d3.fCamera1.resolution %> </td>
-            <%} else if (fcameraWinner == 3 || fcameraWinner == 13 || fcameraWinner == 23) {%>
-            <td class="border-end"><%= d.fCamera1.resolution %> </td>
-            <td class="border-end"><%= d2.fCamera1.resolution %> </td>
-            <td class="border border-4 border-bottom-0"><%= d3.fCamera1.resolution %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.fCamera1.resolution %> </td>
-            <td class="border-end"><%= d2.fCamera1.resolution %> </td>
-            <td class=""><%= d3.fCamera1.resolution %> </td>
-            <%} %>
+            <td class="<% if (fcameraWinner == 1 || fcameraWinner == 12 || fcameraWinner == 13) Response.Write(type5); else Response.Write(type2);  %>"><%= d.fCamera1.resolution %> </td>
+            <td class="<% if (fcameraWinner == 2 || fcameraWinner == 12 || fcameraWinner == 23) Response.Write(type5); else Response.Write(type2);  %>"><%= d2.fCamera1.resolution %> </td>
+            <td class="<% if (fcameraWinner == 3 || fcameraWinner == 23 || fcameraWinner == 13) Response.Write(type5); else Response.Write(type1);  %>"><%= d3.fCamera1.resolution %> </td>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Megapixel</p>    
             </th>
-            <% if (fcameraWinner == 1 || fcameraWinner == 12 || fcameraWinner == 13) { %>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d.fCamera1.megapixels %> </td>
-            <td class="border-end"><%= d2.fCamera1.megapixels %> </td>
-            <td class=""><%= d3.fCamera1.megapixels %> </td>
-            <%} else if (fcameraWinner == 2 || fcameraWinner == 12 || fcameraWinner == 23) {%>
-            <td class="border-end"><%= d.fCamera1.megapixels %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.fCamera1.megapixels %> </td>
-            <td class=""><%= d3.fCamera1.megapixels %> </td>
-            <%} else if (fcameraWinner == 3 || fcameraWinner == 13 || fcameraWinner == 23) {%>
-            <td class="border-end"><%= d.fCamera1.megapixels %> </td>
-            <td class="border-end"><%= d2.fCamera1.megapixels %> </td>
-            <td class="border border-4 border-top-0"><%= d3.fCamera1.megapixels %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.fCamera1.megapixels %> </td>
-            <td class="border-end"><%= d2.fCamera1.megapixels %> </td>
-            <td class=""><%= d3.fCamera1.megapixels %> </td>
-            <%} %>
+            <td class="<% if (fcameraWinner == 1 || fcameraWinner == 12 || fcameraWinner == 13) Response.Write(type3); else Response.Write(type2);  %>"><%= d.fCamera1.megapixels %> </td>
+            <td class="<% if (fcameraWinner == 2 || fcameraWinner == 12 || fcameraWinner == 23) Response.Write(type3); else Response.Write(type2);  %>"><%= d2.fCamera1.megapixels %> </td>
+            <td class="<% if (fcameraWinner == 3 || fcameraWinner == 23 || fcameraWinner == 13) Response.Write(type3); else Response.Write(type1);  %>"><%= d3.fCamera1.megapixels %> </td>
         </tr>
         <tr >
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Framerate</p>    
             </th>
-            <% if (fcameraWinner == 1 || fcameraWinner == 12 || fcameraWinner == 13) { %>
-            <td class="border border-4 border-top-0"><%= d.fCamera1.frame_rate %> </td>
-            <td class="border-end"><%= d2.fCamera1.frame_rate %> </td>
-            <td class=""><%= d3.fCamera1.frame_rate %> </td>
-            <%} else if (fcameraWinner == 2 || fcameraWinner == 12 || fcameraWinner == 23) {%>
-            <td class="border-end"><%= d.fCamera1.frame_rate %> </td>
-            <td class="border border-4 border-top-0"><%= d2.fCamera1.frame_rate %> </td>
-            <td class=""><%= d3.fCamera1.frame_rate %> </td>
-            <%} else if (fcameraWinner == 3 || fcameraWinner == 13 || fcameraWinner == 23) {%>
-            <td class="border-end"><%= d.fCamera1.frame_rate %> </td>
-            <td class="border-end"><%= d2.fCamera1.frame_rate %> </td>
-            <td class="border border-4 border-top-0"><%= d3.fCamera1.frame_rate %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.fCamera1.frame_rate %> </td>
-            <td class="border-end"><%= d2.fCamera1.frame_rate %> </td>
-            <td class=""><%= d3.fCamera1.frame_rate %> </td>
-            <%} %>
+            <td class="<% if (fcameraWinner == 1 || fcameraWinner == 12 || fcameraWinner == 13) Response.Write(type4); else Response.Write(type2);  %>"><%= d.fCamera1.frame_rate %> </td>
+            <td class="<% if (fcameraWinner == 2 || fcameraWinner == 12 || fcameraWinner == 23) Response.Write(type4); else Response.Write(type2);  %>"><%= d2.fCamera1.frame_rate %> </td>
+            <td class="<% if (fcameraWinner == 3 || fcameraWinner == 23 || fcameraWinner == 13) Response.Write(type4); else Response.Write(type1);  %>"><%= d3.fCamera1.frame_rate %> </td>
         </tr>
 
         <tr class="border-bottom">
             <th scope="row" class="fs-5">
                 <p id="spec-subgrup" class="mb-minus2" style="margin-top: 10px;">Kamera Belakang</p>    
             </th>
-            <%if (fcameraWinner != 0) { %>
+            <%if (fcameraWinner >= 1 && fcameraWinner <=3) { %>
             <%if (fcameraWinner == 2) { %>
             <td></td>
             <%} %>
@@ -1121,71 +629,29 @@
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Resolusi</p>    
             </th>
-            <% if (rcameraWinner == 1 || rcameraWinner == 12 || rcameraWinner == 13) { %>
-            <td class="border border-4 border-bottom-0"><%= d.rCamera1.resolution %> </td>
-            <td class="border-end"><%= d2.rCamera1.resolution %> </td>
-            <td class=""><%= d3.rCamera1.resolution %> </td>
-            <%} else if (rcameraWinner == 2 || rcameraWinner == 12 || rcameraWinner == 23) {%>
-            <td class="border-end"><%= d.rCamera1.resolution %> </td>
-            <td class="border border-4 border-bottom-0"><%= d2.rCamera1.resolution %> </td>
-            <td class=""><%= d3.rCamera1.resolution %> </td>
-            <%} else if (rcameraWinner == 3 || rcameraWinner == 13 || rcameraWinner == 23) {%>
-            <td class="border-end"><%= d.rCamera1.resolution %> </td>
-            <td class="border-end"><%= d2.rCamera1.resolution %> </td>
-            <td class="border border-4 border-bottom-0"><%= d3.rCamera1.resolution %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.rCamera1.resolution %> </td>
-            <td class="border-end"><%= d2.rCamera1.resolution %> </td>
-            <td class=""><%= d3.rCamera1.resolution %> </td>
-            <%} %>
+            <td class="<% if (rcameraWinner == 1 || rcameraWinner == 12 || rcameraWinner == 13) Response.Write(type5); else Response.Write(type2);  %>"><%= d.rCamera1.resolution %> </td>
+            <td class="<% if (rcameraWinner == 2 || rcameraWinner == 12 || rcameraWinner == 23) Response.Write(type5); else Response.Write(type2);  %>"><%= d2.rCamera1.resolution %> </td>
+            <td class="<% if (rcameraWinner == 3 || rcameraWinner == 23 || rcameraWinner == 13) Response.Write(type5); else Response.Write(type1);  %>"><%= d3.rCamera1.resolution %> </td>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Megapixel</p>    
             </th>
-            <% if (rcameraWinner == 1 || rcameraWinner == 12 || rcameraWinner == 13) { %>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d.rCamera1.megapixels %> </td>
-            <td class="border-end"><%= d2.rCamera1.megapixels %> </td>
-            <td class=""><%= d3.rCamera1.megapixels %> </td>
-            <%} else if (rcameraWinner == 2 || rcameraWinner == 12 || rcameraWinner == 23) {%>
-            <td class="border-end"><%= d.rCamera1.megapixels %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.rCamera1.megapixels %> </td>
-            <td class=""><%= d3.rCamera1.megapixels %> </td>
-            <%} else if (rcameraWinner == 3 || rcameraWinner == 13 || rcameraWinner == 23) {%>
-            <td class="border-end"><%= d.rCamera1.megapixels %> </td>
-            <td class="border-end"><%= d2.rCamera1.megapixels %> </td>
-            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.rCamera1.megapixels %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.rCamera1.megapixels %> </td>
-            <td class="border-end"><%= d2.rCamera1.megapixels %> </td>
-            <td class=""><%= d3.rCamera1.megapixels %> </td>
-            <%} %>
+            <td class="<% if (rcameraWinner == 1 || rcameraWinner == 12 || rcameraWinner == 13) Response.Write(type3); else Response.Write(type2);  %>"><%= d.rCamera1.megapixels %> </td>
+            <td class="<% if (rcameraWinner == 2 || rcameraWinner == 12 || rcameraWinner == 23) Response.Write(type3); else Response.Write(type2);  %>"><%= d2.rCamera1.megapixels %> </td>
+            <td class="<% if (rcameraWinner == 3 || rcameraWinner == 23 || rcameraWinner == 13) Response.Write(type3); else Response.Write(type1);  %>"><%= d3.rCamera1.megapixels %> </td>
         </tr>
         <tr>
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Framerate</p>    
             </th>
-            <% if (rcameraWinner == 1 || rcameraWinner == 12 || rcameraWinner == 13) { %>
-            <td class="border border-4 border-top-0"><%= d.rCamera1.frame_rate %> </td>
-            <td class="border-end"><%= d2.rCamera1.frame_rate %> </td>
-            <td class=""><%= d3.rCamera1.frame_rate %> </td>
-            <%} else if (rcameraWinner == 2 || rcameraWinner == 12 || rcameraWinner == 23) {%>
-            <td class="border-end"><%= d.rCamera1.frame_rate %> </td>
-            <td class="border border-4 border-top-0"><%= d2.rCamera1.frame_rate %> </td>
-            <td class=""><%= d3.rCamera1.frame_rate %> </td>
-            <%} else if (rcameraWinner == 3 || rcameraWinner == 13 || rcameraWinner == 23) {%>
-            <td class="border-end"><%= d.rCamera1.frame_rate %> </td>
-            <td class="border-end"><%= d2.rCamera1.frame_rate %> </td>
-            <td class="border border-4 border-top-0"><%= d3.rCamera1.frame_rate %> </td>
-            <%} else { %>
-            <td class="border-end"><%= d.rCamera1.frame_rate %> </td>
-            <td class="border-end"><%= d2.rCamera1.frame_rate %> </td>
-            <td class=""><%= d3.rCamera1.frame_rate %> </td>
-            <%} %>
+            <td class="<% if (rcameraWinner == 1 || rcameraWinner == 12 || rcameraWinner == 13) Response.Write(type4); else Response.Write(type2);  %>"><%= d.rCamera1.frame_rate %> </td>
+            <td class="<% if (rcameraWinner == 2 || rcameraWinner == 12 || rcameraWinner == 23) Response.Write(type4); else Response.Write(type2);  %>"><%= d2.rCamera1.frame_rate %> </td>
+            <td class="<% if (rcameraWinner == 3 || rcameraWinner == 23 || rcameraWinner == 13) Response.Write(type4); else Response.Write(type1);  %>"><%= d3.rCamera1.frame_rate %> </td>
         </tr>
         <tr>
             <td></td>
-            <%if (rcameraWinner != 0) { %>
+            <%if (rcameraWinner >= 1 && rcameraWinner <=3) { %>
             <%if (rcameraWinner == 2) { %>
             <td></td>
             <%} %>
