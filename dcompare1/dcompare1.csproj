@@ -109,6 +109,7 @@
     <Content Include="Views\Compare1.aspx" />
     <Content Include="Views\Compare1Device.aspx" />
     <Content Include="Views\Compare2.aspx" />
+    <Content Include="Views\Compare3.aspx" />
     <Content Include="Views\HomeView.aspx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\Register.aspx" />
@@ -123,6 +124,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algo\CompareAlgo.cs" />
     <Compile Include="Factory\CommentFactory.cs" />
     <Compile Include="Model\Audio.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -219,6 +221,13 @@
     </Compile>
     <Compile Include="Views\Compare2.aspx.designer.cs">
       <DependentUpon>Compare2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Compare3.aspx.cs">
+      <DependentUpon>Compare3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Compare3.aspx.designer.cs">
+      <DependentUpon>Compare3.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\HomeView.aspx.cs">
       <DependentUpon>HomeView.aspx</DependentUpon>
