@@ -8,17 +8,20 @@
         <div class="col">
         <div class="" style="padding-top: 80px;">
             <div class="">
-                <img src="Asset/Screenshot_89.png" alt="" class="me-5 shadow z-0" style="width: 155px;">
+                <img src="../Asset/devices/phones/<%= d.image %>" alt="" class="me-5 shadow z-0" style="width: 155px;">
                 <div class="z-1" style="margin-top: -25%; margin-left: 7vw;">
                     <svg width="5vw" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <% if (winner == 1) { %>
                         <circle cx="38" cy="38" r="38" fill="white"/>
                         <path d="M38 0C16.986 0 0 17.1 0 38C0 58.9 17.1 76 38 76C58.9 76 76 58.9 76 38C76 17.1 58.9 0 38 0ZM53.2 51.072C53.2 52.364 52.364 53.2 51.072 53.2H24.928C23.636 53.2 22.8 52.364 22.8 51.072V49.4H53.2V51.072ZM53.2 45.6H22.8L19 22.8L30.4 30.4L38 19L45.6 30.4L57 22.8L53.2 45.6Z" fill="#6300E1"/>
+                        <%} %>
                     </svg>  
                 </div>                
             </div>
 
             <div class="z-1" style="max-width: 70%;">
                 <p class="fw-medium h3 lh-1">
+                    <%=processorWinner %>
                 </p>
             </div>            
     
@@ -26,27 +29,27 @@
                 <svg width="30" height="25" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: -10px;">
                 <path d="M4.78125 23L6.8125 14.4961L0 8.77632L9 8.01974L12.5 0L16 8.01974L25 8.77632L18.1875 14.4961L20.2187 23L12.5 18.4908L4.78125 23Z" fill="white"/>
                 </svg>
-                <p class="h2 text-white ms-2" style="margin-top: -4px; margin-bottom: -4px;">5</p>     
+                <p class="h2 text-white ms-2" style="margin-top: -4px; margin-bottom: -4px;"><%= rating %></p>     
             </div>
         </div>
         </div>
         <div class="col">
         <div style="padding-top: 80px; padding-bottom: 80px;">
             <div class="">
-                <img src="Asset/Screenshot_96.png" alt="" class="me-5 shadow z-0 rounded-4" style="width: 155px;">
+                <img src="../Asset/devices/phones/<%= d2.image %>" alt="" class="me-5 shadow z-0 rounded-4" style="width: 155px;">
                 <div class="z-1 crown-hid" style="margin-top: -60px; margin-left: 100px;">
                     <svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <% if (winner == 2) { %>
                         <circle cx="38" cy="38" r="38" fill="white"/>
                         <path d="M38 0C16.986 0 0 17.1 0 38C0 58.9 17.1 76 38 76C58.9 76 76 58.9 76 38C76 17.1 58.9 0 38 0ZM53.2 51.072C53.2 52.364 52.364 53.2 51.072 53.2H24.928C23.636 53.2 22.8 52.364 22.8 51.072V49.4H53.2V51.072ZM53.2 45.6H22.8L19 22.8L30.4 30.4L38 19L45.6 30.4L57 22.8L53.2 45.6Z" fill="#6300E1"/>
+                        <%} %>
                     </svg>  
                 </div>                
             </div>
 
             <div class="z-1" style="max-width: 70%;">
                 <p class="fw-medium h3 lh-1">
-                    Samsung
-                    <br>
-                    Galaxy S22 Ultra
+                    <%= d2.name %>
                     </p>
             </div>            
     
@@ -54,35 +57,35 @@
                 <svg width="30" height="25" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: -10px;">
                 <path d="M4.78125 23L6.8125 14.4961L0 8.77632L9 8.01974L12.5 0L16 8.01974L25 8.77632L18.1875 14.4961L20.2187 23L12.5 18.4908L4.78125 23Z" fill="white"/>
                 </svg>
-                <p class="h2 text-white ms-2" style="margin-top: -4px; margin-bottom: -4px;">5</p>     
+                <p class="h2 text-white ms-2" style="margin-top: -4px; margin-bottom: -4px;"><%= rating2 %></p>     
             </div>
         </div>
         </div>
         <div class="col">
         <div class="" style="padding-top: 80px; padding-bottom: 80px;">
             <div class="">
-                <img src="Asset/Screenshot_101.png" alt="" class="me-5 shadow z-0" style="width: 148px;">
+                <img src="../Asset/devices/phones/<%= d3.image %>" alt="" class="me-5 shadow z-0" style="width: 148px;">
                 <div class="z-1" style="margin-top: -60px; margin-left: 100px;">
                     <svg class="crown-hid" width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <% if (winner == 3) { %>
                         <circle cx="38" cy="38" r="38" fill="white"/>
                         <path d="M38 0C16.986 0 0 17.1 0 38C0 58.9 17.1 76 38 76C58.9 76 76 58.9 76 38C76 17.1 58.9 0 38 0ZM53.2 51.072C53.2 52.364 52.364 53.2 51.072 53.2H24.928C23.636 53.2 22.8 52.364 22.8 51.072V49.4H53.2V51.072ZM53.2 45.6H22.8L19 22.8L30.4 30.4L38 19L45.6 30.4L57 22.8L53.2 45.6Z" fill="#6300E1"/>
+                        <%} %>
                     </svg>  
                 </div>                
             </div>
 
             <div class="z-1" style="max-width: 70%;">
                 <p class="fw-medium h3 lh-1">
-                    Samsung
-                    <br>
-                    Galaxy S21 Ultra
-                    </p>
+                    <%= d3.name %>
+                </p>
             </div>            
     
             <div class="rounded-3 d-flex justify-content-center" style="background: #6300E1; padding-top: 8px; width: 45%; padding-bottom: 8px;">
                 <svg width="30" height="25" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: -10px;">
                 <path d="M4.78125 23L6.8125 14.4961L0 8.77632L9 8.01974L12.5 0L16 8.01974L25 8.77632L18.1875 14.4961L20.2187 23L12.5 18.4908L4.78125 23Z" fill="white"/>
                 </svg>
-                <p class="h2 text-white ms-2" style="margin-top: -4px; margin-bottom: -4px;">5</p>     
+                <p class="h2 text-white ms-2" style="margin-top: -4px; margin-bottom: -4px;"><%= rating3 %></p>     
             </div>
         </div>
         </div>
@@ -123,7 +126,7 @@
             </th>
             <th scope="col">
                 <div class="d-flex flex-column align-items-start">
-                    <p class="h5 fw-bold">Samsung Galaxy S23 Ultra</p>
+                    <p class="h5 fw-bold"><%= d.name %></p>
                   
                     <div class="mb-4">
                         <button class="btn rounded-4 fw-bold" style="width: 25rem; padding: 1.5%; background-color: #353535; color: white;">ulasan anda</button>
@@ -132,7 +135,7 @@
             </th>
             <th scope="col">
                 <div class="d-flex flex-column align-items-start">
-                    <p class="h5 fw-bold">Samsung Galaxy S22 Ultra</p>
+                    <p class="h5 fw-bold"><%= d2.name %></p>
                     <div class="mb-4">
                         <button class="btn rounded-4 fw-bold" style="width: 25rem; padding: 1.5%; background-color: #353535; color: white;">ulasan anda</button>
                     </div>
@@ -140,7 +143,7 @@
             </th>
             <th scope="col">
                 <div class="d-flex flex-column align-items-start">
-                    <p class="h5 fw-bold">Samsung Galaxy S21 Ultra</p>
+                    <p class="h5 fw-bold"><%= d3.name %></p>
                     <div class="mb-4">
                         <button class="btn rounded-4 fw-bold" style="width: 25rem; padding: 1.5%; background-color: #353535; color: white;">ulasan anda</button>
                     </div>
@@ -156,41 +159,83 @@
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Badan</p>    
+                <p class="mb-minus5 fw-normal">Panjang</p>    
             </th>
-            <td class="border border-4 border-bottom-0">78.1 mm ˣ 163.4 mm ˣ 8.9 mm</td>
-            <td class="border-end">78.1 mm ˣ 163.4 mm ˣ 8.9 mm</td>
-            <td class="" >78.1 mm ˣ 163.4 mm ˣ 8.9 mm</td>
+            <% if (dimensionWinner == 1 || dimensionWinner == 13 || dimensionWinner == 12) { %>
+            <td class="border border-4 border-bottom-0"><%= d.Dimension1.length %> </td>
+            <td class="border-end"><%= d2.Dimension1.length %> </td>
+            <td class=""><%= d3.Dimension1.length %> </td>
+            <%} else if (dimensionWinner == 2 || dimensionWinner == 23 || dimensionWinner == 12) {%>
+            <td class="border-end"><%= d.Dimension1.length %> </td>
+            <td class="border border-4 border-bottom-0"><%= d2.Dimension1.length %> </td>
+            <td class=""><%= d3.Dimension1.length %> </td>
+            <%} else if (dimensionWinner == 3 || dimensionWinner == 13 || dimensionWinner == 23) {%>
+            <td class="border-end"><%= d.Dimension1.length %> </td>
+            <td class="border-end"><%= d2.Dimension1.length %> </td>
+            <td class="border border-4 border-bottom-0"><%= d3.Dimension1.length %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Dimension1.length %> </td>
+            <td class="border-end"><%= d2.Dimension1.length %> </td>
+            <td class=""><%= d3.Dimension1.length %> </td>
+            <%} %>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Berat</p>    
+                <p class="mb-minus5 fw-normal">Lebar</p>    
             </th>
-            <td class="border border-4 border-bottom-0 border-top-0">233 gram</td>
-            <td class="border-end">233 gram</td>
-            <td class="">233 gram</td>
+            <% if (dimensionWinner == 1 || dimensionWinner == 13 || dimensionWinner == 12) { %>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Dimension1.width %> </td>
+            <td class="border-end"><%= d2.Dimension1.width %> </td>
+            <td class=""><%= d3.Dimension1.width %> </td>
+            <%} else if (dimensionWinner == 2 || dimensionWinner == 23 || dimensionWinner == 12) {%>
+            <td class="border-end"><%= d.Dimension1.width %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Dimension1.width %> </td>
+            <td class=""><%= d3.Dimension1.width %> </td>
+            <%} else if (dimensionWinner == 3 || dimensionWinner == 13 || dimensionWinner == 23) {%>
+            <td class="border-end"><%= d.Dimension1.width %> </td>
+            <td class="border-end"><%= d2.Dimension1.width %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Dimension1.width %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Dimension1.width %> </td>
+            <td class="border-end"><%= d2.Dimension1.width %> </td>
+            <td class=""><%= d3.Dimension1.width %> </td>
+            <%} %>
         </tr>
-        <tr class="border-bottom">
+        <tr class="">
             <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Material</p>    
+                <p class="mb-minus5 fw-normal">Tinggi</p>    
             </th>
-            <td class="border border-4 border-top-0 border-bottom-0">Glass, Aluminium, Corning Gorilla Glass Victus 2</td>
-            <td class="border-end">Glass, Aluminium, Corning Gorilla Glass Victus 2</td>
-            <td class="">Glass, Aluminium, Corning Gorilla Glass Victus 2</td>
-        </tr>
-        <tr class="" style="">
-            <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Sertifikasi Resistan</p>    
-            </th>
-            <td class="border border-4 border-top-0">IP68</td>
-            <td class="border-end">IP68</td>
-            <td class="">IP68</td>
+            <% if (dimensionWinner == 1 || dimensionWinner == 13 || dimensionWinner == 12) { %>
+            <td class="border border-4 border-top-0"><%= d.Dimension1.height %> </td>
+            <td class="border-end"><%= d2.Dimension1.height %> </td>
+            <td class=""><%= d3.Dimension1.height %> </td>
+            <%} else if (dimensionWinner == 2 || dimensionWinner == 23 || dimensionWinner == 12) {%>
+            <td class="border-end"><%= d.Dimension1.height %> </td>
+            <td class="border border-4 border-top-0"><%= d2.Dimension1.height %> </td>
+            <td class=""><%= d3.Dimension1.height %> </td>
+            <%} else if (dimensionWinner == 3 || dimensionWinner == 13 || dimensionWinner == 23) {%>
+            <td class="border-end"><%= d.Dimension1.height %> </td>
+            <td class="border-end"><%= d2.Dimension1.height %> </td>
+            <td class="border border-4 border-top-0"><%= d3.Dimension1.height %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Dimension1.height %> </td>
+            <td class="border-end"><%= d2.Dimension1.height %> </td>
+            <td class=""><%= d3.Dimension1.height %> </td>
+            <%} %>
         </tr>
 
         <tr>
             <th scope="row" class="fs-5">
                 <p id="spec-subgrup" class="mb-minus2" style="margin-top: 10px;">Layar</p>    
             </th>
+            <%if (dimensionWinner != 0) { %>
+            <%if (dimensionWinner == 2) { %>
+            <td></td>
+            <%} %>
+            <%if (dimensionWinner == 3) { %>
+            <td></td>
+            <td></td>
+            <%} %>
             <td>
                 <div class="z-1 text-end" style="margin-top: -60px;">
                     <svg width="50" height="90" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -199,131 +244,251 @@
                     </svg>  
                 </div>    
             </td>
+            <%} %>
           
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Diagonal</p>    
+                <p class="mb-minus5 fw-normal">Panjang</p>    
             </th>
-            <td class="border-end">6.7"</td>
-            <td class="border border-4 border-bottom-0">6.7"</td>
-            <td class="">6.7"</td>
+            <% if (displayWinner == 1 || displayWinner == 12 || displayWinner == 13) { %>
+            <td class="border border-4 border-bottom-0 "><%= d.Display1.height %> </td>
+            <td class="border-end"><%= d2.Display1.height %> </td>
+            <td class=""><%= d3.Display1.height %> </td>
+            <%} else if (displayWinner == 2 || displayWinner == 12 || displayWinner == 23) {%>
+            <td class="border-end"><%= d.Display1.height %> </td>
+            <td class="border border-4 border-bottom-0"><%= d2.Display1.height %> </td>
+            <td class=""><%= d3.Display1.height %> </td>
+            <%} else if (displayWinner == 3 || displayWinner == 13 || displayWinner == 23) {%>
+            <td class="border-end"><%= d.Display1.height %> </td>
+            <td class="border-end"><%= d2.Display1.height %> </td>
+            <td class="border border-4 border-bottom-0"><%= d3.Display1.height %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Display1.height %> </td>
+            <td class="border-end"><%= d2.Display1.height %> </td>
+            <td class=""><%= d3.Display1.height %> </td>
+            <%} %>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Tipe</p>    
+                <p class="mb-minus5 fw-normal">Lebar</p>    
             </th>
-            <td class="border-end">Super AMOLED</td>
-            <td class="border border-4 border-top-0 border-bottom-0">Super AMOLED</td>
-            <td class="">Super AMOLED</td>
+            <% if (displayWinner == 1 || displayWinner == 12 || displayWinner == 13) { %>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Display1.width %> </td>
+            <td class="border-end"><%= d2.Display1.width %> </td>
+            <td class=""><%= d3.Display1.width %> </td>
+            <%} else if (displayWinner == 2 || displayWinner == 12 || displayWinner == 23) {%>
+            <td class="border-end"><%= d.Display1.width %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Display1.width %> </td>
+            <td class=""><%= d3.Display1.width %> </td>
+            <%} else if (displayWinner == 3 || displayWinner == 13 || displayWinner == 23) {%>
+            <td class="border-end"><%= d.Display1.width %> </td>
+            <td class="border-end"><%= d2.Display1.width %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Display1.width %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Display1.width %> </td>
+            <td class="border-end"><%= d2.Display1.width %> </td>
+            <td class=""><%= d3.Display1.width %> </td>
+            <%} %>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Rasio Layar</p>    
+                <p class="mb-minus5 fw-normal">Refresh Rate</p>    
             </th>
-            <td class="border-end">1440 ˣ 3088, WQHD+</td>
-            <td class="border border-4 border-top-0 border-bottom-0">1440 ˣ 3088, WQHD+</td>
-            <td class="">1440 ˣ 3088, WQHD+</td>
+            <% if (displayWinner == 1 || displayWinner == 12 || displayWinner == 13) { %>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Display1.refresh_rate %> </td>
+            <td class="border-end"><%= d2.Display1.refresh_rate %> </td>
+            <td class=""><%= d3.Display1.refresh_rate %> </td>
+            <%} else if (displayWinner == 2 || displayWinner == 12 || displayWinner == 23) {%>
+            <td class="border-end"><%= d.Display1.refresh_rate %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Display1.refresh_rate %> </td>
+            <td class=""><%= d3.Display1.refresh_rate %> </td>
+            <%} else if (displayWinner == 3 || displayWinner == 13 || displayWinner == 23) {%>
+            <td class="border-end"><%= d.Display1.refresh_rate %> </td>
+            <td class="border-end"><%= d2.Display1.refresh_rate %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Display1.refresh_rate %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Display1.refresh_rate %> </td>
+            <td class="border-end"><%= d2.Display1.refresh_rate %> </td>
+            <td class=""><%= d3.Display1.refresh_rate %> </td>
+            <%} %>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Densitas</p>    
+                <p class="mb-minus5 fw-normal">Gamut Warna</p>    
             </th>
-            <td class="border-end">500 ppi</td>
-            <td class="border border-4 border-top-0 border-bottom-0">500 ppi</td>
-            <td class="">500 ppi</td>
+            <% if (displayWinner == 1 || displayWinner == 12 || displayWinner == 13) { %>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Display1.color_gamut %> </td>
+            <td class="border-end"><%= d2.Display1.color_gamut %> </td>
+            <td class=""><%= d3.Display1.color_gamut %> </td>
+            <%} else if (displayWinner == 2 || displayWinner == 12 || displayWinner == 23) {%>
+            <td class="border-end"><%= d.Display1.color_gamut %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Display1.color_gamut %> </td>
+            <td class=""><%= d3.Display1.color_gamut %> </td>
+            <%} else if (displayWinner == 3 || displayWinner == 13 || displayWinner == 23) {%>
+            <td class="border-end"><%= d.Display1.color_gamut %> </td>
+            <td class="border-end"><%= d2.Display1.color_gamut %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Display1.color_gamut %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Display1.color_gamut %> </td>
+            <td class="border-end"><%= d2.Display1.color_gamut %> </td>
+            <td class=""><%= d3.Display1.color_gamut %> </td>
+            <%} %>
         </tr>
         <tr class="">
             <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Lainnya</p>    
+                <p class="mb-minus5 fw-normal">Ukuran</p>    
             </th>
-            <td class="border-end">
-                <ul>
-                    <li>Layar 120 Hz</li>
-                    <li>Kecerahan tertinggi 1750 cd/m^2</li>
-                    <li>3000000 : 1 rasio kontras</li>
-                    <li>HDR10+</li>
-                    <li>Frameless</li>
-                </ul>
-            </td>
-            <td class="border border-4 border-top-0">
-                <ul>
-                    <li>Layar 120 Hz</li>
-                    <li>Kecerahan tertinggi 1750 cd/m^2</li>
-                    <li>3000000 : 1 rasio kontras</li>
-                    <li>HDR10+</li>
-                    <li>Frameless</li>
-                </ul>
-            </td>
-            <td class="">
-                <ul>
-                    <li>Layar 120 Hz</li>
-                    <li>Kecerahan tertinggi 1750 cd/m^2</li>
-                    <li>3000000 : 1 rasio kontras</li>
-                    <li>HDR10+</li>
-                    <li>Frameless</li>
-                </ul>
-            </td>
+            <% if (displayWinner == 1 || displayWinner == 12 || displayWinner == 13) { %>
+            <td class="border border-4 border-top-0"><%= d.Display1.size %> </td>
+            <td class="border-end"><%= d2.Display1.size %> </td>
+            <td class=""><%= d3.Display1.size %> </td>
+            <%} else if (displayWinner == 2 || displayWinner == 12 || displayWinner == 23) {%>
+            <td class="border-end"><%= d.Display1.size %> </td>
+            <td class="border border-4 border-top-0"><%= d2.Display1.size %> </td>
+            <td class=""><%= d3.Display1.size %> </td>
+            <%} else if (displayWinner == 3 || displayWinner == 13 || displayWinner == 23) {%>
+            <td class="border-end"><%= d.Display1.size %> </td>
+            <td class="border-end"><%= d2.Display1.size %> </td>
+            <td class="border border-4 border-top-0"><%= d3.Display1.size %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Display1.size %> </td>
+            <td class="border-end"><%= d2.Display1.size %> </td>
+            <td class=""><%= d3.Display1.size %> </td>
+            <%} %>
         </tr>
 
         <tr>
             <th scope="row" class="fs-5">
                 <p id="spec-subgrup" class="mb-minus5" style="margin-top: 10px;">Suara</p>    
             </th>
+            <%if (displayWinner != 0) { %>
+            <%if (displayWinner == 2) { %>
             <td></td>
+            <%} %>
+            <%if (displayWinner == 3) { %>
+            <td></td>
+            <td></td>
+            <%} %>
             <td>
                 <div class="z-1 text-end" style="margin-top: -60px;">
                     <svg width="50" height="90" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="38" cy="38" r="38" fill="white"/>
                         <path d="M38 0C16.986 0 0 17.1 0 38C0 58.9 17.1 76 38 76C58.9 76 76 58.9 76 38C76 17.1 58.9 0 38 0ZM53.2 51.072C53.2 52.364 52.364 53.2 51.072 53.2H24.928C23.636 53.2 22.8 52.364 22.8 51.072V49.4H53.2V51.072ZM53.2 45.6H22.8L19 22.8L30.4 30.4L38 19L45.6 30.4L57 22.8L53.2 45.6Z" fill="#6300E1"/>
                     </svg>  
-                </div>
+                </div>    
             </td>
+            <%} %>
         </tr>
-        <tr>
+        <tr class="border-bottom">
             <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Suara</p>    
+                <p class="mb-minus5 fw-normal">Nama</p>    
             </th>
-            <td class="border-end">
-                <ul>
-                    <li>Suara Hi-Res</li>
-                    <li>Noice Cancellation Microphone</li>
-                    <li>Speaker stereo</li>
-                    <li>2 mic</li>
-                </ul>
-            </td>
-            <td class="border-end">
-                <ul>
-                    <li>Suara Hi-Res</li>
-                    <li>Noice Cancellation Microphone</li>
-                    <li>Speaker stereo</li>
-                    <li>2 mic</li>
-                </ul>
-            </td>
-            <td class="border border-4">
-                <ul>
-                    <li>Suara Hi-Res</li>
-                    <li>Noice Cancellation Microphone</li>
-                    <li>Speaker stereo</li>
-                    <li>2 mic</li>
-                </ul>
-            </td>
+            <% if (audioWinner == 1 || audioWinner == 12 || audioWinner == 13) { %>
+            <td class="border border-4 border-bottom-0"><%= d.Audio1.name %> </td>
+            <td class="border-end"><%= d2.Audio1.name %> </td>
+            <td class=""><%= d3.Audio1.name %> </td>
+            <%} else if (audioWinner == 2 || audioWinner == 12 || audioWinner == 23) {%>
+            <td class="border-end"><%= d.Audio1.name %> </td>
+            <td class="border border-4 border-bottom-0"><%= d2.Audio1.name %> </td>
+            <td class=""><%= d3.Audio1.name %> </td>
+            <%} else if (audioWinner == 3 || audioWinner == 13 || audioWinner == 23) {%>
+            <td class="border-end"><%= d.Audio1.name %> </td>
+            <td class="border-end"><%= d2.Audio1.name %> </td>
+            <td class="border border-4 border-bottom-0"><%= d3.Audio1.name %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Audio1.name %> </td>
+            <td class="border-end"><%= d2.Audio1.name %> </td>
+            <td class=""><%= d3.Audio1.name %> </td>
+            <%} %>
         </tr>
-
+        <tr class="border-bottom">
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">Tipe</p>    
+            </th>
+            <% if (audioWinner == 1 || audioWinner == 12 || audioWinner == 13) { %>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Audio1.type %> </td>
+            <td class="border-end"><%= d2.Audio1.type %> </td>
+            <td class=""><%= d3.Audio1.type %> </td>
+            <%} else if (audioWinner == 2 || audioWinner == 12 || audioWinner == 23) {%>
+            <td class="border-end"><%= d.Audio1.type %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Audio1.type %> </td>
+            <td class=""><%= d3.Audio1.type %> </td>
+            <%} else if (audioWinner == 3 || audioWinner == 13 || audioWinner == 23) {%>
+            <td class="border-end"><%= d.Audio1.type %> </td>
+            <td class="border-end"><%= d2.Audio1.type %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Audio1.type %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Audio1.type %> </td>
+            <td class="border-end"><%= d2.Audio1.type %> </td>
+            <td class=""><%= d3.Audio1.type %> </td>
+            <%} %>
+        </tr>
+        <tr class="border-bottom">
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">Mikrofon</p>    
+            </th>
+            <% if (audioWinner == 1 || audioWinner == 12 || audioWinner == 13) { %>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Audio1.microphone %> </td>
+            <td class="border-end"><%= d2.Audio1.microphone %> </td>
+            <td class=""><%= d3.Audio1.microphone %> </td>
+            <%} else if (audioWinner == 2 || audioWinner == 12 || audioWinner == 23) {%>
+            <td class="border-end"><%= d.Audio1.microphone %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Audio1.microphone %> </td>
+            <td class=""><%= d3.Audio1.microphone %> </td>
+            <%} else if (audioWinner == 3 || audioWinner == 13 || audioWinner == 23) {%>
+            <td class="border-end"><%= d.Audio1.microphone %> </td>
+            <td class="border-end"><%= d2.Audio1.microphone %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Audio1.microphone %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Audio1.microphone %> </td>
+            <td class="border-end"><%= d2.Audio1.microphone %> </td>
+            <td class=""><%= d3.Audio1.microphone %> </td>
+            <%} %>
+        </tr>
+        <tr class="">
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">Jumlah Speaker</p>    
+            </th>
+            <% if (audioWinner == 1 || audioWinner == 12 || audioWinner == 13) { %>
+            <td class="border border-4 border-top-0"><%= d.Audio1.quantity %> </td>
+            <td class="border-end"><%= d2.Audio1.quantity %> </td>
+            <td class=""><%= d3.Audio1.quantity %> </td>
+            <%} else if (audioWinner == 2 || audioWinner == 12 || audioWinner == 23) {%>
+            <td class="border-end"><%= d.Audio1.quantity %> </td>
+            <td class="border border-4 border-top-0"><%= d2.Audio1.quantity %> </td>
+            <td class=""><%= d3.Audio1.quantity %> </td>
+            <%} else if (audioWinner == 3 || audioWinner == 13 || audioWinner == 23) {%>
+            <td class="border-end"><%= d.Audio1.quantity %> </td>
+            <td class="border-end"><%= d2.Audio1.quantity %> </td>
+            <td class="border border-4 border-top-0"><%= d3.Audio1.quantity %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Audio1.quantity %> </td>
+            <td class="border-end"><%= d2.Audio1.quantity %> </td>
+            <td class=""><%= d3.Audio1.quantity %> </td>
+            <%} %>
+        </tr>
         <tr>
             <th scope="row" class="">
                 <p class="h4 text-white rounded-4 text-center" style="background-color: #353535; padding-bottom: 10px; padding-top: 10px; width: 120%;">PERFORMA</p>   
             </th>
+            <%if (audioWinner != 0) { %>
+            <%if (audioWinner == 2) { %>
+            <td></td>
+            <%} %>
+            <%if (audioWinner == 3) { %>
             <td></td>
             <td></td>
+            <%} %>
             <td>
                 <div class="z-1 text-end" style="margin-top: -60px;">
                     <svg width="50" height="90" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="38" cy="38" r="38" fill="white"/>
                         <path d="M38 0C16.986 0 0 17.1 0 38C0 58.9 17.1 76 38 76C58.9 76 76 58.9 76 38C76 17.1 58.9 0 38 0ZM53.2 51.072C53.2 52.364 52.364 53.2 51.072 53.2H24.928C23.636 53.2 22.8 52.364 22.8 51.072V49.4H53.2V51.072ZM53.2 45.6H22.8L19 22.8L30.4 30.4L38 19L45.6 30.4L57 22.8L53.2 45.6Z" fill="#6300E1"/>
                     </svg>  
-                </div>  
+                </div>    
             </td>
+            <%} %>
         </tr>
         <tr>
             <th scope="row" class="fs-5">
@@ -332,212 +497,711 @@
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Model</p>    
+                <p class="mb-minus5 fw-normal">Nama</p>    
             </th>
-            <td class="border-end">Qualcomm Snapdragon 8 Gen2 (3,36 GHz)</td>
-            <td class="border-end">Qualcomm Snapdragon 8 Gen2 (3,36 GHz)</td>
-            <td class="">Qualcomm Snapdragon 8 Gen2 (3,36 GHz)</td>
-        </tr>
-        <tr class="border-bottom">
-            <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">CPU</p>    
-            </th>
-            <td class="border-end">1x3.36GHz Cortex - X3 + 4x2.8 GHz Cortex - A715 + 3x2.02 GHz Cortex - A51</td>
-            <td class="border-end">1x3.36GHz Cortex - X3 + 4x2.8 GHz Cortex - A715 + 3x2.02 GHz Cortex - A51</td>
-            <td class="">1x3.36GHz Cortex - X3 + 4x2.8 GHz Cortex - A715 + 3x2.02 GHz Cortex - A51</td>
-        </tr>
-        <tr class="border-bottom">
-            <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Tipe</p>    
-            </th>
-            <td class="border-end">Octa-Core</td>
-            <td class="border-end">Octa-Core</td>
-            <td class="">Octa-Core</td>
-        </tr>
-        <tr>
-            <th scope="row">
-                <p class="mb-minus5 fw-normal">Nanometer</p>    
-            </th>
-            <td class="border-end">4 nm</td>
-            <td class="border-end">4 nm</td>
-            <td class="">4 nm</td>
-        </tr>
-
-        <tr>
-            <th scope="row" class="fs-5">
-                <p id="spec-subgrup" class="mb-minus2" style="margin-top: 10px;">Grafis</p>    
-            </th>
-        </tr>
-        <tr>
-            <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">GPU</p>    
-            </th>
-            <td class="border-end">Qualcomm Adreno 740</td>     
-            <td class="border-end">Qualcomm Adreno 740</td>     
-            <td class="">Qualcomm Adreno 740</td>     
-        </tr>
-
-        <tr>
-            <th scope="row" class="fs-5">
-                <p id="spec-subgrup" class="mb-minus2" style="margin-top: 10px;">RAM</p>    
-            </th>
-        </tr>
-        <tr class="border-bottom">
-            <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">RAM</p>    
-            </th>
-            <td class="border-end">12 GB</td>        
-            <td class="border-end">12 GB</td>        
-            <td class="">12 GB</td>        
-        </tr>
-        <tr>
-            <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Tipe</p>    
-            </th>
-            <td class="border-end">RAM LPDDR5X</td>     
-            <td class="border-end">RAM LPDDR5X</td>     
-            <td class="">RAM LPDDR5X</td>     
-        </tr>
-
-        <tr style="">
-            <th scope="row" class="fs-5">
-                <p id="spec-subgrup" class="mb-minus2" style="margin-top: 10px;">Ruang Penyimpanan</p>    
-            </th>
+            <% if (processorWinner == 1 || processorWinner == 12 || processorWinner == 13) { %>
+            <td class="border border-4 border-bottom-0"><%= d.Processor1.name %> </td>
+            <td class="border-end"><%= d2.Processor1.name %> </td>
+            <td class=""><%= d3.Processor1.name %> </td>
+            <%} else if (processorWinner == 2 || processorWinner == 12 || processorWinner == 23) {%>
+            <td class="border-end"><%= d.Processor1.name %> </td>
+            <td class="border border-4 border-bottom-0"><%= d2.Processor1.name %> </td>
+            <td class=""><%= d3.Processor1.name %> </td>
+            <%} else if (processorWinner == 3 || processorWinner == 13 || processorWinner == 23) {%>
+            <td class="border-end"><%= d.Processor1.name %> </td>
+            <td class="border-end"><%= d2.Processor1.name %> </td>
+            <td class="border border-4 border-bottom-0"><%= d3.Processor1.name %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Processor1.name %> </td>
+            <td class="border-end"><%= d2.Processor1.name %> </td>
+            <td class=""><%= d3.Processor1.name %> </td>
+            <%} %>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Tipe</p>    
             </th>
-            <td class="border-end">256 GB</td>     
-            <td class="border-end">256 GB</td>          
-            <td class="">256 GB</td>          
+            <% if (processorWinner == 1 || processorWinner == 12 || processorWinner == 13) { %>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Processor1.type %> </td>
+            <td class="border-end"><%= d2.Processor1.type %> </td>
+            <td class=""><%= d3.Processor1.type %> </td>
+            <%} else if (processorWinner == 2 || processorWinner == 12 || processorWinner == 23) {%>
+            <td class="border-end"><%= d.Processor1.type %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Processor1.type %> </td>
+            <td class=""><%= d3.Processor1.type %> </td>
+            <%} else if (processorWinner == 3 || processorWinner == 13 || processorWinner == 23) {%>
+            <td class="border-end"><%= d.Processor1.type %> </td>
+            <td class="border-end"><%= d2.Processor1.type %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Processor1.type %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Processor1.type %> </td>
+            <td class="border-end"><%= d2.Processor1.type %> </td>
+            <td class=""><%= d3.Processor1.type %> </td>
+            <%} %>
+        </tr>
+        <tr class="border-bottom">
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">Pabrikan</p>    
+            </th>
+            <% if (processorWinner == 1 || processorWinner == 12 || processorWinner == 13) { %>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Processor1.manufacturer %> </td>
+            <td class="border-end"><%= d2.Processor1.manufacturer %> </td>
+            <td class=""><%= d3.Processor1.manufacturer %> </td>
+            <%} else if (processorWinner == 2 || processorWinner == 12 || processorWinner == 23) {%>
+            <td class="border-end"><%= d.Processor1.manufacturer %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Processor1.manufacturer %> </td>
+            <td class=""><%= d3.Processor1.manufacturer %> </td>
+            <%} else if (processorWinner == 3 || processorWinner == 13 || processorWinner == 23) {%>
+            <td class="border-end"><%= d.Processor1.manufacturer %> </td>
+            <td class="border-end"><%= d2.Processor1.manufacturer %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Processor1.manufacturer %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Processor1.manufacturer %> </td>
+            <td class="border-end"><%= d2.Processor1.manufacturer %> </td>
+            <td class=""><%= d3.Processor1.manufacturer %> </td>
+            <%} %>
+        </tr>
+        <tr class="border-bottom">
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">Kecepatan Clock</p>    
+            </th>
+            <% if (processorWinner == 1 || processorWinner == 12 || processorWinner == 13) { %>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Processor1.clock_speed %> </td>
+            <td class="border-end"><%= d2.Processor1.clock_speed %> </td>
+            <td class=""><%= d3.Processor1.clock_speed %> </td>
+            <%} else if (processorWinner == 2 || processorWinner == 12 || processorWinner == 23) {%>
+            <td class="border-end"><%= d.Processor1.clock_speed %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Processor1.clock_speed %> </td>
+            <td class=""><%= d3.Processor1.clock_speed %> </td>
+            <%} else if (processorWinner == 3 || processorWinner == 13 || processorWinner == 23) {%>
+            <td class="border-end"><%= d.Processor1.clock_speed %> </td>
+            <td class="border-end"><%= d2.Processor1.clock_speed %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Processor1.clock_speed %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Processor1.clock_speed %> </td>
+            <td class="border-end"><%= d2.Processor1.clock_speed %> </td>
+            <td class=""><%= d3.Processor1.clock_speed %> </td>
+            <%} %>
+        </tr>
+        <tr class="border-bottom">
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">Jumlah Core</p>    
+            </th>
+            <% if (processorWinner == 1 || processorWinner == 12 || processorWinner == 13) { %>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Processor1.cores %> </td>
+            <td class="border-end"><%= d2.Processor1.cores %> </td>
+            <td class=""><%= d3.Processor1.cores %> </td>
+            <%} else if (processorWinner == 2 || processorWinner == 12 || processorWinner == 23) {%>
+            <td class="border-end"><%= d.Processor1.cores %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Processor1.cores %> </td>
+            <td class=""><%= d3.Processor1.cores %> </td>
+            <%} else if (processorWinner == 3 || processorWinner == 13 || processorWinner == 23) {%>
+            <td class="border-end"><%= d.Processor1.cores %> </td>
+            <td class="border-end"><%= d2.Processor1.cores %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Processor1.cores %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Processor1.cores %> </td>
+            <td class="border-end"><%= d2.Processor1.cores %> </td>
+            <td class=""><%= d3.Processor1.cores %> </td>
+            <%} %>
         </tr>
         <tr>
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">Jumlah Thread</p>    
+            </th>
+            <% if (processorWinner == 1 || processorWinner == 12 || processorWinner == 13) { %>
+            <td class="border border-4 border-top-0"><%= d.Processor1.threads %> </td>
+            <td class="border-end"><%= d2.Processor1.threads %> </td>
+            <td class=""><%= d3.Processor1.threads %> </td>
+            <%} else if (processorWinner == 2 || processorWinner == 12 || processorWinner == 23) {%>
+            <td class="border-end"><%= d.Processor1.threads %> </td>
+            <td class="border border-4 border-top-0"><%= d2.Processor1.threads %> </td>
+            <td class=""><%= d3.Processor1.threads %> </td>
+            <%} else if (processorWinner == 3 || processorWinner == 13 || processorWinner == 23) {%>
+            <td class="border-end"><%= d.Processor1.threads %> </td>
+            <td class="border-end"><%= d2.Processor1.threads %> </td>
+            <td class="border border-4 border-top-0"><%= d3.Processor1.threads %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Processor1.threads %> </td>
+            <td class="border-end"><%= d2.Processor1.threads %> </td>
+            <td class=""><%= d3.Processor1.threads %> </td>
+            <%} %>
+        </tr>
+        <tr>
+            <th scope="row" class="fs-5">
+                <p id="spec-subgrup" class="mb-minus2">Grafis</p>    
+            </th>
+            <%if (processorWinner != 0) { %>
+            <%if (processorWinner == 2) { %>
+            <td></td>
+            <%} %>
+            <%if (processorWinner == 3) { %>
+            <td></td>
+            <td></td>
+            <%} %>
+            <td>
+                <div class="z-1 text-end" style="margin-top: -60px;">
+                    <svg width="50" height="90" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="38" cy="38" r="38" fill="white"/>
+                        <path d="M38 0C16.986 0 0 17.1 0 38C0 58.9 17.1 76 38 76C58.9 76 76 58.9 76 38C76 17.1 58.9 0 38 0ZM53.2 51.072C53.2 52.364 52.364 53.2 51.072 53.2H24.928C23.636 53.2 22.8 52.364 22.8 51.072V49.4H53.2V51.072ZM53.2 45.6H22.8L19 22.8L30.4 30.4L38 19L45.6 30.4L57 22.8L53.2 45.6Z" fill="#6300E1"/>
+                    </svg>  
+                </div>    
+            </td>
+            <%} %>
+        </tr>
+        <tr class="border-bottom">
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">Nama</p>    
+            </th>
+            <% if (graphicsWinner == 1 || graphicsWinner == 12 || graphicsWinner == 13) { %>
+            <td class="border border-4 border-bottom-0"><%= d.Graphic.name %> </td>
+            <td class="border-end"><%= d2.Graphic.name %> </td>
+            <td class=""><%= d3.Graphic.name %> </td>
+            <%} else if (graphicsWinner == 2 || graphicsWinner == 12 || graphicsWinner == 23) {%>
+            <td class="border-end"><%= d.Graphic.name %> </td>
+            <td class="border border-4 border-bottom-0"><%= d2.Graphic.name %> </td>
+            <td class=""><%= d3.Graphic.name %> </td>
+            <%} else if (graphicsWinner == 3 || graphicsWinner == 13 || graphicsWinner == 23) {%>
+            <td class="border-end"><%= d.Graphic.name %> </td>
+            <td class="border-end"><%= d2.Graphic.name %> </td>
+            <td class="border border-4 border-bottom-0"><%= d3.Graphic.name %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Graphic.name %> </td>
+            <td class="border-end"><%= d2.Graphic.name %> </td>
+            <td class=""><%= d3.Graphic.name %> </td>
+            <%} %>
+        </tr>
+        <tr class="border-bottom">
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">Tipe</p>    
+            </th>
+            <% if (graphicsWinner == 1 || graphicsWinner == 12 || graphicsWinner == 13) { %>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Graphic.type %> </td>
+            <td class="border-end"><%= d2.Graphic.type %> </td>
+            <td class=""><%= d3.Graphic.type %> </td>
+            <%} else if (graphicsWinner == 2 || graphicsWinner == 12 || graphicsWinner == 23) {%>
+            <td class="border-end"><%= d.Graphic.type %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Graphic.type %> </td>
+            <td class=""><%= d3.Graphic.type %> </td>
+            <%} else if (graphicsWinner == 3 || graphicsWinner == 13 || graphicsWinner == 23) {%>
+            <td class="border-end"><%= d.Graphic.type %> </td>
+            <td class="border-end"><%= d2.Graphic.type %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Graphic.type %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Graphic.type %> </td>
+            <td class="border-end"><%= d2.Graphic.type %> </td>
+            <td class=""><%= d3.Graphic.type %> </td>
+            <%} %>
+        </tr>
+        <tr class="border-bottom">
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">Pabrikan</p>    
+            </th>
+            <% if (graphicsWinner == 1 || graphicsWinner == 12 || graphicsWinner == 13) { %>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Graphic.manufacturer %> </td>
+            <td class="border-end"><%= d2.Graphic.manufacturer %> </td>
+            <td class=""><%= d3.Graphic.manufacturer %> </td>
+            <%} else if (graphicsWinner == 2 || graphicsWinner == 12 || graphicsWinner == 23) {%>
+            <td class="border-end"><%= d.Graphic.manufacturer %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Graphic.manufacturer %> </td>
+            <td class=""><%= d3.Graphic.manufacturer %> </td>
+            <%} else if (graphicsWinner == 3 || graphicsWinner == 13 || graphicsWinner == 23) {%>
+            <td class="border-end"><%= d.Graphic.manufacturer %> </td>
+            <td class="border-end"><%= d2.Graphic.manufacturer %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Graphic.manufacturer %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Graphic.manufacturer %> </td>
+            <td class="border-end"><%= d2.Graphic.manufacturer %> </td>
+            <td class=""><%= d3.Graphic.manufacturer %> </td>
+            <%} %>
+        </tr>
+        <tr class="border-bottom">
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">Watt</p>    
+            </th>
+            <% if (graphicsWinner == 1 || graphicsWinner == 12 || graphicsWinner == 13) { %>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Graphic.wattage %> </td>
+            <td class="border-end"><%= d2.Graphic.wattage %> </td>
+            <td class=""><%= d3.Graphic.wattage %> </td>
+            <%} else if (graphicsWinner == 2 || graphicsWinner == 12 || graphicsWinner == 23) {%>
+            <td class="border-end"><%= d.Graphic.wattage %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Graphic.wattage %> </td>
+            <td class=""><%= d3.Graphic.wattage %> </td>
+            <%} else if (graphicsWinner == 3 || graphicsWinner == 13 || graphicsWinner == 23) {%>
+            <td class="border-end"><%= d.Graphic.wattage %> </td>
+            <td class="border-end"><%= d2.Graphic.wattage %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Graphic.wattage %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Graphic.wattage %> </td>
+            <td class="border-end"><%= d2.Graphic.wattage %> </td>
+            <td class=""><%= d3.Graphic.wattage %> </td>
+            <%} %>
+        </tr>
+        <tr class="border-bottom">
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">Kecepatan Clock</p>    
+            </th>
+            <% if (graphicsWinner == 1 || graphicsWinner == 12 || graphicsWinner == 13) { %>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Graphic.clock_speed %> </td>
+            <td class="border-end"><%= d2.Graphic.clock_speed %> </td>
+            <td class=""><%= d3.Graphic.clock_speed %> </td>
+            <%} else if (graphicsWinner == 2 || graphicsWinner == 12 || graphicsWinner == 23) {%>
+            <td class="border-end"><%= d.Graphic.clock_speed %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Graphic.clock_speed %> </td>
+            <td class=""><%= d3.Graphic.clock_speed %> </td>
+            <%} else if (graphicsWinner == 3 || graphicsWinner == 13 || graphicsWinner == 23) {%>
+            <td class="border-end"><%= d.Graphic.clock_speed %> </td>
+            <td class="border-end"><%= d2.Graphic.clock_speed %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Graphic.clock_speed %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Graphic.clock_speed %> </td>
+            <td class="border-end"><%= d2.Graphic.clock_speed %> </td>
+            <td class=""><%= d3.Graphic.clock_speed %> </td>
+            <%} %>
+        </tr>
+        <tr class="border-bottom">
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">VRAM</p>    
+            </th>
+            <% if (graphicsWinner == 1 || graphicsWinner == 12 || graphicsWinner == 13) { %>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Graphic.vram %> </td>
+            <td class="border-end"><%= d2.Graphic.vram %> </td>
+            <td class=""><%= d3.Graphic.vram %> </td>
+            <%} else if (graphicsWinner == 2 || graphicsWinner == 12 || graphicsWinner == 23) {%>
+            <td class="border-end"><%= d.Graphic.vram %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Graphic.vram %> </td>
+            <td class=""><%= d3.Graphic.vram %> </td>
+            <%} else if (graphicsWinner == 3 || graphicsWinner == 13 || graphicsWinner == 23) {%>
+            <td class="border-end"><%= d.Graphic.vram %> </td>
+            <td class="border-end"><%= d2.Graphic.vram %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Graphic.vram %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Graphic.vram %> </td>
+            <td class="border-end"><%= d2.Graphic.vram %> </td>
+            <td class=""><%= d3.Graphic.vram %> </td>
+            <%} %>
+        </tr>
+        <tr class="">
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">Kecepatan Data</p>    
+            </th>
+            <% if (graphicsWinner == 1 || graphicsWinner == 12 || graphicsWinner == 13) { %>
+            <td class="border border-4 border-top-0"><%= d.Graphic.data_rate %> </td>
+            <td class="border-end"><%= d2.Graphic.data_rate %> </td>
+            <td class=""><%= d3.Graphic.data_rate %> </td>
+            <%} else if (graphicsWinner == 2 || graphicsWinner == 12 || graphicsWinner == 23) {%>
+            <td class="border-end"><%= d.Graphic.data_rate %> </td>
+            <td class="border border-4 border-top-0"><%= d2.Graphic.data_rate %> </td>
+            <td class=""><%= d3.Graphic.data_rate %> </td>
+            <%} else if (graphicsWinner == 3 || graphicsWinner == 13 || graphicsWinner == 23) {%>
+            <td class="border-end"><%= d.Graphic.data_rate %> </td>
+            <td class="border-end"><%= d2.Graphic.data_rate %> </td>
+            <td class="border border-4 border-top-0"><%= d3.Graphic.data_rate %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Graphic.data_rate %> </td>
+            <td class="border-end"><%= d2.Graphic.data_rate %> </td>
+            <td class=""><%= d3.Graphic.data_rate %> </td>
+            <%} %>
+        </tr>
+        <tr>
+            <th scope="row" class="fs-5">
+                <p id="spec-subgrup" class="mb-minus5" style="margin-top: 10px;">RAM</p>    
+            </th>
+            <%if (graphicsWinner != 0) { %>
+            <%if (graphicsWinner == 2) { %>
+            <td></td>
+            <%} %>
+            <%if (graphicsWinner == 3) { %>
+            <td></td>
+            <td></td>
+            <%} %>
+            <td>
+                <div class="z-1 text-end" style="margin-top: -60px;">
+                    <svg width="50" height="90" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="38" cy="38" r="38" fill="white"/>
+                        <path d="M38 0C16.986 0 0 17.1 0 38C0 58.9 17.1 76 38 76C58.9 76 76 58.9 76 38C76 17.1 58.9 0 38 0ZM53.2 51.072C53.2 52.364 52.364 53.2 51.072 53.2H24.928C23.636 53.2 22.8 52.364 22.8 51.072V49.4H53.2V51.072ZM53.2 45.6H22.8L19 22.8L30.4 30.4L38 19L45.6 30.4L57 22.8L53.2 45.6Z" fill="#6300E1"/>
+                    </svg>  
+                </div>    
+            </td>
+            <%} %>
+        </tr>
+        <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Kapasitas</p>    
             </th>
-            <td class="border-end">UFS Storage 4.0</td>     
-            <td class="border-end">UFS Storage 4.0</td>       
-            <td class="">UFS Storage 4.0</td>       
+            <% if (ramWinner == 1 || ramWinner == 12 || ramWinner == 13) { %>
+            <td class="border border-4 border-bottom-0"><%= d.Memory1.size %> </td>
+            <td class="border-end"><%= d2.Memory1.size %> </td>
+            <td class=""><%= d3.Memory1.size %> </td>
+            <%} else if (ramWinner == 2 || ramWinner == 12 || ramWinner == 23) {%>
+            <td class="border-end"><%= d.Memory1.size %> </td>
+            <td class="border border-4 border-bottom-0"><%= d2.Memory1.size %> </td>
+            <td class=""><%= d3.Memory1.size %> </td>
+            <%} else if (ramWinner == 3 || ramWinner == 13 || ramWinner == 23) {%>
+            <td class="border-end"><%= d.Memory1.size %> </td>
+            <td class="border-end"><%= d2.Memory1.size %> </td>
+            <td class="border border-4 border-bottom-0"><%= d3.Memory1.size %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Memory1.size %> </td>
+            <td class="border-end"><%= d2.Memory1.size %> </td>
+            <td class=""><%= d3.Memory1.size %> </td>
+            <%} %>
         </tr>
-
+        <tr class="border-bottom">
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">Kecepatan Data</p>    
+            </th>
+            <% if (ramWinner == 1 || ramWinner == 12 || ramWinner == 13) { %>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Memory1.data_rate %> </td>
+            <td class="border-end"><%= d2.Memory1.data_rate %> </td>
+            <td class=""><%= d3.Memory1.data_rate %> </td>
+            <%} else if (ramWinner == 2 || ramWinner == 12 || ramWinner == 23) {%>
+            <td class="border-end"><%= d.Memory1.data_rate %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Memory1.data_rate %> </td>
+            <td class=""><%= d3.Memory1.data_rate %> </td>
+            <%} else if (ramWinner == 3 || ramWinner == 13 || ramWinner == 23) {%>
+            <td class="border-end"><%= d.Dimension1.length %> </td>
+            <td class="border-end"><%= d2.Dimension1.length %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Dimension1.length %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Dimension1.length %> </td>
+            <td class="border-end"><%= d2.Dimension1.length %> </td>
+            <td class=""><%= d3.Dimension1.length %> </td>
+            <%} %>
+        </tr>
+        <tr class="border-bottom">
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">Channel</p>    
+            </th>
+            <% if (ramWinner == 1 || ramWinner == 12 || ramWinner == 13) { %>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Memory1.channel %> </td>
+            <td class="border-end"><%= d2.Memory1.channel %> </td>
+            <td class=""><%= d3.Memory1.channel %> </td>
+            <%} else if (ramWinner == 2 || ramWinner == 12 || ramWinner == 23) {%>
+            <td class="border-end"><%= d.Memory1.channel %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Memory1.channel %> </td>
+            <td class=""><%= d3.Memory1.channel %> </td>
+            <%} else if (ramWinner == 3 || ramWinner == 13 || ramWinner == 23) {%>
+            <td class="border-end"><%= d.Dimension1.length %> </td>
+            <td class="border-end"><%= d2.Dimension1.length %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Dimension1.length %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Dimension1.length %> </td>
+            <td class="border-end"><%= d2.Dimension1.length %> </td>
+            <td class=""><%= d3.Dimension1.length %> </td>
+            <%} %>
+        </tr>
+        <tr>
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">Kapasitas Maks</p>    
+            </th>
+            <% if (ramWinner == 1 || ramWinner == 12 || ramWinner == 13) { %>
+            <td class="border border-4 border-top-0"><%= d.Memory1.max_capacity %> </td>
+            <td class="border-end"><%= d2.Memory1.max_capacity %> </td>
+            <td class=""><%= d3.Memory1.max_capacity %> </td>
+            <%} else if (ramWinner == 2 || ramWinner == 12 || ramWinner == 23) {%>
+            <td class="border-end"><%= d.Memory1.max_capacity %> </td>
+            <td class="border border-4 border-top-0"><%= d2.Memory1.max_capacity %> </td>
+            <td class=""><%= d3.Memory1.max_capacity %> </td>
+            <%} else if (ramWinner == 3 || ramWinner == 13 || ramWinner == 23) {%>
+            <td class="border-end"><%= d.Dimension1.length %> </td>
+            <td class="border-end"><%= d2.Dimension1.length %> </td>
+            <td class="border border-4 border-top-0"><%= d3.Dimension1.length %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Dimension1.length %> </td>
+            <td class="border-end"><%= d2.Dimension1.length %> </td>
+            <td class=""><%= d3.Dimension1.length %> </td>
+            <%} %>
+        </tr>
+        <tr>
+            <th scope="row" class="fs-5">
+                <p id="spec-subgrup" class="mb-minus5" style="margin-top: 10px;">Ruang Penyimpanan</p>    
+            </th>
+            <%if (ramWinner != 0) { %>
+            <%if (ramWinner == 2) { %>
+            <td></td>
+            <%} %>
+            <%if (ramWinner == 3) { %>
+            <td></td>
+            <td></td>
+            <%} %>
+            <td>
+                <div class="z-1 text-end" style="margin-top: -60px;">
+                    <svg width="50" height="90" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="38" cy="38" r="38" fill="white"/>
+                        <path d="M38 0C16.986 0 0 17.1 0 38C0 58.9 17.1 76 38 76C58.9 76 76 58.9 76 38C76 17.1 58.9 0 38 0ZM53.2 51.072C53.2 52.364 52.364 53.2 51.072 53.2H24.928C23.636 53.2 22.8 52.364 22.8 51.072V49.4H53.2V51.072ZM53.2 45.6H22.8L19 22.8L30.4 30.4L38 19L45.6 30.4L57 22.8L53.2 45.6Z" fill="#6300E1"/>
+                    </svg>  
+                </div>    
+            </td>
+            <%} %>
+        </tr>
+        <tr class="border-bottom">
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">Kapasitas</p>    
+            </th>
+            <% if (storageWinner == 1 || storageWinner == 12 || storageWinner == 13) { %>
+            <td class="border border-4 border-bottom-0"><%= d.Storage1.size %> </td>
+            <td class="border-end"><%= d2.Storage1.size %> </td>
+            <td class=""><%= d3.Storage1.size %> </td>
+            <%} else if (storageWinner == 2 || storageWinner == 12 || storageWinner == 23) {%>
+            <td class="border-end"><%= d.Storage1.size %> </td>
+            <td class="border border-4 border-bottom-0"><%= d2.Storage1.size %> </td>
+            <td class=""><%= d3.Storage1.size %> </td>
+            <%} else if (storageWinner == 3 || storageWinner == 13 || storageWinner == 23) {%>
+            <td class="border-end"><%= d.Storage1.size %> </td>
+            <td class="border-end"><%= d2.Storage1.size %> </td>
+            <td class="border border-4 border-bottom-0"><%= d3.Storage1.size %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Storage1.size %> </td>
+            <td class="border-end"><%= d2.Storage1.size %> </td>
+            <td class=""><%= d3.Storage1.size %> </td>
+            <%} %>
+        </tr>
+        <tr class="border-bottom">
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">Tipe</p>    
+            </th>
+            <% if (storageWinner == 1 || storageWinner == 12 || storageWinner == 13) { %>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Storage1.type %> </td>
+            <td class="border-end"><%= d2.Storage1.type %> </td>
+            <td class=""><%= d3.Storage1.type %> </td>
+            <%} else if (storageWinner == 2 || storageWinner == 12 || storageWinner == 23) {%>
+            <td class="border-end"><%= d.Audio1.type %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Storage1.type %> </td>
+            <td class=""><%= d3.Storage1.type %> </td>
+            <%} else if (storageWinner == 3 || storageWinner == 13 || storageWinner == 23) {%>
+            <td class="border-end"><%= d.Storage1.type %> </td>
+            <td class="border-end"><%= d2.Storage1.type %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.Storage1.type %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Storage1.type %> </td>
+            <td class="border-end"><%= d2.Storage1.type %> </td>
+            <td class=""><%= d3.Storage1.type %> </td>
+            <%} %>
+        </tr>
+        <tr>
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">Kapasitas Maks</p>    
+            </th>
+            <% if (storageWinner == 1 || storageWinner == 12 || storageWinner == 13) { %>
+            <td class="border border-4 border-top-0"><%= d.Storage1.max_caoacity %> </td>
+            <td class="border-end"><%= d2.Storage1.max_caoacity %> </td>
+            <td class=""><%= d3.Storage1.max_caoacity %> </td>
+            <%} else if (storageWinner == 2 || storageWinner == 12 || storageWinner == 23) {%>
+            <td class="border-end"><%= d.Storage1.max_caoacity %> </td>
+            <td class="border border-4 border-top-0"><%= d2.Storage1.max_caoacity %> </td>
+            <td class=""><%= d3.Storage1.max_caoacity %> </td>
+            <%} else if (storageWinner == 3 || storageWinner == 13 || storageWinner == 23) {%>
+            <td class="border-end"><%= d.Storage1.max_caoacity %> </td>
+            <td class="border-end"><%= d2.Storage1.max_caoacity %> </td>
+            <td class="border border-4 border-top-0"><%= d3.Storage1.max_caoacity %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.Storage1.max_caoacity %> </td>
+            <td class="border-end"><%= d2.Storage1.max_caoacity %> </td>
+            <td class=""><%= d3.Storage1.max_caoacity %> </td>
+            <%} %>
+        </tr>
         <tr>
             <th scope="row" class="">
                 <p class="h4 text-white rounded-4 text-center mb-minus2" style="background-color: #353535; padding-bottom: 10px; padding-top: 10px; margin-top: 20px;">KAMERA</p>   
             </th>
+            <%if (storageWinner != 0) { %>
+            <%if (storageWinner == 2) { %>
+            <td></td>
+            <%} %>
+            <%if (storageWinner == 3) { %>
+            <td></td>
+            <td></td>
+            <%} %>
+            <td>
+                <div class="z-1 text-end" style="margin-top: -60px;">
+                    <svg width="50" height="90" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="38" cy="38" r="38" fill="white"/>
+                        <path d="M38 0C16.986 0 0 17.1 0 38C0 58.9 17.1 76 38 76C58.9 76 76 58.9 76 38C76 17.1 58.9 0 38 0ZM53.2 51.072C53.2 52.364 52.364 53.2 51.072 53.2H24.928C23.636 53.2 22.8 52.364 22.8 51.072V49.4H53.2V51.072ZM53.2 45.6H22.8L19 22.8L30.4 30.4L38 19L45.6 30.4L57 22.8L53.2 45.6Z" fill="#6300E1"/>
+                    </svg>  
+                </div>    
+            </td>
+            <%} %>
         </tr>
         <tr>
             <th scope="row" class="fs-5">
-                <p id="spec-subgrup" class="mb-minus2" style="margin-top: 10px;">Resolusi</p>    
+                <p id="spec-subgrup" class="mb-minus2">Kamera Depan</p>    
             </th>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Kamera Utama</p>    
+                <p class="mb-minus5 fw-normal">Resolusi</p>    
             </th>
-            <td class="border-end">200 Mpx</td>
-            <td class="border-end">200 Mpx</td>
-            <td class="">200 Mpx</td>
+            <% if (fcameraWinner == 1 || fcameraWinner == 12 || fcameraWinner == 13) { %>
+            <td class="border border-4 border-bottom-0"><%= d.fCamera1.resolution %> </td>
+            <td class="border-end"><%= d2.fCamera1.resolution %> </td>
+            <td class=""><%= d3.fCamera1.resolution %> </td>
+            <%} else if (fcameraWinner == 2 || fcameraWinner == 12 || fcameraWinner == 23) {%>
+            <td class="border-end"><%= d.fCamera1.resolution %> </td>
+            <td class="border border-4 border-bottom-0"><%= d2.fCamera1.resolution %> </td>
+            <td class=""><%= d3.fCamera1.resolution %> </td>
+            <%} else if (fcameraWinner == 3 || fcameraWinner == 13 || fcameraWinner == 23) {%>
+            <td class="border-end"><%= d.fCamera1.resolution %> </td>
+            <td class="border-end"><%= d2.fCamera1.resolution %> </td>
+            <td class="border border-4 border-bottom-0"><%= d3.fCamera1.resolution %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.fCamera1.resolution %> </td>
+            <td class="border-end"><%= d2.fCamera1.resolution %> </td>
+            <td class=""><%= d3.fCamera1.resolution %> </td>
+            <%} %>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Kamera Wide</p>    
+                <p class="mb-minus5 fw-normal">Megapixel</p>    
             </th>
-            <td class="border-end">12.2 Mpx</td>
-            <td class="border-end">12.2 Mpx</td>
-            <td class="">12.2 Mpx</td>
+            <% if (fcameraWinner == 1 || fcameraWinner == 12 || fcameraWinner == 13) { %>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d.fCamera1.megapixels %> </td>
+            <td class="border-end"><%= d2.fCamera1.megapixels %> </td>
+            <td class=""><%= d3.fCamera1.megapixels %> </td>
+            <%} else if (fcameraWinner == 2 || fcameraWinner == 12 || fcameraWinner == 23) {%>
+            <td class="border-end"><%= d.fCamera1.megapixels %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.fCamera1.megapixels %> </td>
+            <td class=""><%= d3.fCamera1.megapixels %> </td>
+            <%} else if (fcameraWinner == 3 || fcameraWinner == 13 || fcameraWinner == 23) {%>
+            <td class="border-end"><%= d.fCamera1.megapixels %> </td>
+            <td class="border-end"><%= d2.fCamera1.megapixels %> </td>
+            <td class="border border-4 border-top-0"><%= d3.fCamera1.megapixels %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.fCamera1.megapixels %> </td>
+            <td class="border-end"><%= d2.fCamera1.megapixels %> </td>
+            <td class=""><%= d3.fCamera1.megapixels %> </td>
+            <%} %>
         </tr>
-        <tr class="border-bottom">
+        <tr >
             <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Kamera Potrait</p>    
+                <p class="mb-minus5 fw-normal">Framerate</p>    
             </th>
-            <td class="border-end">10 Mpx</td>
-            <td class="border-end">10 Mpx</td>
-            <td class="">10 Mpx</td>
-        </tr>
-        <tr>
-            <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Kamera Telefoto</p>    
-            </th>
-            <td class="border-end">10 Mpx</td>
-            <td class="border-end">10 Mpx</td>
-            <td class="">10 Mpx</td>
+            <% if (fcameraWinner == 1 || fcameraWinner == 12 || fcameraWinner == 13) { %>
+            <td class="border border-4 border-top-0"><%= d.fCamera1.frame_rate %> </td>
+            <td class="border-end"><%= d2.fCamera1.frame_rate %> </td>
+            <td class=""><%= d3.fCamera1.frame_rate %> </td>
+            <%} else if (fcameraWinner == 2 || fcameraWinner == 12 || fcameraWinner == 23) {%>
+            <td class="border-end"><%= d.fCamera1.frame_rate %> </td>
+            <td class="border border-4 border-top-0"><%= d2.fCamera1.frame_rate %> </td>
+            <td class=""><%= d3.fCamera1.frame_rate %> </td>
+            <%} else if (fcameraWinner == 3 || fcameraWinner == 13 || fcameraWinner == 23) {%>
+            <td class="border-end"><%= d.fCamera1.frame_rate %> </td>
+            <td class="border-end"><%= d2.fCamera1.frame_rate %> </td>
+            <td class="border border-4 border-top-0"><%= d3.fCamera1.frame_rate %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.fCamera1.frame_rate %> </td>
+            <td class="border-end"><%= d2.fCamera1.frame_rate %> </td>
+            <td class=""><%= d3.fCamera1.frame_rate %> </td>
+            <%} %>
         </tr>
 
-        <tr>
+        <tr class="border-bottom">
             <th scope="row" class="fs-5">
-                <p id="spec-subgrup" class="mb-minus2" style="margin-top: 10px;">Sensor</p>    
+                <p id="spec-subgrup" class="mb-minus2" style="margin-top: 10px;">Kamera Belakang</p>    
             </th>
+            <%if (fcameraWinner != 0) { %>
+            <%if (fcameraWinner == 2) { %>
+            <td></td>
+            <%} %>
+            <%if (fcameraWinner == 3) { %>
+            <td></td>
+            <td></td>
+            <%} %>
+            <td>
+                <div class="z-1 text-end" style="margin-top: -60px;">
+                    <svg width="50" height="90" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="38" cy="38" r="38" fill="white"/>
+                        <path d="M38 0C16.986 0 0 17.1 0 38C0 58.9 17.1 76 38 76C58.9 76 76 58.9 76 38C76 17.1 58.9 0 38 0ZM53.2 51.072C53.2 52.364 52.364 53.2 51.072 53.2H24.928C23.636 53.2 22.8 52.364 22.8 51.072V49.4H53.2V51.072ZM53.2 45.6H22.8L19 22.8L30.4 30.4L38 19L45.6 30.4L57 22.8L53.2 45.6Z" fill="#6300E1"/>
+                    </svg>  
+                </div>    
+            </td>
+            <%} %>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Kamera Utama</p>    
+                <p class="mb-minus5 fw-normal">Resolusi</p>    
             </th>
-            <td class="border-end">Samsung ISOCELL HP2</td>
-            <td class="border-end">Samsung ISOCELL HP2</td>
-            <td class="">Samsung ISOCELL HP2</td>
+            <% if (rcameraWinner == 1 || rcameraWinner == 12 || rcameraWinner == 13) { %>
+            <td class="border border-4 border-bottom-0"><%= d.rCamera1.resolution %> </td>
+            <td class="border-end"><%= d2.rCamera1.resolution %> </td>
+            <td class=""><%= d3.rCamera1.resolution %> </td>
+            <%} else if (rcameraWinner == 2 || rcameraWinner == 12 || rcameraWinner == 23) {%>
+            <td class="border-end"><%= d.rCamera1.resolution %> </td>
+            <td class="border border-4 border-bottom-0"><%= d2.rCamera1.resolution %> </td>
+            <td class=""><%= d3.rCamera1.resolution %> </td>
+            <%} else if (rcameraWinner == 3 || rcameraWinner == 13 || rcameraWinner == 23) {%>
+            <td class="border-end"><%= d.rCamera1.resolution %> </td>
+            <td class="border-end"><%= d2.rCamera1.resolution %> </td>
+            <td class="border border-4 border-bottom-0"><%= d3.rCamera1.resolution %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.rCamera1.resolution %> </td>
+            <td class="border-end"><%= d2.rCamera1.resolution %> </td>
+            <td class=""><%= d3.rCamera1.resolution %> </td>
+            <%} %>
         </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Kamera Wide</p>    
+                <p class="mb-minus5 fw-normal">Megapixel</p>    
             </th>
-            <td class="border-end">Sony IMX564</td>
-            <td class="border-end">Sony IMX564</td>
-            <td class="">Sony IMX564</td>
-        </tr>
-        <tr class="border-bottom">
-            <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Kamera Potrait</p>    
-            </th>
-            <td class="border-end">-</td>
-            <td class="border-end">-</td>
-            <td class="">-</td>
+            <% if (rcameraWinner == 1 || rcameraWinner == 12 || rcameraWinner == 13) { %>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d.rCamera1.megapixels %> </td>
+            <td class="border-end"><%= d2.rCamera1.megapixels %> </td>
+            <td class=""><%= d3.rCamera1.megapixels %> </td>
+            <%} else if (rcameraWinner == 2 || rcameraWinner == 12 || rcameraWinner == 23) {%>
+            <td class="border-end"><%= d.rCamera1.megapixels %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.rCamera1.megapixels %> </td>
+            <td class=""><%= d3.rCamera1.megapixels %> </td>
+            <%} else if (rcameraWinner == 3 || rcameraWinner == 13 || rcameraWinner == 23) {%>
+            <td class="border-end"><%= d.rCamera1.megapixels %> </td>
+            <td class="border-end"><%= d2.rCamera1.megapixels %> </td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d3.rCamera1.megapixels %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.rCamera1.megapixels %> </td>
+            <td class="border-end"><%= d2.rCamera1.megapixels %> </td>
+            <td class=""><%= d3.rCamera1.megapixels %> </td>
+            <%} %>
         </tr>
         <tr>
             <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Kamera Telefoto</p>    
+                <p class="mb-minus5 fw-normal">Framerate</p>    
             </th>
-            <td class="border-end">-</td>
-            <td class="border-end">-</td>
-            <td class="">-</td>
-        </tr>
-
-        <tr>
-            <th scope="row" class="fs-5">
-                <p id="spec-subgrup" class="mb-minus2" style="margin-top: 10px;">Aperture</p>    
-            </th>
-        </tr>
-        <tr class="border-bottom">
-            <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Kamera Utama</p>    
-            </th>
-            <td class="border-end">f/1.7</td>
-            <td class="border-end">f/1.7</td>
-            <td class="">f/1.7</td>
-        </tr>
-        <tr class="border-bottom">
-            <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Kamera Wide</p>    
-            </th>
-            <td class="border-end">f/2.2</td>
-            <td class="border-end">f/2.2</td>
-            <td class="">f/2.2</td>
-        </tr>
-        <tr class="border-bottom">
-            <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Kamera Potrait</p>    
-            </th>
-            <td class="border-end">f/2.4</td>
-            <td class="border-end">f/2.4</td>
-            <td class="">f/2.4</td>
+            <% if (rcameraWinner == 1 || rcameraWinner == 12 || rcameraWinner == 13) { %>
+            <td class="border border-4 border-top-0"><%= d.rCamera1.frame_rate %> </td>
+            <td class="border-end"><%= d2.rCamera1.frame_rate %> </td>
+            <td class=""><%= d3.rCamera1.frame_rate %> </td>
+            <%} else if (rcameraWinner == 2 || rcameraWinner == 12 || rcameraWinner == 23) {%>
+            <td class="border-end"><%= d.rCamera1.frame_rate %> </td>
+            <td class="border border-4 border-top-0"><%= d2.rCamera1.frame_rate %> </td>
+            <td class=""><%= d3.rCamera1.frame_rate %> </td>
+            <%} else if (rcameraWinner == 3 || rcameraWinner == 13 || rcameraWinner == 23) {%>
+            <td class="border-end"><%= d.rCamera1.frame_rate %> </td>
+            <td class="border-end"><%= d2.rCamera1.frame_rate %> </td>
+            <td class="border border-4 border-top-0"><%= d3.rCamera1.frame_rate %> </td>
+            <%} else { %>
+            <td class="border-end"><%= d.rCamera1.frame_rate %> </td>
+            <td class="border-end"><%= d2.rCamera1.frame_rate %> </td>
+            <td class=""><%= d3.rCamera1.frame_rate %> </td>
+            <%} %>
         </tr>
         <tr>
-            <th scope="row" class="">
-                <p class="mb-minus5 fw-normal">Kamera Telefoto</p>    
-            </th>
-            <td class="border-end">f/4.9</td>
-            <td class="border-end">f/4.9</td>
-            <td class="">f/4.9</td>
+            <td></td>
+            <%if (rcameraWinner != 0) { %>
+            <%if (rcameraWinner == 2) { %>
+            <td></td>
+            <%} %>
+            <%if (rcameraWinner == 3) { %>
+            <td></td>
+            <td></td>
+            <%} %>
+            <td>
+                <div class="z-1 text-end" style="margin-top: -60px;">
+                    <svg width="50" height="90" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="38" cy="38" r="38" fill="white"/>
+                        <path d="M38 0C16.986 0 0 17.1 0 38C0 58.9 17.1 76 38 76C58.9 76 76 58.9 76 38C76 17.1 58.9 0 38 0ZM53.2 51.072C53.2 52.364 52.364 53.2 51.072 53.2H24.928C23.636 53.2 22.8 52.364 22.8 51.072V49.4H53.2V51.072ZM53.2 45.6H22.8L19 22.8L30.4 30.4L38 19L45.6 30.4L57 22.8L53.2 45.6Z" fill="#6300E1"/>
+                    </svg>  
+                </div>    
+            </td>
+            <%} %>
         </tr>
         </tbody>
     </table>

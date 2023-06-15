@@ -35,16 +35,16 @@ namespace dcompare1.Views
             rating = DeviceRepo.GetRating(id);
             rating2 = DeviceRepo.GetRating(id2);
             rating3 = DeviceRepo.GetRating(id3);
-            dimensionWinner = CompareAlgo.compareDimension(d, d2);
-            displayWinner = CompareAlgo.compareDisplay(d, d2);
-            audioWinner = CompareAlgo.compareAudio(d, d2);
-            processorWinner = CompareAlgo.compareProcessor(d, d2);
-            graphicsWinner = CompareAlgo.compareGraphics(d, d2);
-            ramWinner = CompareAlgo.compareMemory(d, d2);
-            storageWinner = CompareAlgo.compareStorage(d, d2);
-            fcameraWinner = CompareAlgo.compareFCamera(d, d2);
-            rcameraWinner = CompareAlgo.compareRCamera(d, d2);
-            winner = CompareAlgo.realWinner(dimensionWinner, displayWinner, audioWinner, processorWinner, graphicsWinner, ramWinner, storageWinner, fcameraWinner, rcameraWinner);
+            dimensionWinner = CompareAlgo2.compareDimension(d, d2, d3);
+            displayWinner = CompareAlgo2.compareDisplay(d, d2, d3);
+            audioWinner = CompareAlgo2.compareAudio(d, d2, d3);
+            processorWinner = CompareAlgo2.compareProcessor(d, d2, d3);
+            graphicsWinner = CompareAlgo2.compareGraphics(d, d2, d3);
+            ramWinner = CompareAlgo2.compareMemory(d, d2, d3);
+            storageWinner = CompareAlgo2.compareStorage(d, d2, d3);
+            fcameraWinner = CompareAlgo2.compareFCamera(d, d2, d3);
+            rcameraWinner = CompareAlgo2.compareRCamera(d, d2, d3);
+            winner = CompareAlgo2.realWinner(dimensionWinner, displayWinner, audioWinner, processorWinner, graphicsWinner, ramWinner, storageWinner, fcameraWinner, rcameraWinner);
             //Console.WriteLine(dimensionWinner);
         }
     }
