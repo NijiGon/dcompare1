@@ -23,5 +23,16 @@ namespace dcompare1.Views
             rating = DeviceRepo.GetRating(id);
             review = CommentRepo.GetReviews(Convert.ToInt32(id));
         }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            User u = Session["user"] as User;
+            int device_id = Convert.ToInt32(Request.QueryString["id"]);
+            string rating = "";
+            if (u != null || !string.IsNullOrEmpty(rating))
+            {
+                CommentRepo.addReview(u.Id, device_id, 0, 0, txtReview.Value, Convert.ToInt32(rating));
+            }
+        }
     }
 }

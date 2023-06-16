@@ -17,7 +17,7 @@ namespace dcompare1.Views
         public Device d2 = null;
         public double rating;
         public double rating2;
-        public int dimensionWinner, displayWinner, audioWinner, processorWinner, graphicsWinner, ramWinner, storageWinner, fcameraWinner, rcameraWinner;
+        public int dimensionWinner, displayWinner, audioWinner, processorWinner, graphicsWinner, ramWinner, storageWinner, fcameraWinner, rcameraWinner, batteryWinner;
 
         public int winner;
         protected void Page_Load(object sender, EventArgs e)
@@ -37,9 +37,10 @@ namespace dcompare1.Views
             graphicsWinner = CompareAlgo.compareGraphics(d, d2);
             ramWinner = CompareAlgo.compareMemory(d, d2);
             storageWinner = CompareAlgo.compareStorage(d, d2);
+            batteryWinner = CompareAlgo.compareBattery(d, d2);
             fcameraWinner = CompareAlgo.compareFCamera(d, d2);
             rcameraWinner = CompareAlgo.compareRCamera(d, d2);
-            winner = CompareAlgo.realWinner(dimensionWinner, displayWinner, audioWinner, processorWinner, graphicsWinner, ramWinner, storageWinner, fcameraWinner, rcameraWinner);
+            winner = CompareAlgo.realWinner(dimensionWinner, displayWinner, audioWinner, processorWinner, graphicsWinner, ramWinner, storageWinner, fcameraWinner, rcameraWinner, batteryWinner);
             //Console.WriteLine(dimensionWinner);
         }
         

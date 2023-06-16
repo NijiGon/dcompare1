@@ -17,7 +17,7 @@
         <EntityTypeShape EntityType="MainModel.Memory" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MainModel.Port" Width="1.5" PointX="0.75" PointY="28.25" IsExpanded="true" />
         <EntityTypeShape EntityType="MainModel.Processor" Width="1.5" PointX="0.75" PointY="31.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="MainModel.Review" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MainModel.Review" Width="1.5" PointX="12.5" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MainModel.Security" Width="1.5" PointX="0.75" PointY="34.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MainModel.Storage" Width="1.5" PointX="0.75" PointY="37.625" IsExpanded="true" />
         <EntityTypeShape EntityType="MainModel.User" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />

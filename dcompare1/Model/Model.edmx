@@ -58,6 +58,7 @@
           <Property Name="image" Type="varchar" MaxLength="50" />
           <Property Name="fcamera" Type="int" />
           <Property Name="rcamera" Type="int" />
+          <Property Name="youtube" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Dimension">
           <Key>
@@ -568,6 +569,7 @@
           <Property Name="rcamera" Type="Int32" />
           <NavigationProperty Name="fCamera1" Relationship="MainModel.FK_Device_fCamera" FromRole="Device" ToRole="fCamera" />
           <NavigationProperty Name="rCamera1" Relationship="MainModel.FK_Device_rCamera" FromRole="Device" ToRole="rCamera" />
+          <Property Name="youtube" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Dimension">
           <Key>
@@ -1060,6 +1062,7 @@
           <EntitySetMapping Name="Devices">
             <EntityTypeMapping TypeName="MainModel.Device">
               <MappingFragment StoreEntitySet="Device">
+                <ScalarProperty Name="youtube" ColumnName="youtube" />
                 <ScalarProperty Name="rcamera" ColumnName="rcamera" />
                 <ScalarProperty Name="fcamera" ColumnName="fcamera" />
                 <ScalarProperty Name="Id" ColumnName="Id" />

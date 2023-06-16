@@ -117,7 +117,7 @@
                             { %>
                         <a class="flex-column d-flex justify-content-between" href="Compare1.aspx?id=<%= d.Id %>" style="border: 2px solid #9ca0a3; border-width: 2px #9ca0a3; text-decoration: none; color:black; margin-bottom: 10px;">
                             <div style="margin-top: 5px; font-size: 24px;">
-                                <span class="float-"><img src="../Asset/devices/phones/Iphone14.png" style="width: 5%; margin: 10px;"><%= d.name %></span>
+                                <span class="float-"><img src="../Asset/devices/phones/<%= d.image %>" style="height: 100px; margin: 10px;"><%= d.name %></span>
                                 <span class="float-right" style="margin-top: 4%; margin-right: 5%; background: -webkit-linear-gradient(#B132FF, #0038FF, #00A3FF
                                 );-webkit-background-clip: text; -webkit-text-fill-color: transparent;">Rp 14.409.000</span>
                             </div>

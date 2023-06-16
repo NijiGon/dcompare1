@@ -79,6 +79,11 @@
     <Content Include="App_Data\Main_log.ldf">
       <DependentUpon>Main.mdf</DependentUpon>
     </Content>
+    <Content Include="Asset\devices\phones\IphoneSE2022.png" />
+    <Content Include="Asset\logo\aboutusimg.png" />
+    <Content Include="Asset\logo\email.png" />
+    <Content Include="Asset\logo\twitter.png" />
+    <Content Include="Asset\logo\watsapp.png" />
     <Content Include="Asset\logo\WELCOME.png" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -106,10 +111,13 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\AboutUs.aspx" />
     <Content Include="Views\Compare1.aspx" />
     <Content Include="Views\Compare1Device.aspx" />
     <Content Include="Views\Compare2.aspx" />
     <Content Include="Views\Compare3.aspx" />
+    <Content Include="Views\Compare4.aspx" />
+    <Content Include="Views\ContactUs.aspx" />
     <Content Include="Views\HomeView.aspx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\Register.aspx" />
@@ -126,6 +134,7 @@
   <ItemGroup>
     <Compile Include="Algo\CompareAlgo.cs" />
     <Compile Include="Algo\CompareAlgo2.cs" />
+    <Compile Include="Algo\CompareAlgo3.cs" />
     <Compile Include="Factory\CommentFactory.cs" />
     <Compile Include="Model\Audio.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -202,6 +211,13 @@
     <Compile Include="Factory\UserFactory.cs" />
     <Compile Include="Repository\DatabaseSingleton.cs" />
     <Compile Include="Repository\UserRepo.cs" />
+    <Compile Include="Views\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Compare1.aspx.cs">
       <DependentUpon>Compare1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -229,6 +245,20 @@
     </Compile>
     <Compile Include="Views\Compare3.aspx.designer.cs">
       <DependentUpon>Compare3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Compare4.aspx.cs">
+      <DependentUpon>Compare4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Compare4.aspx.designer.cs">
+      <DependentUpon>Compare4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\HomeView.aspx.cs">
       <DependentUpon>HomeView.aspx</DependentUpon>

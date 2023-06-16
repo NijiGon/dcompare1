@@ -118,6 +118,18 @@ namespace dcompare1.Algo
             conditional(temp, ref sub1, ref sub2);
             return chooseWinner2Device(sub1, sub2);
         }
+        public static int compareBattery(Device d, Device d2)
+        {
+            int sub1 = 0, sub2 = 0;
+            int temp;
+            temp = chooseWinner2Device(d.Battery1.capacity, d2.Battery1.capacity);
+            conditional(temp, ref sub1, ref sub2);
+            temp = chooseWinner2Device(d.Battery1.wattage, d2.Battery1.wattage);
+            conditional(temp, ref sub1, ref sub2);
+            temp = chooseWinner2Device(d.Battery1.life_hours, d2.Battery1.life_hours);
+            conditional(temp, ref sub1, ref sub2);
+            return chooseWinner2Device(sub1, sub2);
+        }
         public static int compareFCamera(Device d, Device d2)
         {
             int sub1 = 0, sub2 = 0;
@@ -142,7 +154,7 @@ namespace dcompare1.Algo
             conditional(temp, ref sub1, ref sub2);
             return chooseWinner2Device(sub1, sub2);
         }
-        public static int realWinner(int dimensionWinner, int displayWinner, int audioWinner, int processorWinner, int graphicsWinner, int ramWinner, int storageWinner, int fcameraWinner, int rcameraWinner)
+        public static int realWinner(int dimensionWinner, int displayWinner, int audioWinner, int processorWinner, int graphicsWinner, int ramWinner, int storageWinner, int fcameraWinner, int rcameraWinner, int batteryWinner)
         {
             int count = 0;
             int count2 = 0;
@@ -160,6 +172,8 @@ namespace dcompare1.Algo
             else if (ramWinner == 2) count2++;
             if (storageWinner == 1) count++;
             else if (storageWinner == 2) count2++;
+            if (batteryWinner == 1) count++;
+            else if (batteryWinner == 2) count2++;
             if (fcameraWinner == 1) count++;
             else if (fcameraWinner == 2) count2++;
             if (rcameraWinner == 1) count++;

@@ -37,7 +37,7 @@
         <div style="padding-top: 80px; padding-bottom: 80px;">
             <div class="">
                 <img src="../Asset/devices/phones/<%= d2.image %>" alt="" class="me-5 shadow z-0 rounded-4" style="height: 312px;">
-                <div class="z-1 crown-hid" style="margin-top: -60px; margin-left: 100px;">
+                <div class="z-1" style="margin-top: -60px; margin-left: 100px;">
                     <svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <%if (winner == 2) { %>
                         <circle cx="38" cy="38" r="38" fill="white"/>
@@ -720,13 +720,76 @@
             <td class=""><%= d2.Storage1.max_caoacity %></td>
             <%} %>      
         </tr>
+        <tr style="">
+            <th scope="row" class="fs-5">
+                <p id="spec-subgrup" class="mb-minus2" style="margin-top: 10px;">Daya</p>    
+            </th>
+            <%if (storageWinner != 0) { %>
+            <%if (storageWinner == 2) { %>
+            <td></td>
+            <%} %>
+            <td>
+                <div class="z-1 text-end" style="margin-top: -60px;">
+                    <svg width="50" height="90" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="38" cy="38" r="38" fill="white"/>
+                        <path d="M38 0C16.986 0 0 17.1 0 38C0 58.9 17.1 76 38 76C58.9 76 76 58.9 76 38C76 17.1 58.9 0 38 0ZM53.2 51.072C53.2 52.364 52.364 53.2 51.072 53.2H24.928C23.636 53.2 22.8 52.364 22.8 51.072V49.4H53.2V51.072ZM53.2 45.6H22.8L19 22.8L30.4 30.4L38 19L45.6 30.4L57 22.8L53.2 45.6Z" fill="#6300E1"/>
+                    </svg>  
+                </div>
+            </td>
+            <%} %>
+        </tr>
+        <tr class="border-bottom">
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">Kapasitas</p>    
+            </th>
+            <% if (batteryWinner == 1){ %>
+            <td class="border border-4 border-bottom-0"><%= d.Battery1.capacity %></td>
+            <td class=""><%= d2.Battery1.capacity %></td>
+            <%} else if (batteryWinner == 2){ %>
+            <td class="border-end"><%= d.Battery1.capacity %></td>
+            <td class="border border-4 border-bottom-0"><%= d2.Battery1.capacity %></td>
+            <%} else {%>
+            <td class="border-end"><%= d.Battery1.capacity %></td>
+            <td class=""><%= d2.Battery1.capacity %></td>
+            <%} %>
+        </tr>
+        <tr class="border-bottom">
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">Watt</p>    
+            </th>
+            <% if (batteryWinner == 1){ %>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d.Battery1.wattage %></td>
+            <td class=""><%= d2.Battery1.wattage %></td>
+            <%} else if (batteryWinner == 2){ %>
+            <td class="border-end"><%= d.Battery1.wattage %></td>
+            <td class="border border-4 border-bottom-0 border-top-0"><%= d2.Battery1.wattage %></td>
+            <%} else {%>
+            <td class="border-end"><%= d.Battery1.wattage %></td>
+            <td class=""><%= d2.Battery1.wattage %></td>
+            <%} %>
+        </tr>
+        <tr>
+            <th scope="row" class="">
+                <p class="mb-minus5 fw-normal">Jam Hidup</p>    
+            </th>
+            <% if (batteryWinner == 1){ %>
+            <td class="border border-4 border-top-0"><%= d.Battery1.life_hours %></td>
+            <td class=""><%= d2.Battery1.life_hours %></td>
+            <%} else if (batteryWinner == 2){ %>
+            <td class="border-end"><%= d.Battery1.life_hours %></td>
+            <td class="border border-4 border-top-0"><%= d2.Battery1.life_hours %></td>
+            <%} else {%>
+            <td class="border-end"><%= d.Battery1.life_hours %></td>
+            <td class=""><%= d2.Battery1.life_hours %></td>
+            <%} %>      
+        </tr>
 
         <tr>
             <th scope="row" class="">
                 <p class="h4 text-white rounded-4 text-center mb-minus2" style="background-color: #353535; padding-bottom: 10px; padding-top: 10px; margin-top: 20px;">KAMERA</p>   
             </th>
-            <%if (storageWinner != 0) { %>
-            <%if (storageWinner == 2) { %>
+            <%if (batteryWinner != 0) { %>
+            <%if (batteryWinner == 2) { %>
             <td></td>
             <%} %>
             <td>

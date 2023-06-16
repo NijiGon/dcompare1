@@ -8,7 +8,7 @@ namespace dcompare1.Algo
 {
     public class CompareAlgo2
     {
-        public static int realWinner(int dimensionWinner, int displayWinner, int audioWinner, int processorWinner, int graphicsWinner, int ramWinner, int storageWinner, int fcameraWinner, int rcameraWinner)
+        public static int realWinner(int dimensionWinner, int displayWinner, int audioWinner, int processorWinner, int graphicsWinner, int ramWinner, int storageWinner, int fcameraWinner, int rcameraWinner, int batteryWinner)
         {
             int count = 0;
             int count2 = 0;
@@ -139,6 +139,24 @@ namespace dcompare1.Algo
                 count2++;
                 count3++;
             }
+            if (batteryWinner == 1) count++;
+            else if (batteryWinner == 2) count2++;
+            else if (batteryWinner == 3) count3++;
+            else if (batteryWinner == 12)
+            {
+                count++;
+                count2++;
+            }
+            else if (batteryWinner == 13)
+            {
+                count++;
+                count3++;
+            }
+            else if (batteryWinner == 23)
+            {
+                count2++;
+                count3++;
+            }
             if (fcameraWinner == 1) count++;
             else if (fcameraWinner == 2) count2++;
             else if (fcameraWinner == 3) count3++;
@@ -179,47 +197,27 @@ namespace dcompare1.Algo
         }
         public static int chooseWinner3Device(double? n1, double? n2, double? n3)
         {
-            if (n1 == n2 && n2 == n3)
-            {
-                return 0; // All numbers are equal or null
-            }
-            else if (n1 > n2 && n1 > n3)
-            {
-                if (n1 == n2)
-                {
-                    return 12; // Maximum values are n1 and n2
-                }
-                else if (n1 == n3)
-                {
-                    return 13; // Maximum values are n1 and n3
-                }
-                else
-                {
-                    return 1; // n1 is the maximum value
-                }
-            }
-            else if (n2 > n1 && n2 > n3)
-            {
-                if (n2 == n3)
-                {
-                    return 23; // Maximum values are n2 and n3
-                }
-                else
-                {
-                    return 2; // n2 is the maximum value
-                }
-            }
-            else if (n3 > n1 && n3 > n2)
-            {
-                return 3; // n3 is the maximum value
-            }
+            if ((n1 == n2 && n2 == n3) || (n1 == null && n2 == null && n3 == null)) return 0;
             else
             {
-                return 0; // All values are null
+                if (n1 > n2)
+                {
+                    if (n1 > n3) return 1;
+                    else if (n1 == n3) return 13;
+                }
+                else if (n2 > n3)
+                {
+                    if (n2 > n1) return 2;
+                    else if (n2 == n1) return 12;
+                }
+                else if (n3 > n1)
+                {
+                    if (n3 > n2) return 3;
+                    else if (n3 == n2) return 23;
+                }
             }
+            return 0;
         }
-
-
 
         public static void conditional(int temp, ref int sub1, ref int sub2, ref int sub3)
         {
@@ -329,6 +327,18 @@ namespace dcompare1.Algo
             temp = chooseWinner3Device(d.Storage1.size, d2.Storage1.size, d3.Storage1.size);
             conditional(temp, ref sub1, ref sub2, ref sub3);
             temp = chooseWinner3Device(d.Storage1.max_caoacity, d2.Storage1.max_caoacity, d3.Storage1.max_caoacity);
+            conditional(temp, ref sub1, ref sub2, ref sub3);
+            return chooseWinner3Device(sub1, sub2, sub3);
+        }
+        public static int compareBattery(Device d, Device d2, Device d3)
+        {
+            int sub1 = 0, sub2 = 0, sub3 = 0;
+            int temp;
+            temp = chooseWinner3Device(d.Battery1.capacity, d2.Battery1.capacity, d3.Battery1.capacity);
+            conditional(temp, ref sub1, ref sub2, ref sub3);
+            temp = chooseWinner3Device(d.Battery1.wattage, d2.Battery1.wattage, d3.Battery1.wattage);
+            conditional(temp, ref sub1, ref sub2, ref sub3);
+            temp = chooseWinner3Device(d.Battery1.life_hours, d2.Battery1.life_hours, d3.Battery1.life_hours);
             conditional(temp, ref sub1, ref sub2, ref sub3);
             return chooseWinner3Device(sub1, sub2, sub3);
         }
