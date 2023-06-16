@@ -14,7 +14,7 @@ namespace dcompare1
         protected void Page_Load(object sender, EventArgs e)
         {
             User u = Session["user"] as User;
-            uname = u != null ? u.first_name : "Login";
+            uname = u != null ? "Hello, " + u.first_name : "Login";
         }
     }
 }

@@ -1,8 +1,11 @@
-﻿using dcompare1.Model;
+﻿using dcompare1.Algo;
+using dcompare1.Model;
 using dcompare1.Repository;
+using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -15,6 +18,7 @@ namespace dcompare1.Views
         public List<Device> devices = new List<Device>();
         public Device d = null;
         public double rating;
+        public string data;
         protected void Page_Load(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(Request.QueryString["id"]);
@@ -22,6 +26,7 @@ namespace dcompare1.Views
             d = DeviceRepo.FindById(id);
             rating = DeviceRepo.GetRating(id);
             review = CommentRepo.GetReviews(Convert.ToInt32(id));
+            data = WebScraper.ScrapeWebsite(d.priceUrl);
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)

@@ -1,4 +1,5 @@
-﻿using dcompare1.Model;
+﻿using dcompare1.Algo;
+using dcompare1.Model;
 using dcompare1.Repository;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,16 @@ namespace dcompare1
         protected void Page_Load(object sender, EventArgs e)
         {
             devices = DeviceRepo.GetDevices();
+        }
+
+        protected static string ShowPrice(string url)
+        {
+            if (url != null)
+            {
+                string p = WebScraper.ScrapeWebsite(url);
+                if (p != null) return p;
+            }
+            return "-";
         }
     }
 }
