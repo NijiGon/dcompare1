@@ -29,5 +29,10 @@ namespace dcompare1.Repository
         {
             return (from d in db.Devices where d.Id == id select d).FirstOrDefault();
         }
+
+        public static List<Device> FindyByKeyword(string keys)
+        {
+            return (from d in db.Devices where d.name.Contains(keys) select d).ToList();
+        }
     }
 }

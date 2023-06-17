@@ -113,10 +113,10 @@
     </div>
 
     <!-- SEARCH -->
-    <div id="search" class="d-flex flex-column justify-content-center align-items-center mt-5">
+    <%--<div id="search" class="d-flex flex-column justify-content-center align-items-center mt-5">
         <p class="h2" style="color: #6300E1;">Mulai bandingkan</p>
         <input class="form-control rounded-pill" style="width: 25vw;" type="search" placeholder="Cari Device" aria-label="Search" style="background-color: #EEEEEE;">
-    </div>
+    </div>--%>
 
     <!-- DEVICE SPEC -->
     <table class="table table-borderless ms-5" style="width: 93%;">
