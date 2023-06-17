@@ -132,6 +132,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Views\Device.aspx" />
+    <Content Include="Views\Search.aspx" />
     <Content Include="Views\SearchDevice.aspx" />
     <Content Include="Views\SearchDevices.aspx" />
     <Content Include="Views\SearchDevices2.aspx" />
@@ -303,6 +304,13 @@
     </Compile>
     <Compile Include="Views\Device.aspx.designer.cs">
       <DependentUpon>Device.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\SearchDevice.aspx.cs">
       <DependentUpon>SearchDevice.aspx</DependentUpon>

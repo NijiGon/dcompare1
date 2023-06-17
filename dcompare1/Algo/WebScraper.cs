@@ -11,34 +11,38 @@ namespace dcompare1.Algo
     {
         public static string ScrapeWebsite(string url)
         {
-            // Create a WebClient to make the HTTP request
-            WebClient client = new WebClient();
-
-            try
+            if(url != null)
             {
-                // Download the HTML content of the web page
-                string html = client.DownloadString(url);
+                // Create a WebClient to make the HTTP request
+                WebClient client = new WebClient();
 
-                // Load the HTML document using HtmlAgilityPack
-                HtmlDocument document = new HtmlDocument();
-                document.LoadHtml(html);
+                try
+                {
+                    // Download the HTML content of the web page
+                    string html = client.DownloadString(url);
 
-                // Perform scraping operations on the document
-                // Extract desired information using XPath or other querying methods
+                    // Load the HTML document using HtmlAgilityPack
+                    HtmlDocument document = new HtmlDocument();
+                    document.LoadHtml(html);
 
-                // Example: Extract the text of a specific HTML element
-                HtmlNode element = document.DocumentNode.SelectSingleNode("//div[@class='price']");
-                string extractedText = element?.InnerText;
+                    // Perform scraping operations on the document
+                    // Extract desired information using XPath or other querying methods
 
-                // Return the extracted information
-                return extractedText;
+                    // Example: Extract the text of a specific HTML element
+                    HtmlNode element = document.DocumentNode.SelectSingleNode("//div[@class='price']");
+                    string extractedText = element?.InnerText;
+
+                    // Return the extracted information
+                    return extractedText;
+                }
+                catch (WebException ex)
+                {
+                    // Handle exceptions, e.g., if the web page is not accessible
+                    // Log or display an error message
+                    return "Error: " + ex.Message;
+                }
             }
-            catch (WebException ex)
-            {
-                // Handle exceptions, e.g., if the web page is not accessible
-                // Log or display an error message
-                return "Error: " + ex.Message;
-            }
+            return "-";
         }
     }
 }

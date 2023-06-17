@@ -23,7 +23,7 @@
             </div>
             
             <div class="bg-white rounded-3 w-75 d-flex flex-column align-items-center p-2 mt-3 shadow pt-3">
-                <p  id="nr" class="h6"> <%= d.Storage1.max_caoacity %> TB &nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp <%= d.Memory1.max_capacity %> GB</p>
+                <p  id="nr" class="h6"> <%= d.Storage1.max_caoacity %> GB &nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp <%= d.Memory1.max_capacity %> GB</p>
                 <%--<p id="nr" class="h5 fw-bold">Rp19.100.000,-</p>--%>
                 <p id="nr" class="h5 fw-bold"><%= data %>,-</p>
             </div>    

@@ -42,15 +42,6 @@ namespace dcompare1.Views
         protected global::System.Web.UI.WebControls.CheckBox checkBox3;
 
         /// <summary>
-        /// checkBox4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox checkBox4;
-
-        /// <summary>
         /// checkBox5 control.
         /// </summary>
         /// <remarks>
@@ -76,14 +67,5 @@ namespace dcompare1.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox checkBox7;
-
-        /// <summary>
-        /// checkBox8 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox checkBox8;
     }
 }

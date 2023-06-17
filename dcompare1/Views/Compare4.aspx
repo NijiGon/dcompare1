@@ -7,7 +7,7 @@
         <div class="row mt-5">
             <div class="col">
             <div class="" style="padding-top: 80px;">
-                <div class="">
+                <div class="d-flex align-items-center justify-content-center flex-column">
                     <img src="../Asset/devices/phones/<%= d.image %>" alt="" class="me-5 shadow z-0" style="height: 312px">
                     <div class="z-1" style="margin-top: -25%; margin-left: 7vw;">
                         <svg width="5vw" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,7 +33,7 @@
             </div>
             <div class="col">
             <div style="padding-top: 80px; padding-bottom: 80px;">
-                <div class="">
+                <div class="d-flex align-items-center justify-content-center flex-column">
                     <img src="../Asset/devices/phones/<%= d2.image %>" alt="" class="me-5 shadow z-0 rounded-4" style="height: 312px">
                     <div class="z-1" style="margin-top: -60px; margin-left: 100px;">
                         <svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,7 +59,7 @@
             </div>
             <div class="col">
             <div class="" style="padding-top: 80px; padding-bottom: 80px;">
-                <div class="">
+                <div class="d-flex align-items-center justify-content-center flex-column">
                     <img src="../Asset/devices/phones/<%= d3.image %>" alt="" class="me-5 shadow z-0" style="height: 312px">
                     <div class="z-1" style="margin-top: -60px; margin-left: 100px;">
                         <svg class="" width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +85,7 @@
             </div>
             <div class="col">
             <div class="" style="padding-top: 80px; padding-bottom: 80px;">
-                <div class="">
+                <div class="d-flex align-items-center justify-content-center flex-column">
                     <img src="../Asset/devices/phones/<%= d4.image %>" alt="" class="me-5 shadow z-0 rounded-4" style="height: 312px">
                     <div class="z-1" style="margin-top: -60px; margin-left: 100px;">
                         <svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
