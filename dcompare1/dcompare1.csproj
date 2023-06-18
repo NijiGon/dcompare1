@@ -84,6 +84,7 @@
     </Content>
     <Content Include="Asset\devices\phones\IphoneSE2022.png" />
     <Content Include="Asset\logo\aboutusimg.png" />
+    <Content Include="Asset\logo\banner-home.jpg" />
     <Content Include="Asset\logo\email.png" />
     <Content Include="Asset\logo\empty-star.svg" />
     <Content Include="Asset\logo\filled-star.svg" />

@@ -28,9 +28,10 @@ namespace dcompare1.Views
             foreach (var d in devices)
             {
                 ratings[d.Id] = DeviceRepo.GetRating(d.Id);
-                if (pt == "min") sp[d.Id] = d.minpriceUrl != null ? WebScraper.ScrapeWebsite(d.minpriceUrl) : "-";
-                else if (pt == "max") sp[d.Id] = d.maxpriceUrl != null ? WebScraper.ScrapeWebsite(d.maxpriceUrl) : "-";
-                else sp[d.Id] = d.maxpriceUrl != null ? WebScraper.ScrapeWebsite(d.maxpriceUrl) : "-";
+                //if (pt == "min") sp[d.Id] = d.minpriceUrl != null ? WebScraper.ScrapeWebsite(d.minpriceUrl) : "-";
+                //else if (pt == "max") sp[d.Id] = d.maxpriceUrl != null ? WebScraper.ScrapeWebsite(d.maxpriceUrl) : "-";
+                //else
+                sp[d.Id] = d.maxpriceUrl != null ? WebScraper.ScrapeWebsite(d.maxpriceUrl) : "-";
             }
 
             // Filter devices based on checkbox selections
@@ -55,16 +56,16 @@ namespace dcompare1.Views
                 else if (sort == "rating_dsc") devices = devices.OrderByDescending(d => DeviceRepo.GetRating(d.Id)).ToList();
                 else if (sort == "price_asc") devices = devices.OrderBy(d => ParsePrice(WebScraper.ScrapeWebsite(d.maxpriceUrl))).ToList();
                 else if (sort == "price_dsc") devices = devices.OrderByDescending(d => ParsePrice(WebScraper.ScrapeWebsite(d.maxpriceUrl))).ToList();
-                if(pt == "max")
-                {
-                    if (sort == "price_asc") devices = devices.OrderBy(d => ParsePrice(WebScraper.ScrapeWebsite(d.maxpriceUrl))).ToList();
-                    else if (sort == "price_dsc") devices = devices.OrderByDescending(d => ParsePrice(WebScraper.ScrapeWebsite(d.maxpriceUrl))).ToList();
-                }
-                else if(pt == "min")
-                {
-                    if (sort == "price_asc") devices = devices.OrderBy(d => ParsePrice(WebScraper.ScrapeWebsite(d.minpriceUrl))).ToList();
-                    else if (sort == "price_dsc") devices = devices.OrderByDescending(d => ParsePrice(WebScraper.ScrapeWebsite(d.minpriceUrl))).ToList();
-                }
+                //if(pt == "max")
+                //{
+                //    if (sort == "price_asc") devices = devices.OrderBy(d => ParsePrice(WebScraper.ScrapeWebsite(d.maxpriceUrl))).ToList();
+                //    else if (sort == "price_dsc") devices = devices.OrderByDescending(d => ParsePrice(WebScraper.ScrapeWebsite(d.maxpriceUrl))).ToList();
+                //}
+                //else if(pt == "min")
+                //{
+                //    if (sort == "price_asc") devices = devices.OrderBy(d => ParsePrice(WebScraper.ScrapeWebsite(d.minpriceUrl))).ToList();
+                //    else if (sort == "price_dsc") devices = devices.OrderByDescending(d => ParsePrice(WebScraper.ScrapeWebsite(d.minpriceUrl))).ToList();
+                //}
             }
         }
 

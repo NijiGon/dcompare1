@@ -81,6 +81,11 @@
             color:#aaa;
             margin-bottom:0;
         }
+        .bg-blur{
+            backdrop-filter: blur(10px);
+            background-position: center center;
+            background-size: cover;
+        }
   
         .box :hover{
             border-color: purple;
@@ -88,9 +93,14 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+        <div class="container-fluid bg-blur" style="margin:0px; padding: 0px; background-image: url('../Asset/logo/banner-home.jpg'); height:45vh; margin-bottom: 5rem; display:relative; right: -81px; top: -160px; background-repeat: no-repeat;">
+            <div class="color-overlay d-flex justify-content-center align-items-center">
+                <a class="" style="color: white; font-family: 'Bebas Neue'; margin-top: 11%; font-size: 42px; letter-spacing: 4px;"><img src="../Asset/logo/logo putih.png" style="width: 10%; margin: 2%; text-align: center;">Bandingkan yang Terbaik</a>
+            </div>
+        </div>
         <section class="content">
-            <div class="container-fluid" style="font-family:'Bebas Neue' ; padding-left: 20%;">
-                <div class="col-6 mt-5" style="width: 75%; padding: 20px; border-radius: 10px; margin-bottom: 200px; background-color: #EEEEEE; position: relative; height: 375px; width: 60%;">
+            <div class="container-fluid d-flex flex-column align-items-center justify-content-center" style="font-family:'Bebas Neue' ;">
+                <div class="col-6" style="width: 75%; padding: 20px; border-radius: 10px; margin-top:0px; margin-bottom: 300px; background-color: #EEEEEE; position: relative; height: 375px; width: 60%;">
                     <a style="font-size: 32px; letter-spacing: 1px;">SMARTPHONE</a>
                     <hr style="width: 10%">
                     <div class="container" style="margin-left: -8%; position: absolute; width: 130%;">
@@ -108,16 +118,16 @@
                     </div>
                 </div>
 
-                <div class="container-fluid mt-5">
+                <div class="container" style="width: 60%;">
                     <a style="font-size: 32px; letter-spacing: 1px;">Sedang Tren</a>
-                    <div class="d-flex flex-column mb-5" style="width: 75%;">
+                    <div class="d-flex flex-column mb-5">
                         <%foreach (var d in devices)
                             { %>
-                        <a class="flex-column d-flex justify-content-between" href="Compare1.aspx?id=<%= d.Id %>" style="border: 2px solid #9ca0a3; border-width: 2px #9ca0a3; text-decoration: none; color:black; margin-bottom: 10px;">
-                            <div style="margin-top: 5px; font-size: 24px;">
+                        <a class="flex-column d-flex justify-content-between rounded-4" href="Compare1.aspx?id=<%= d.Id %>" style="border: 2px solid #9ca0a3; border-width: 2px #9ca0a3; text-decoration: none; color:black; margin-bottom: 10px;">
+                            <div class="rounded-4" style="margin-top: 5px; font-size: 24px;">
                                 <span class="float-"><img src="../Asset/devices/phones/<%= d.image %>" style="height: 100px; margin: 10px;"><%= d.name %></span>
                                 <span class="float-right" style="margin-top: 4%; margin-right: 5%; background: -webkit-linear-gradient(#B132FF, #0038FF, #00A3FF
-                                );-webkit-background-clip: text; -webkit-text-fill-color: transparent;"><%= ShowPrice(d.minpriceUrl) %> - <%= ShowPrice(d.maxpriceUrl) %></span>
+                                );-webkit-background-clip: text; -webkit-text-fill-color: transparent;"><%= ShowPrice(d.maxpriceUrl) %></span>
                             </div>
                             <div class="ml-auto" style="margin-right: 10%;"></div>
                         </a>
@@ -126,10 +136,11 @@
                 </div>
                 
 
-                <a style="font-size: 32px; letter-spacing: 1px;">Rekomendasi Review</a>
-                <div class="col mb-5" style="width: 75%;">
-                    <div class="embed-responsive embed-responsive-16by9" style="margin-bottom: 10px;">
-                        <iframe width="1125px" height="600px" src="https://www.youtube.com/embed/zTDsP2P_Qfk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                
+                <div class="col mb-5" style="width: 60%;">
+                    <a class="text-start text-decoration-none text-black" style="font-size: 32px; text-align:left !important; letter-spacing: 1px;">Rekomendasi Review</a>
+                    <div class="embed-responsive embed-responsive-16by9 d-flex flex-column" style="margin-bottom: 50px;">
+                        <iframe class="rounded-4" width="1125px" height="600px" src="https://www.youtube.com/embed/zTDsP2P_Qfk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     <div class="row d-flex">
                         <div class="col">
@@ -138,24 +149,24 @@
                         <div class="col">
                             <a style="font-size: 32px;">Samsung S23 Ultra</a>
                             <div class="flex-row d-flex" style="margin-bottom: 5%;">
-                                <div class="col" style="border: 2px solid #9ca0a3; border-width: 2px #9ca0a3; margin-right: 5%; padding: 5%; font-size: 25px; width: fit-content; height: fit-content;">
+                                <div class="col rounded-4" style="border: 2px solid #9ca0a3; border-width: 2px #9ca0a3; margin-right: 5%; padding: 5%; font-size: 25px; width: fit-content; height: fit-content;">
                                     Kualitas Fisik
                                     <div style="margin-top: 4%; margin-right: 5%; background: -webkit-linear-gradient(#B132FF, #0038FF, #00A3FF
                                     );-webkit-background-clip: text; -webkit-text-fill-color: transparent;">5/5</div>
                                 </div>
-                                <div class="col" style="border: 2px solid #9ca0a3; border-width: 2px #9ca0a3; padding: 5%; font-size: 25px;">
+                                <div class="col rounded-4" style="border: 2px solid #9ca0a3; border-width: 2px #9ca0a3; padding: 5%; font-size: 25px;">
                                     Tampilan
                                     <div style="margin-top: 4%; margin-right: 5%; background: -webkit-linear-gradient(#B132FF, #0038FF, #00A3FF
                                     );-webkit-background-clip: text; -webkit-text-fill-color: transparent;">5/5</div>
                                 </div>
                             </div>
                             <div class="flex-row d-flex" style="margin-bottom: 5%;">
-                                <div class="col" style="border: 2px solid #9ca0a3; border-width: 2px #9ca0a3; margin-right: 5%; padding: 5%; font-size: 25px;">
+                                <div class="col rounded-4" style="border: 2px solid #9ca0a3; border-width: 2px #9ca0a3; margin-right: 5%; padding: 5%; font-size: 25px;">
                                     Performa
                                     <div style="margin-top: 4%; margin-right: 5%; background: -webkit-linear-gradient(#B132FF, #0038FF, #00A3FF
                                     );-webkit-background-clip: text; -webkit-text-fill-color: transparent;">5/5</div>
                                 </div>
-                                <div class="col" style="border: 2px solid #9ca0a3; border-width: 2px #9ca0a3; padding: 5%; font-size: 25px;">
+                                <div class="col rounded-4" style="border: 2px solid #9ca0a3; border-width: 2px #9ca0a3; padding: 5%; font-size: 25px;">
                                     Fotografi
                                     <div style="margin-top: 4%; margin-right: 5%; background: -webkit-linear-gradient(#B132FF, #0038FF, #00A3FF
                                     );-webkit-background-clip: text; -webkit-text-fill-color: transparent;">4.9/5</div>
@@ -165,19 +176,19 @@
                     </div>
                 </div>
 
-                <div class="col mt-5 m" style="width: 75%; margin-bottom: 200px;">
+                <div class="" style="width: 75%; margin-top:130px; margin-bottom: 300px;">
                     <a href="" style="text-decoration: none;">
-                        <div class="container" style="position: absolute; background: -webkit-linear-gradient(#202020, #000000); border-radius: 100px; width: 525px; height: 550px; margin-left: -5%; padding: 2%">
+                        <div class="container" style="position: absolute; background: -webkit-linear-gradient(#202020, #000000); border-radius: 50px; width: 525px; height: 550px; margin-left: 10%; margin-top:-5%; padding: 2%">
                             <img src="../Asset/devices/laptops/lenovo.png" style="width: 100%;">
                             <div style="font-size: 50px; color: whitesmoke; text-align: center;">LENOVO</div>
                         </div> 
                     </a>
 
-                    <div class="container" style="background-color: #EEEEEE; border-radius: 10px; padding-top: 2%; height: 550px; width: 75%">
+                    <div class="container" style="background-color: #EEEEEE; border-radius: 20px; padding-top: 2%; height: 550px; width: 50%">
                         <a style="font-size: 32px; letter-spacing: 1px; margin-left: 80%;">LAPTOP</a>
                         <hr style="width: 25%; margin-left: 75%;">
                         <a href="" style="text-decoration: none;">
-                            <div class="container" style="background: -webkit-linear-gradient(#202020, #000000); border-radius: 100px; margin-left: 55%; width: 525px; height: 550px;text-align: center; margin-top: 10%;">
+                            <div class="container" style="background: -webkit-linear-gradient(#202020, #000000); border-radius: 50px; margin-left: 55%; width: 525px; height: 550px;text-align: center; margin-top: 10%;">
                                 <img src="../Asset/devices/laptops/asus.png" style="width: 80%; padding: 5%; padding-top: 8%;" style="text-align: center;">
                                 <div style="font-size: 50px; color: whitesmoke; text-align: center;">Asus</div>
                             </div>

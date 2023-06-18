@@ -6,9 +6,9 @@
     <div id="banner" class="container-fluid d-flex flex-column align-items-center" style="background-color: #E8E8E8;">
     <div class="row mt-5">
         <div class="col">
-        <div class="" style="padding-top: 80px;">
+        <div class="d-flex flex-column align-items-center justify-content-center text-center me-5" style="padding-top: 80px;">
             <div class="">
-                <img src="../Asset/devices/phones/<%= d.image %>" alt="" class="me-5 shadow z-0 rounded-4" style="height: 312px">
+                <img src="../Asset/devices/phones/<%= d.image %>" alt="" class="shadow z-0 rounded-4" style="height: 312px">
                 <div class="z-1" style="margin-top: -25%; margin-left: 7vw;">
                     <svg width="5vw" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <% if (winner == 1 || winner == 12 || winner == 13) { %>
@@ -25,7 +25,7 @@
                 </p>
             </div>            
     
-            <div class="rounded-3 d-flex justify-content-center" style="background: #6300E1; padding-top: 8px; width: 45%; padding-bottom: 8px;">
+            <div class="rounded-3 d-flex justify-content-center" style="background: #6300E1; padding-top: 8px; min-width: 150px; padding-bottom: 8px;">
                 <svg width="30" height="25" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: -10px;">
                 <path d="M4.78125 23L6.8125 14.4961L0 8.77632L9 8.01974L12.5 0L16 8.01974L25 8.77632L18.1875 14.4961L20.2187 23L12.5 18.4908L4.78125 23Z" fill="white"/>
                 </svg>
@@ -34,9 +34,9 @@
         </div>
         </div>
         <div class="col">
-        <div style="padding-top: 80px; padding-bottom: 80px;">
+        <div class="d-flex flex-column align-items-center justify-content-center text-center me-5" style="padding-top: 80px; padding-bottom: 80px;">
             <div class="">
-                <img src="../Asset/devices/phones/<%= d2.image %>" alt="" class="me-5 shadow z-0 rounded-4" style="height: 312px">
+                <img src="../Asset/devices/phones/<%= d2.image %>" alt="" class="shadow z-0 rounded-4" style="height: 312px">
                 <div class="z-1 crown-hid" style="margin-top: -60px; margin-left: 100px;">
                     <svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <% if (winner == 2 || winner == 12 || winner == 23) { %>
@@ -53,7 +53,7 @@
                     </p>
             </div>            
     
-            <div class="rounded-3 d-flex justify-content-center" style="background: #6300E1; padding-top: 8px; width: 45%; padding-bottom: 8px;">
+            <div class="rounded-3 d-flex justify-content-center" style="background: #6300E1; padding-top: 8px; min-width: 150px; padding-bottom: 8px;">
                 <svg width="30" height="25" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: -10px;">
                 <path d="M4.78125 23L6.8125 14.4961L0 8.77632L9 8.01974L12.5 0L16 8.01974L25 8.77632L18.1875 14.4961L20.2187 23L12.5 18.4908L4.78125 23Z" fill="white"/>
                 </svg>
@@ -62,9 +62,9 @@
         </div>
         </div>
         <div class="col">
-        <div class="" style="padding-top: 80px; padding-bottom: 80px;">
+        <div class="d-flex flex-column align-items-center justify-content-center text-center me-5" style="padding-top: 80px; padding-bottom: 80px;">
             <div class="">
-                <img src="../Asset/devices/phones/<%= d3.image %>" alt="" class="me-5 shadow z-0 rounded-4" style="height: 312px">
+                <img src="../Asset/devices/phones/<%= d3.image %>" alt="" class="shadow z-0 rounded-4" style="height: 312px">
                 <div class="z-1" style="margin-top: -60px; margin-left: 100px;">
                     <svg class="" width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <% if (winner == 3 || winner == 13 || winner == 23) { %>
@@ -81,7 +81,7 @@
                 </p>
             </div>            
     
-            <div class="rounded-3 d-flex justify-content-center" style="background: #6300E1; padding-top: 8px; width: 45%; padding-bottom: 8px;">
+            <div class="rounded-3 d-flex justify-content-center" style="background: #6300E1; padding-top: 8px; min-width: 150px; padding-bottom: 8px;">
                 <svg width="30" height="25" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: -10px;">
                 <path d="M4.78125 23L6.8125 14.4961L0 8.77632L9 8.01974L12.5 0L16 8.01974L25 8.77632L18.1875 14.4961L20.2187 23L12.5 18.4908L4.78125 23Z" fill="white"/>
                 </svg>
@@ -90,7 +90,7 @@
         </div>
         </div>
         <div class="col">
-        <div class="" style="margin-top: 160%;">
+        <div class="" style="margin-top: 90%;">
             <a href="">
                 <button class="" style="background-color: #E8E8E8; border-color: transparent;">
                 <svg width="90" height="90" viewBox="0 0 97 97" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -543,7 +543,7 @@
             <td class="<% if (storageWinner == 1 || storageWinner == 12 || storageWinner == 13) Response.Write(type5); else Response.Write(type2);  %>"><%= d.Storage1.size %> </td>
             <td class="<% if (storageWinner == 2 || storageWinner == 12 || storageWinner == 23) Response.Write(type5); else Response.Write(type2);  %>"><%= d2.Storage1.size %> </td>
             <td class="<% if (storageWinner == 3 || storageWinner == 23 || storageWinner == 13) Response.Write(type5); else Response.Write(type1);  %>"><%= d3.Storage1.size %> </td>
-        </tr>storageWinner
+        </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Tipe</p>    
@@ -589,7 +589,7 @@
             <td class="<% if (batteryWinner == 1 || batteryWinner == 12 || batteryWinner == 13) Response.Write(type5); else Response.Write(type2);  %>"><%= d.Battery1.capacity %> </td>
             <td class="<% if (batteryWinner == 2 || batteryWinner == 12 || batteryWinner == 23) Response.Write(type5); else Response.Write(type2);  %>"><%= d2.Battery1.capacity %> </td>
             <td class="<% if (batteryWinner == 3 || batteryWinner == 23 || batteryWinner == 13) Response.Write(type5); else Response.Write(type1);  %>"><%= d3.Battery1.capacity %> </td>
-        </tr>storageWinner
+        </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Watt</p>    
@@ -727,23 +727,29 @@
         </tbody>
     </table>
     <script type="text/javascript">
+        document.getElementById('searchResults').style.display = "none";
         function searchDevices() {
             var searchInput = document.getElementById('searchInput');
             var searchResults = document.getElementById('searchResults');
             var searchText = searchInput.value;
-            var id1 = <%= Request.QueryString["id"] %>;
-            var id_2 = <%= Request.QueryString["id2"] %>;
-            var id_3 = <%= Request.QueryString["id3"] %>;
-            // Make an AJAX request to the server
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'SearchDevices2.aspx?id=' + id1 + '&id2=' + id_2 + '&id3=' + id_3 + '&keywords=' + searchText, true);
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    // Update the search results container with the received HTML
-                    searchResults.innerHTML = xhr.responseText;
-                }
-            };
-            xhr.send();
+            if (searchText == "") searchResults.style.display = "none";
+            else {
+                searchResults.style.display = "block";
+
+                var id1 = <%= Request.QueryString["id"] %>;
+                var id_2 = <%= Request.QueryString["id2"] %>;
+                var id_3 = <%= Request.QueryString["id3"] %>;
+                // Make an AJAX request to the server
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', 'SearchDevices2.aspx?id=' + id1 + '&id2=' + id_2 + '&id3=' + id_3 + '&keywords=' + searchText, true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        // Update the search results container with the received HTML
+                        searchResults.innerHTML = xhr.responseText;
+                    }
+                };
+                xhr.send();
+            }
         }
 
         document.getElementById('searchInput').addEventListener('keyup', searchDevices);

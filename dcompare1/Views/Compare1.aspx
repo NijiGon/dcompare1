@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col mt-5">
         <div class="d-flex justify-content-center" style="padding-top: 80px; padding-bottom: 80px;">
-            <img src="../Asset/devices/phones/<%= d.image %>" alt="" class="me-5 shadow" style="width: 15vw;">
+            <img src="../Asset/devices/phones/<%= d.image %>" alt="" class="me-5 rounded-4 shadow" style="width: 15vw;">
             <div class="">
             <p id="nb" class="fw-bold h2">
                 <%= d.name %>
@@ -89,10 +89,10 @@
     <!-- SEARCH -->
         <asp:UpdatePanel ID="updatePanel" runat="server" UpdateMode="Conditional">
             <ContentTemplate>
-                <div id="search" class="d-flex flex-column justify-content-center align-items-center mt-5 z-1">
+                <div id="search" style="margin-left:78px" class="d-flex flex-column justify-content-center align-items-center mt-5 z-1">
                     <p class="h2" style="color: #6300E1;">Mulai bandingkan</p>
                     <input id="searchInput" class="form-control rounded-pill bg-white z-1" style="width: 25vw;" type="search" placeholder="Cari Device" aria-label="Search" style="background-color: #EEEEEE;">
-                    <div class="z-0" style="width: 25%;">
+                    <div class="z-0" style="width: 100%;">
                         <ul id="searchResults" class="list-unstyled rounded-4 border border-1" style="background-color: white; margin-top: -35px; padding: 12% 0 3% 0 ;border-color: lightgray !important;">
                             <!-- Search results will be dynamically added here -->
                         </ul>
@@ -318,7 +318,7 @@
         </svg>
     </p>
     <div class="embed-responsive-16by9">
-        <iframe style="width: 1200px; height: 675px;" class="rounded-4 shadow" src="<%= d.youtube %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe style="width: 1045px; height: 675px;" class="rounded-4 shadow" src="<%= d.youtube %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     </div>
 
@@ -614,21 +614,29 @@
     </div>
     </div>
     <script type="text/javascript">
+        document.getElementById('searchResults').style.display = "none";
         function searchDevices() {
             var searchInput = document.getElementById('searchInput');
             var searchResults = document.getElementById('searchResults');
             var searchText = searchInput.value;
-            var id1 = <%= Request.QueryString["id"] %>;
-            // Make an AJAX request to the server
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'SearchDevice.aspx?id=' + id1 + '&keywords=' + searchText, true);
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    // Update the search results container with the received HTML
-                    searchResults.innerHTML = xhr.responseText;
-                }
-            };
-            xhr.send();
+
+            if (searchText === "") {
+                searchResults.style.display = "none";
+            } else {
+                searchResults.style.display = "block";
+
+                var id1 = <%= Request.QueryString["id"] %>;
+                // Make an AJAX request to the server
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', 'SearchDevice.aspx?id=' + id1 + '&keywords=' + searchText, true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        // Update the search results container with the received HTML
+                        searchResults.innerHTML = xhr.responseText;
+                    }
+                };
+                xhr.send();
+            }
         }
 
         document.getElementById('searchInput').addEventListener('keyup', searchDevices);

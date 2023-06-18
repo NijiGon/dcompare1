@@ -34,6 +34,9 @@
             visibility: hidden;
         }
     }
+    .border-gray{
+        border-color:#353535 !important;
+    }
     /* .border-stor{
         border-width: 2px;
         border-style: solid;
@@ -131,81 +134,80 @@
     <form id="form1" runat="server">
         <asp:ScriptManager ID="scriptManager" runat="server"></asp:ScriptManager>
         <div>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid justify-content-between d-flex">
-            <a id="homeBtn" class="navbar-brand fw-bold fs-4" href="Home.aspx">D'Compare</a>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2 rounded-pill w-50" type="search" placeholder="Cari Device" aria-label="Search">
-            </form>
-            <%--<asp:UpdatePanel ID="updatePanel" runat="server" UpdateMode="Conditional">
-                <ContentTemplate>
-                    <div id="search" class="d-flex flex-column justify-content-center align-items-center mt-5 z-1">
-                        <form class="d-flex" role="search">
-                            <input id="searchInput" class="form-control me-2 rounded-pil z-1" style="width: 1000px" type="search" placeholder="Cari Device" aria-label="Search">
-                        </form>
-                        <div class="z-0">
-                            <ul id="searchResults" class="list-unstyled rounded-4 border border-1" style="background-color: white; width:990px; margin-top: -35px; padding: 5% 0 1% 0 ;border-color: lightgray !important;">
-                                <!-- Search results will be dynamically added here -->
-                            </ul>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow">
+                <div class="container-fluid justify-content-between d-flex">
+                <a id="homeBtn" class="navbar-brand fw-bold fs-4" href="Home.aspx">D'Compare</a>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2 rounded-pill w-50" type="search" placeholder="Cari Device" aria-label="Search">
+                </form>
+                <%--<asp:UpdatePanel ID="updatePanel" runat="server" UpdateMode="Conditional">
+                    <ContentTemplate>
+                        <div id="search" class="d-flex flex-column justify-content-center align-items-center mt-5 z-1">
+                            <form class="d-flex" role="search">
+                                <input id="searchInput" class="form-control me-2 rounded-pil z-1" style="width: 1000px" type="search" placeholder="Cari Device" aria-label="Search">
+                            </form>
+                            <div class="z-0">
+                                <ul id="searchResults" class="list-unstyled rounded-4 border border-1" style="background-color: white; width:990px; margin-top: -35px; padding: 5% 0 1% 0 ;border-color: lightgray !important;">
+                                    <!-- Search results will be dynamically added here -->
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                </ContentTemplate>
-            </asp:UpdatePanel>--%>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
+                    </ContentTemplate>
+                </asp:UpdatePanel>--%>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <%--<li class="nav-item dropdown">
-                        <a id="deviceBtn" class="nav-link fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Device</a>
-                        <ul class="dropdown-menu">
-                            <li id="label-sub" class="fw-bold ms-3">HandPhone</li>
-                            <li><a class="dropdown-item" href="#">Iphone</a></li>
-                            <li><a class="dropdown-item" href="#">Samsung</a></li>
-                            <li><a class="dropdown-item" href="#">Xiaomi</a></li>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <%--<li class="nav-item dropdown">
+                            <a id="deviceBtn" class="nav-link fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Device</a>
+                            <ul class="dropdown-menu">
+                                <li id="label-sub" class="fw-bold ms-3">HandPhone</li>
+                                <li><a class="dropdown-item" href="#">Iphone</a></li>
+                                <li><a class="dropdown-item" href="#">Samsung</a></li>
+                                <li><a class="dropdown-item" href="#">Xiaomi</a></li>
                           
-                            <li class="dropdown-divider"></li>
+                                <li class="dropdown-divider"></li>
   
-                            <li id="label-sub" class="fw-bold ms-3">Laptop</li>
-                            <li><a class="dropdown-item" href="#">HP</a></li>
-                            <li><a class="dropdown-item" href="#">Asus</a></li>
-                            <li><a class="dropdown-item" href="#">Lenovo</a></li>
-                        </ul>
-                    </li>--%>
-                    <li class="nav-item">
-                        <a id="viewBtn" class="nav-link fw-bold" href="ViewDevices.aspx">Devices</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="compareBtn" class="nav-link fw-bold" href="#">Compare</a>
-                    </li>
+                                <li id="label-sub" class="fw-bold ms-3">Laptop</li>
+                                <li><a class="dropdown-item" href="#">HP</a></li>
+                                <li><a class="dropdown-item" href="#">Asus</a></li>
+                                <li><a class="dropdown-item" href="#">Lenovo</a></li>
+                            </ul>
+                        </li>--%>
+                        <li class="nav-item">
+                            <a id="deviceBtn" class="nav-link fw-bold" href="ViewDevices.aspx">Devices</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="compareBtn" class="nav-link fw-bold" href="#">Compare</a>
+                        </li>
 
-                    <li id="login" class="nav-item me-auto d-flex">
-                        <div id="line" class="vr my-2"></div>
-                        <a href="Login.aspx" class="nav-link fw-bold"><%= uname %></a>
-                    </li>
-                </ul>                  
-            </div>               
-        </div>
-        </nav>
+                        <li id="login" class="nav-item me-auto d-flex">
+                            <div id="line" class="vr my-2"></div>
+                            <a href="Login.aspx" style="min-width: 200px;" class="nav-link fw-bold"><%= uname %></a>
+                        </li>
+                    </ul>                  
+                </div>               
+            </div>
+            </nav>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
             <div class="footer-basic bg-dark">
-            <footer style="margin-bottom: -20px; margin-top: -20px;">
-                <div class="social" style="">
-                  <a href="#"><i class="icon ion-social-instagram" style="color: white;"></i></a>
-                  <a href="#"><i class="icon ion-social-twitter" style="color: white;"></i></a>
-                  <a href="#"><i class="icon ion-social-facebook" style="color: white;"></i></a>
-                  <a href="#"><i class="icon ion-social-whatsapp" style="color: white;"></i></a>
-                </div>
-                <ul class="list-inline">
-                    <li class="list-inline-item text-white h6"><a href="ContactUs.aspx">Hubungi Kami</a></li>
-                    <li class="list-inline-item text-white h6"><a href="AboutUs.aspx">Tentang Kami</a></li>
-                    <li class="list-inline-item text-white h6"><a href="#">Syarat dan Ketentuan</a></li>
-                </ul>
-                <p class="copyright">D'Compare © 2023</p>
-            </footer>
-        </div>
+                <footer style="margin-bottom: -20px; margin-top: -20px;">
+                    <div class="social" style="">
+                      <a href="#"><i class="icon ion-social-instagram" style="color: white;"></i></a>
+                      <a href="#"><i class="icon ion-social-twitter" style="color: white;"></i></a>
+                      <a href="#"><i class="icon ion-social-facebook" style="color: white;"></i></a>
+                      <a href="#"><i class="icon ion-social-whatsapp" style="color: white;"></i></a>
+                    </div>
+                    <ul class="list-inline">
+                        <li class="list-inline-item text-white h6"><a href="ContactUs.aspx">Hubungi Kami</a></li>
+                        <li class="list-inline-item text-white h6"><a href="AboutUs.aspx">Tentang Kami</a></li>
+                    </ul>
+                    <p class="copyright">D'Compare © 2023</p>
+                </footer>
+            </div>
         </div>
     </form>
     <%--<script type="text/javascript">

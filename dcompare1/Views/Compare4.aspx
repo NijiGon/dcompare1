@@ -6,9 +6,9 @@
     <div id="banner" class="container-fluid d-flex flex-column align-items-center" style="background-color: #E8E8E8;">
         <div class="row mt-5">
             <div class="col">
-            <div class="" style="padding-top: 80px;">
+            <div class="d-flex flex-column align-items-center justify-content-center text-center me-5" style="padding-top: 80px;">
                 <div class="d-flex align-items-center justify-content-center flex-column">
-                    <img src="../Asset/devices/phones/<%= d.image %>" alt="" class="me-5 shadow z-0" style="height: 312px">
+                    <img src="../Asset/devices/phones/<%= d.image %>" alt="" class="shadow rounded-4 z-0" style="height: 312px">
                     <div class="z-1" style="margin-top: -25%; margin-left: 7vw;">
                         <svg width="5vw" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <% if (winner.ToString().Contains('1')) { %>
@@ -23,7 +23,7 @@
                     <p class="fw-medium h3 lh-1"><%= d.name %></p>
                 </div>            
         
-                <div class="rounded-3 d-flex justify-content-center" style="background: #6300E1; padding-top: 8px; width: 45%; padding-bottom: 8px;">
+                <div class="rounded-3 d-flex justify-content-center" style="background: #6300E1; padding-top: 8px; min-width: 150px; padding-bottom: 8px;">
                     <svg width="30" height="25" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: -10px;">
                     <path d="M4.78125 23L6.8125 14.4961L0 8.77632L9 8.01974L12.5 0L16 8.01974L25 8.77632L18.1875 14.4961L20.2187 23L12.5 18.4908L4.78125 23Z" fill="white"/>
                     </svg>
@@ -32,9 +32,9 @@
             </div>
             </div>
             <div class="col">
-            <div style="padding-top: 80px; padding-bottom: 80px;">
+            <div class="d-flex flex-column align-items-center justify-content-center text-center me-5" style="padding-top: 80px; padding-bottom: 80px;">
                 <div class="d-flex align-items-center justify-content-center flex-column">
-                    <img src="../Asset/devices/phones/<%= d2.image %>" alt="" class="me-5 shadow z-0 rounded-4" style="height: 312px">
+                    <img src="../Asset/devices/phones/<%= d2.image %>" alt="" class="shadow z-0 rounded-4" style="height: 312px">
                     <div class="z-1" style="margin-top: -60px; margin-left: 100px;">
                         <svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <% if (winner.ToString().Contains('2')) { %>
@@ -49,7 +49,7 @@
                     <p class="fw-medium h3 lh-1"><%= d2.name %></p>
                 </div>            
         
-                <div class="rounded-3 d-flex justify-content-center" style="background: #6300E1; padding-top: 8px; width: 45%; padding-bottom: 8px;">
+                <div class="rounded-3 d-flex justify-content-center" style="background: #6300E1; padding-top: 8px; min-width: 150px; padding-bottom: 8px;">
                     <svg width="30" height="25" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: -10px;">
                     <path d="M4.78125 23L6.8125 14.4961L0 8.77632L9 8.01974L12.5 0L16 8.01974L25 8.77632L18.1875 14.4961L20.2187 23L12.5 18.4908L4.78125 23Z" fill="white"/>
                     </svg>
@@ -58,9 +58,9 @@
             </div>
             </div>
             <div class="col">
-            <div class="" style="padding-top: 80px; padding-bottom: 80px;">
+            <div class="d-flex flex-column align-items-center justify-content-center text-center me-5" style="padding-top: 80px; padding-bottom: 80px;">
                 <div class="d-flex align-items-center justify-content-center flex-column">
-                    <img src="../Asset/devices/phones/<%= d3.image %>" alt="" class="me-5 shadow z-0" style="height: 312px">
+                    <img src="../Asset/devices/phones/<%= d3.image %>" alt="" class="shadow rounded-4 z-0" style="height: 312px">
                     <div class="z-1" style="margin-top: -60px; margin-left: 100px;">
                         <svg class="" width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <% if (winner.ToString().Contains('3')) { %>
@@ -75,7 +75,7 @@
                     <p class="fw-medium h3 lh-1"><%= d3.name %></p>
                 </div>            
         
-                <div class="rounded-3 d-flex justify-content-center" style="background: #6300E1; padding-top: 8px; width: 45%; padding-bottom: 8px;">
+                <div class="rounded-3 d-flex justify-content-center" style="background: #6300E1; padding-top: 8px; min-width: 150px; padding-bottom: 8px;">
                     <svg width="30" height="25" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: -10px;">
                     <path d="M4.78125 23L6.8125 14.4961L0 8.77632L9 8.01974L12.5 0L16 8.01974L25 8.77632L18.1875 14.4961L20.2187 23L12.5 18.4908L4.78125 23Z" fill="white"/>
                     </svg>
@@ -84,9 +84,9 @@
             </div>
             </div>
             <div class="col">
-            <div class="" style="padding-top: 80px; padding-bottom: 80px;">
+            <div class="d-flex flex-column align-items-center justify-content-center text-center me-5" style="padding-top: 80px; padding-bottom: 80px;">
                 <div class="d-flex align-items-center justify-content-center flex-column">
-                    <img src="../Asset/devices/phones/<%= d4.image %>" alt="" class="me-5 shadow z-0 rounded-4" style="height: 312px">
+                    <img src="../Asset/devices/phones/<%= d4.image %>" alt="" class="shadow z-0 rounded-4" style="height: 312px">
                     <div class="z-1" style="margin-top: -60px; margin-left: 100px;">
                         <svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <% if (winner.ToString().Contains('4')) { %>
@@ -101,7 +101,7 @@
                     <p class="fw-medium h3 lh-1"><%= d4.name %></p>
                 </div>            
         
-                <div class="rounded-3 d-flex justify-content-center" style="background: #6300E1; padding-top: 8px; width: 45%; padding-bottom: 8px;">
+                <div class="rounded-3 d-flex justify-content-center" style="background: #6300E1; padding-top: 8px; min-width: 150px; padding-bottom: 8px;">
                     <svg width="30" height="25" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: -10px;">
                     <path d="M4.78125 23L6.8125 14.4961L0 8.77632L9 8.01974L12.5 0L16 8.01974L25 8.77632L18.1875 14.4961L20.2187 23L12.5 18.4908L4.78125 23Z" fill="white"/>
                     </svg>
