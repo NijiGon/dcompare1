@@ -117,7 +117,7 @@
                             <div style="margin-top: 5px; font-size: 24px;">
                                 <span class="float-"><img src="../Asset/devices/phones/<%= d.image %>" style="height: 100px; margin: 10px;"><%= d.name %></span>
                                 <span class="float-right" style="margin-top: 4%; margin-right: 5%; background: -webkit-linear-gradient(#B132FF, #0038FF, #00A3FF
-                                );-webkit-background-clip: text; -webkit-text-fill-color: transparent;"><%= ShowPrice(d.priceUrl) %></span>
+                                );-webkit-background-clip: text; -webkit-text-fill-color: transparent;"><%= ShowPrice(d.minpriceUrl) %> - <%= ShowPrice(d.maxpriceUrl) %></span>
                             </div>
                             <div class="ml-auto" style="margin-right: 10%;"></div>
                         </a>

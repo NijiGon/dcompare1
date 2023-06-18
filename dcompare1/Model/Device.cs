@@ -39,7 +39,8 @@ namespace dcompare1.Model
         public Nullable<int> fcamera { get; set; }
         public Nullable<int> rcamera { get; set; }
         public string youtube { get; set; }
-        public string priceUrl { get; set; }
+        public string maxpriceUrl { get; set; }
+        public string minpriceUrl { get; set; }
     
         public virtual Audio Audio1 { get; set; }
         public virtual Battery Battery1 { get; set; }

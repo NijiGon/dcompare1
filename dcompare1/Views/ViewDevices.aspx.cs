@@ -18,16 +18,19 @@ namespace dcompare1.Views
         public string[] sp = new string[100];
         public List<Device> devices = new List<Device>();
         public List<Device> newdevices = new List<Device>();
-
+        public string sort, pt;
         protected void Page_Load(object sender, EventArgs e)
         {
-            string sort = Request.QueryString["sort"];
+            sort = Request.QueryString["sort"];
+            pt = Request.QueryString["pricetype"];
             devices = DeviceRepo.GetDevices();
-            GetSorted(sort, ref devices);
+            GetSorted(sort, pt, ref devices);
             foreach (var d in devices)
             {
                 ratings[d.Id] = DeviceRepo.GetRating(d.Id);
-                sp[d.Id] = d.priceUrl != null ? WebScraper.ScrapeWebsite(d.priceUrl) : "-";
+                if (pt == "min") sp[d.Id] = d.minpriceUrl != null ? WebScraper.ScrapeWebsite(d.minpriceUrl) : "-";
+                else if (pt == "max") sp[d.Id] = d.maxpriceUrl != null ? WebScraper.ScrapeWebsite(d.maxpriceUrl) : "-";
+                else sp[d.Id] = d.maxpriceUrl != null ? WebScraper.ScrapeWebsite(d.maxpriceUrl) : "-";
             }
 
             // Filter devices based on checkbox selections
@@ -43,15 +46,25 @@ namespace dcompare1.Views
             // gridView.DataBind();
         }
 
-        protected static void GetSorted(string sort, ref List<Device> devices)
+        protected static void GetSorted(string sort, string pt, ref List<Device> devices)
         {
             if(sort != null)
             {
                 if (sort == "alph_asc") devices = DeviceRepo.SortByName();
                 else if (sort == "alph_dsc") devices = DeviceRepo.SortByNameDesc();
                 else if (sort == "rating_dsc") devices = devices.OrderByDescending(d => DeviceRepo.GetRating(d.Id)).ToList();
-                else if (sort == "price_asc") devices = devices.OrderBy(d => ParsePrice(WebScraper.ScrapeWebsite(d.priceUrl))).ToList();
-                else if (sort == "price_dsc") devices = devices.OrderByDescending(d => ParsePrice(WebScraper.ScrapeWebsite(d.priceUrl))).ToList();
+                else if (sort == "price_asc") devices = devices.OrderBy(d => ParsePrice(WebScraper.ScrapeWebsite(d.maxpriceUrl))).ToList();
+                else if (sort == "price_dsc") devices = devices.OrderByDescending(d => ParsePrice(WebScraper.ScrapeWebsite(d.maxpriceUrl))).ToList();
+                if(pt == "max")
+                {
+                    if (sort == "price_asc") devices = devices.OrderBy(d => ParsePrice(WebScraper.ScrapeWebsite(d.maxpriceUrl))).ToList();
+                    else if (sort == "price_dsc") devices = devices.OrderByDescending(d => ParsePrice(WebScraper.ScrapeWebsite(d.maxpriceUrl))).ToList();
+                }
+                else if(pt == "min")
+                {
+                    if (sort == "price_asc") devices = devices.OrderBy(d => ParsePrice(WebScraper.ScrapeWebsite(d.minpriceUrl))).ToList();
+                    else if (sort == "price_dsc") devices = devices.OrderByDescending(d => ParsePrice(WebScraper.ScrapeWebsite(d.minpriceUrl))).ToList();
+                }
             }
         }
 

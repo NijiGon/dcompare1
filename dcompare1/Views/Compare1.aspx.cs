@@ -26,7 +26,7 @@ namespace dcompare1.Views
             d = DeviceRepo.FindById(id);
             rating = DeviceRepo.GetRating(id);
             review = CommentRepo.GetReviews(Convert.ToInt32(id));
-            data = WebScraper.ScrapeWebsite(d.priceUrl);
+            data = WebScraper.ScrapeWebsite(d.maxpriceUrl);
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)

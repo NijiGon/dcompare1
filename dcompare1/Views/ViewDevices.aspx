@@ -16,12 +16,12 @@
             <div>
                 <div class="border border-2 border-secondary-subtle p-3" style="font-family: Nexa-bold; width: 150%;">
                     <p>Harga</p>
-                    <button class="border rounded-4 border-secondary p-2 d-flex justify-content-center w-100 bg-white mb-2">
+                    <a href="ViewDevices.aspx?pricetype=max&sort=<%= sort %>" class="border rounded-4 border-secondary p-2 d-flex justify-content-center w-100 bg-white mb-2 no-underline">
                         Harga Maksimum
-                    </button>
-                    <button class="border rounded-4 border-secondary p-2 d-flex justify-content-center w-100 bg-white mb-2">
+                    </a>
+                    <a href="ViewDevices.aspx?pricetype=min&sort=<%= sort %>" class="border rounded-4 border-secondary p-2 d-flex justify-content-center w-100 bg-white mb-2 no-underline">
                         Harga Minimum
-                    </button>
+                    </a>
                     <div>
                         <div class="mb-3">
                             <asp:CheckBox ID="checkBox1" runat="server" CssClass="me-2" Style="width: 20px; height: 20px;" AutoPostBack="true" OnCheckedChanged="checkBox1_CheckedChanged" />
@@ -83,11 +83,11 @@
                 <div class="dropdown">
                     <button class="btn dropdown-toggle border text-start" style="width: 100%;" type="button" data-bs-toggle="dropdown" aria-expanded="false">Berdasarkan</button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="ViewDevices.aspx?sort=price_dsc">Harga Tertinggi</a></li>
-                        <li><a class="dropdown-item" href="ViewDevices.aspx?sort=price_asc">Harga Terendah</a></li>
-                        <li><a class="dropdown-item" href="ViewDevices.aspx?sort=rating_dsc">Ulasan (tinggi ke rendah)</a></li>
-                        <li><a class="dropdown-item" href="ViewDevices.aspx?sort=alph_asc">A - Z</a></li>
-                        <li><a class="dropdown-item" href="ViewDevices.aspx?sort=alph_dsc">Z - A</a></li>
+                        <li><a class="dropdown-item" href="ViewDevices.aspx?sort=price_dsc&pricetype=<%= pt %>">Harga Tertinggi</a></li>
+                        <li><a class="dropdown-item" href="ViewDevices.aspx?sort=price_asc&pricetype=<%= pt %>">Harga Terendah</a></li>
+                        <li><a class="dropdown-item" href="ViewDevices.aspx?sort=rating_dsc&pricetype=<%= pt %>">Ulasan (tinggi ke rendah)</a></li>
+                        <li><a class="dropdown-item" href="ViewDevices.aspx?sort=alph_asc&pricetype=<%= pt %>">A - Z</a></li>
+                        <li><a class="dropdown-item" href="ViewDevices.aspx?sort=alph_dsc&pricetype=<%= pt %>">Z - A</a></li>
                     </ul>
                 </div>
             </div>
