@@ -16,9 +16,7 @@ namespace dcompare1.Views
         public Device d = null;
         public Device d2 = null;
         public Device d3 = null;
-        public double rating;
-        public double rating2;
-        public double rating3;
+        public string rating, rating2, rating3;
         public int dimensionWinner, displayWinner, audioWinner, processorWinner, graphicsWinner, ramWinner, storageWinner, fcameraWinner, rcameraWinner, batteryWinner;
         public string type1 = "";
         public string type2 = "border-end";
@@ -37,9 +35,9 @@ namespace dcompare1.Views
             d = DeviceRepo.FindById(id);
             d2 = DeviceRepo.FindById(id2);
             d3 = DeviceRepo.FindById(id3);
-            rating = DeviceRepo.GetRating(id);
-            rating2 = DeviceRepo.GetRating(id2);
-            rating3 = DeviceRepo.GetRating(id3);
+            rating = DeviceRepo.GetRating(id).ToString("0.00");
+            rating2 = DeviceRepo.GetRating(id2).ToString("0.00");
+            rating3 = DeviceRepo.GetRating(id3).ToString("0.00");
             dimensionWinner = CompareAlgo2.compareDimension(d, d2, d3);
             displayWinner = CompareAlgo2.compareDisplay(d, d2, d3);
             audioWinner = CompareAlgo2.compareAudio(d, d2, d3);

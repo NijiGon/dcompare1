@@ -21,7 +21,20 @@ namespace dcompare1.Repository
         public static List<Review> GetReviews(int id)
         {
             //return (from r in db.Reviews select r).ToList();
-            return (from r in db.Reviews where r.user == id select r).ToList();
+            return (from r in db.Reviews where r.device == id select r).ToList();
+        }
+        public static Review GetReviewByUserAndDevice(int user_id, int device_id)
+        {
+            return (from r in db.Reviews where r.user == user_id && r.device == device_id select r).FirstOrDefault();
+        }
+        public static void EditComment(int user_id, int device_id, string comment, int rating)
+        {
+            Review r = GetReviewByUserAndDevice(user_id, device_id);
+            if(r != null)
+            {
+                CommentFactory.UpdateComment(r, comment, rating);
+                db.SaveChanges();
+            }
         }
     }
 }

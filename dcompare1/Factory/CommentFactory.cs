@@ -19,5 +19,10 @@ namespace dcompare1.Factory
             review.rating = rating;
             return review;
         }
+        public static void UpdateComment(Review r, string comment, int rating)
+        {
+            r.comment = comment;
+            r.rating = rating;
+        }
     }
 }

@@ -99,11 +99,11 @@
                             <img class="" style="height: 200px;" src="../Asset/devices/phones/<%= d.image %>" alt="">
                             <p class="w-75 fs-6 mt-2 mb-0 d-flex align-items-center justify-content-center" style="font-family: Nexa-bold; min-height:50px;"><%= d.name %></p>
                             <p class="rounded-pill fs-7 py-1 text-white mt-4 w-100" style="font-family: Nexa-bold; background-color: #6300E1;"><%= sp[d.Id] %></p>
-                            <div class="d-flex justify-content-center border border-2 border-black rounded-pill px-3 py-1 bg-white w-50" margin-top: -10px;">
-                                <svg id="bintang" class="me-2" width="18" height="18" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <div class="d-flex justify-content-center border border-2 border-black rounded-pill px-3 py-1 bg-white w-75" margin-top: -10px;">
+                                <svg id="bintang" class="me-2" style="margin-top:1px" width="18" height="18" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4.78125 23L6.8125 14.4961L0 8.77632L9 8.01974L12.5 0L16 8.01974L25 8.77632L18.1875 14.4961L20.2187 23L12.5 18.4908L4.78125 23Z" fill="#6300E1"/>
                                 </svg>
-                                <label for="bintang" class="fs-5" style="font-family: Nexa-bold; margin-top: -3.5px; margin-bottom: -5px;"><%= ratings[d.Id] %></label>
+                                <label for="bintang" class="fs-5" style="font-family: Nexa-bold; margin-top: -3.5px; margin-bottom: -5px;"><%= ratings[d.Id].ToString("0.00") %></label>
                             </div>
                         </a>
                     </div>

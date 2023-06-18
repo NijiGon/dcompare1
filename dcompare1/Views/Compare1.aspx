@@ -330,76 +330,77 @@
             <div>
                 <p>Rating</p>
                 <div class="d-flex" style="margin-top: -10px;">
-                    <div class="z-0">
-                    <svg class="z-0" xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="" class="bi bi-star ms-2 mt-1 mb-1" viewBox="0 0 16 16">
-                        <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-                    </svg>
-                    <svg class="z-0" xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="" class="bi bi-star ms-2 mt-1 mb-1" viewBox="0 0 16 16">
-                        <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-                    </svg>
-                    <svg class="z-0" xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="" class="bi bi-star ms-2 mt-1 mb-1" viewBox="0 0 16 16">
-                        <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-                    </svg>
-                    <svg class="z-0" xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="" class="bi bi-star ms-2 mt-1 mb-1" viewBox="0 0 16 16">
-                        <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-                    </svg>
-                    <svg class="z-0" xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="" class="bi bi-star ms-2 mt-1 mb-1" viewBox="0 0 16 16">
-                        <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-                    </svg>
-                    </div>
-                    <div class="z-1" style="margin-left: -138px; margin-top: 2px;">
-                    <svg class="" width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4.78125 23L6.8125 14.4961L0 8.77632L9 8.01974L12.5 0L16 8.01974L25 8.77632L18.1875 14.4961L20.2187 23L12.5 18.4908L4.78125 23Z" fill="url(#paint0_linear_74_193)"/>
-                        <defs>
-                        <linearGradient id="paint0_linear_74_193" x1="0" y1="23" x2="25" y2="23" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#B132FF"/>
-                        <stop offset="0.497917" stop-color="#0038FF"/>
-                        <stop offset="1" stop-color="#00A3FF"/>
-                        </linearGradient>
-                        </defs>
-                    </svg>
-                    <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4.78125 23L6.8125 14.4961L0 8.77632L9 8.01974L12.5 0L16 8.01974L25 8.77632L18.1875 14.4961L20.2187 23L12.5 18.4908L4.78125 23Z" fill="url(#paint0_linear_74_193)"/>
-                        <defs>
-                        <linearGradient id="paint0_linear_74_193" x1="0" y1="23" x2="25" y2="23" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#B132FF"/>
-                        <stop offset="0.497917" stop-color="#0038FF"/>
-                        <stop offset="1" stop-color="#00A3FF"/>
-                        </linearGradient>
-                        </defs>
-                    </svg>
-                    <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4.78125 23L6.8125 14.4961L0 8.77632L9 8.01974L12.5 0L16 8.01974L25 8.77632L18.1875 14.4961L20.2187 23L12.5 18.4908L4.78125 23Z" fill="url(#paint0_linear_74_193)"/>
-                        <defs>
-                        <linearGradient id="paint0_linear_74_193" x1="0" y1="23" x2="25" y2="23" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#B132FF"/>
-                        <stop offset="0.497917" stop-color="#0038FF"/>
-                        <stop offset="1" stop-color="#00A3FF"/>
-                        </linearGradient>
-                        </defs>
-                    </svg>
-                    <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4.78125 23L6.8125 14.4961L0 8.77632L9 8.01974L12.5 0L16 8.01974L25 8.77632L18.1875 14.4961L20.2187 23L12.5 18.4908L4.78125 23Z" fill="url(#paint0_linear_74_193)"/>
-                        <defs>
-                        <linearGradient id="paint0_linear_74_193" x1="0" y1="23" x2="25" y2="23" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#B132FF"/>
-                        <stop offset="0.497917" stop-color="#0038FF"/>
-                        <stop offset="1" stop-color="#00A3FF"/>
-                        </linearGradient>
-                        </defs>
-                    </svg>
-                    <svg class="star-hid" width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4.78125 23L6.8125 14.4961L0 8.77632L9 8.01974L12.5 0L16 8.01974L25 8.77632L18.1875 14.4961L20.2187 23L12.5 18.4908L4.78125 23Z" fill="url(#paint0_linear_74_193)"/>
-                        <defs>
-                        <linearGradient id="paint0_linear_74_193" x1="0" y1="23" x2="25" y2="23" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#B132FF"/>
-                        <stop offset="0.497917" stop-color="#0038FF"/>
-                        <stop offset="1" stop-color="#00A3FF"/>
-                        </linearGradient>
-                        </defs>
-                    </svg>
+                    <div class="z-0" style="margin-top: 2px;">
+                        <asp:LinkButton ID="star1" CssClass="star" runat="server" OnClick="Star_Click" CommandArgument="1">
+                            <asp:Image ID="emptyStar1" runat="server" ImageUrl="../Asset/logo/empty-star.svg" />
+                            <asp:Image ID="filledStar1" runat="server" ImageUrl="../Asset/logo/filled-star.svg" Visible="false" />
+                        </asp:LinkButton>
+                        <asp:LinkButton ID="star2" CssClass="star" runat="server" OnClick="Star_Click" CommandArgument="2">
+                            <asp:Image ID="emptyStar2" runat="server" ImageUrl="../Asset/logo/empty-star.svg" />
+                            <asp:Image ID="filledStar2" runat="server" ImageUrl="../Asset/logo/filled-star.svg" Visible="false" />
+                        </asp:LinkButton>
+                        <asp:LinkButton ID="star3" CssClass="star" runat="server" OnClick="Star_Click" CommandArgument="3">
+                            <asp:Image ID="emptyStar3" runat="server" ImageUrl="../Asset/logo/empty-star.svg" />
+                            <asp:Image ID="filledStar3" runat="server" ImageUrl="../Asset/logo/filled-star.svg" Visible="false" />
+                        </asp:LinkButton>
+                        <asp:LinkButton ID="star4" CssClass="star" runat="server" OnClick="Star_Click" CommandArgument="4">
+                            <asp:Image ID="emptyStar4" runat="server" ImageUrl="../Asset/logo/empty-star.svg" />
+                            <asp:Image ID="filledStar4" runat="server" ImageUrl="../Asset/logo/filled-star.svg" Visible="false" />
+                        </asp:LinkButton>
+                        <asp:LinkButton ID="star5" CssClass="star" runat="server" OnClick="Star_Click" CommandArgument="5">
+                            <asp:Image ID="emptyStar5" runat="server" ImageUrl="../Asset/logo/empty-star.svg" />
+                            <asp:Image ID="filledStar5" runat="server" ImageUrl="../Asset/logo/filled-star.svg" Visible="false" />
+                        </asp:LinkButton>
+                        <asp:HiddenField ID="hiddenStarIndex" runat="server" />
                     </div>
                 </div>
+                <%--<div class="d-flex" style="margin-top: -10px;">
+                    <div class="z-0" style="margin-top: 2px;">
+                        <svg class="" width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.78125 23L6.8125 14.4961L0 8.77632L9 8.01974L12.5 0L16 8.01974L25 8.77632L18.1875 14.4961L20.2187 23L12.5 18.4908L4.78125 23Z" fill="url(#paint0_linear_74_193)"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_74_193" x1="0" y1="23" x2="25" y2="23" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#B132FF"/>
+                            <stop offset="0.497917" stop-color="#0038FF"/>
+                            <stop offset="1" stop-color="#00A3FF"/>
+                            </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.78125 23L6.8125 14.4961L0 8.77632L9 8.01974L12.5 0L16 8.01974L25 8.77632L18.1875 14.4961L20.2187 23L12.5 18.4908L4.78125 23Z" fill="url(#paint0_linear_74_193)"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_74_193" x1="0" y1="23" x2="25" y2="23" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#B132FF"/>
+                            <stop offset="0.497917" stop-color="#0038FF"/>
+                            <stop offset="1" stop-color="#00A3FF"/>
+                            </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.78125 23L6.8125 14.4961L0 8.77632L9 8.01974L12.5 0L16 8.01974L25 8.77632L18.1875 14.4961L20.2187 23L12.5 18.4908L4.78125 23Z" fill="url(#paint0_linear_74_193)"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_74_193" x1="0" y1="23" x2="25" y2="23" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#B132FF"/>
+                            <stop offset="0.497917" stop-color="#0038FF"/>
+                            <stop offset="1" stop-color="#00A3FF"/>
+                            </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.78125 23L6.8125 14.4961L0 8.77632L9 8.01974L12.5 0L16 8.01974L25 8.77632L18.1875 14.4961L20.2187 23L12.5 18.4908L4.78125 23Z" fill="url(#paint0_linear_74_193)"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_74_193" x1="0" y1="23" x2="25" y2="23" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#B132FF"/>
+                            <stop offset="0.497917" stop-color="#0038FF"/>
+                            <stop offset="1" stop-color="#00A3FF"/>
+                            </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg style="margin-top: 1px" xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="" class="bi bi-star ms-1" viewBox="0 0 16 16">
+                            <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                        </svg>
+                    </div>
+                </div>--%>
                 <%--<p class="mt-3">Performa</p>
                 <div class="d-flex" style="margin-top: -10px;">
                     <div class="z-0">
@@ -569,8 +570,7 @@
     <!-- LAST REVIEW -->
     <div class="ms-5 mt-4">
     <p id="nb" class="h5 mt-4 fw-bold fs-4">Review Terakhir</p>
-        <%foreach (var r in review)
-            { %>
+        <%foreach (var r in review) { %>
     <div class="p-4 border rounded-4 shadow mb-2" style="background-color: #FFFFFF; width: 57%;">
         <div class="" style="width: 90%;">
         <div class="d-flex">
@@ -580,15 +580,19 @@
             </svg>
             </div>
             <div class="ms-3 mt-2">
-            <p id="nb" class="fw-bold"><%= r.User1.first_name + r.User1.last_name %></p> 
+            <p id="nb" class="fw-bold"><%= r.User1.first_name + " " + r.User1.last_name %></p> 
             </div>
         </div>
          
         <p id="" style="text-align: justify;"><%= r.comment %></p>
         <div class="d-flex">
-            <%for (int i = 0; i < r.rating; i++)
-                { %>
-            <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <%for (int i = 0; i < 5; i++) { %>
+            <%if (i > r.rating - 1) { %>
+            <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: -3px" width="25" height="30" fill="" class="bi bi-star ms-1" viewBox="0 0 16 16">
+                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+            </svg>
+            <%} else { %>
+            <svg class="ms-1" width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M4.78125 23L6.8125 14.4961L0 8.77632L9 8.01974L12.5 0L16 8.01974L25 8.77632L18.1875 14.4961L20.2187 23L12.5 18.4908L4.78125 23Z" fill="url(#paint0_linear_74_193)"/>
             <defs>
             <linearGradient id="paint0_linear_74_193" x1="0" y1="23" x2="25" y2="23" gradientUnits="userSpaceOnUse">
@@ -598,6 +602,7 @@
             </linearGradient>
             </defs>
             </svg>
+            <%} %>
             <%} %>
             <p id="nb" class="fw-bold h3 ms-2" style="margin-top: -3px;"><%= r.rating %></p>
         </div>
