@@ -14,9 +14,14 @@
             <option value="report">Saya ingin melaporkan postingan yang melanggar ketentuan</option>
         </select>
         <form action="">
-            <input type="description" style="border-radius: 10px; width: 50%; height: 500px; margin-bottom: 100px;">
+            <div class="d-flex flex-column align-items-baseline">
+                <textarea type="description" style="border-radius: 10px; width: 50%; height: 500px;" class="mb-3"></textarea>
+                <asp:Button ID="btnLogout" class="rounded btn btn-dark mb-5" runat="server" Text="Kirim" />
+            </div>
+            <%--<input type="description" style="border-radius: 10px; width: 50%; height: 500px; margin-bottom: 100px;">--%>
+            
         </form>
-
+        
         <h2><b>Informasi Tambahan</b></h2>
         <button type="button" style="border-radius: 10px; width: 15%; background-color: #313131; padding-top: 5px; outline: none;"><b style="font-size: 24px; color: aliceblue;">FAQ</b></button>
     </div>

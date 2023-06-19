@@ -30,7 +30,6 @@ namespace dcompare1.Model
         public virtual DbSet<Connectivity> Connectivities { get; set; }
         public virtual DbSet<Device> Devices { get; set; }
         public virtual DbSet<Dimension> Dimensions { get; set; }
-        public virtual DbSet<Display> Displays { get; set; }
         public virtual DbSet<Graphic> Graphics { get; set; }
         public virtual DbSet<Included> Includeds { get; set; }
         public virtual DbSet<ltKeyboard> ltKeyboards { get; set; }
@@ -43,5 +42,8 @@ namespace dcompare1.Model
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<fCamera> fCameras { get; set; }
         public virtual DbSet<rCamera> rCameras { get; set; }
+        public virtual DbSet<Camera> Cameras { get; set; }
+        public virtual DbSet<Table> Tables { get; set; }
+        public virtual DbSet<Display> Displays { get; set; }
     }
 }

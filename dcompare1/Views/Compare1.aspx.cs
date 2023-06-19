@@ -53,13 +53,17 @@ namespace dcompare1.Views
             User u = Session["user"] as User;
             int device_id = Convert.ToInt32(Request.QueryString["id"]);
             string rating = hiddenStarIndex.Value;
-            if (u != null || !string.IsNullOrEmpty(rating))
+            if (u != null || !string.IsNullOrEmpty(rating) && cbAgree.Checked == true)
             {
                 Review r = CommentRepo.GetReviewByUserAndDevice(u.Id, d.Id);
                 if(r == null)
                     CommentRepo.addReview(u.Id, device_id, 0, 0, txtReview.Value, Convert.ToInt32(rating));
                 else
                     CommentRepo.EditComment(u.Id, device_id, txtReview.Value, Convert.ToInt32(rating));
+            }
+            else
+            {
+                if (cbAgree.Checked == false) lbError.Text += "Agreement must be checked";
             }
         }
     }

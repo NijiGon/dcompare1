@@ -28,6 +28,15 @@
           <Property Name="life_hours" Type="int" />
           <Property Name="name" Type="varchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="Camera">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="resolution" Type="int" />
+          <Property Name="megapixels" Type="int" />
+          <Property Name="frame_rate" Type="int" />
+        </EntityType>
         <EntityType Name="Connectivity">
           <Key>
             <PropertyRef Name="Id" />
@@ -79,8 +88,8 @@
           <Property Name="height" Type="int" />
           <Property Name="width" Type="int" />
           <Property Name="refresh_rate" Type="int" />
-          <Property Name="color_gamut" Type="float" />
           <Property Name="size" Type="float" />
+          <Property Name="color_gamut" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="fCamera">
           <Key>
@@ -193,6 +202,12 @@
           <Property Name="type" Type="varchar" MaxLength="50" />
           <Property Name="max_caoacity" Type="int" />
         </EntityType>
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="Id" />
@@ -202,6 +217,7 @@
           <Property Name="last_name" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_Device_Audio">
           <End Role="Audio" Type="Self.Audio" Multiplicity="0..1" />
@@ -410,6 +426,7 @@
         <EntityContainer Name="MainModelStoreContainer">
           <EntitySet Name="Audio" EntityType="Self.Audio" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Battery" EntityType="Self.Battery" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Camera" EntityType="Self.Camera" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Connectivity" EntityType="Self.Connectivity" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Device" EntityType="Self.Device" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Dimension" EntityType="Self.Dimension" Schema="dbo" store:Type="Tables" />
@@ -425,6 +442,7 @@
           <EntitySet Name="Review" EntityType="Self.Review" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Security" EntityType="Self.Security" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Storage" EntityType="Self.Storage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Device_Audio" Association="Self.FK_Device_Audio">
             <End Role="Audio" EntitySet="Audio" />
@@ -557,7 +575,6 @@
           <NavigationProperty Name="Battery1" Relationship="Self.FK_Device_Battery" FromRole="Device" ToRole="Battery" />
           <NavigationProperty Name="Connectivity1" Relationship="Self.FK_Device_Connectivity" FromRole="Device" ToRole="Connectivity" />
           <NavigationProperty Name="Dimension1" Relationship="Self.FK_Device_Dimension" FromRole="Device" ToRole="Dimension" />
-          <NavigationProperty Name="Display1" Relationship="Self.FK_Device_Display" FromRole="Device" ToRole="Display" />
           <NavigationProperty Name="Graphic" Relationship="Self.FK_Device_Graphics" FromRole="Device" ToRole="Graphics" />
           <NavigationProperty Name="Included1" Relationship="Self.FK_Device_Included" FromRole="Device" ToRole="Included" />
           <NavigationProperty Name="Port1" Relationship="Self.FK_Device_Port" FromRole="Device" ToRole="Port" />
@@ -574,6 +591,7 @@
           <Property Name="youtube" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="maxpriceUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="minpriceUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Display1" Relationship="MainModel.FK_Device_Display" FromRole="Device" ToRole="Display" />
         </EntityType>
         <EntityType Name="Dimension">
           <Key>
@@ -584,18 +602,6 @@
           <Property Name="width" Type="Double" />
           <Property Name="height" Type="Double" />
           <NavigationProperty Name="Devices" Relationship="Self.FK_Device_Dimension" FromRole="Dimension" ToRole="Device" />
-        </EntityType>
-        <EntityType Name="Display">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="height" Type="Int32" />
-          <Property Name="width" Type="Int32" />
-          <Property Name="refresh_rate" Type="Int32" />
-          <Property Name="color_gamut" Type="Double" />
-          <Property Name="size" Type="Double" />
-          <NavigationProperty Name="Devices" Relationship="Self.FK_Device_Display" FromRole="Display" ToRole="Device" />
         </EntityType>
         <EntityType Name="Graphic">
           <Key>
@@ -710,6 +716,7 @@
           <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Reviews" Relationship="Self.FK_Review_ToUser" FromRole="User" ToRole="Review" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK_Device_Audio">
           <End Role="Audio" Type="Self.Audio" Multiplicity="0..1" />
@@ -756,18 +763,6 @@
             </Principal>
             <Dependent Role="Device">
               <PropertyRef Name="dimension" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Device_Display">
-          <End Role="Display" Type="Self.Display" Multiplicity="0..1" />
-          <End Role="Device" Type="Self.Device" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Display">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Device">
-              <PropertyRef Name="display" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -885,7 +880,6 @@
           <EntitySet Name="Connectivities" EntityType="Self.Connectivity" />
           <EntitySet Name="Devices" EntityType="Self.Device" />
           <EntitySet Name="Dimensions" EntityType="Self.Dimension" />
-          <EntitySet Name="Displays" EntityType="Self.Display" />
           <EntitySet Name="Graphics" EntityType="Self.Graphic" />
           <EntitySet Name="Includeds" EntityType="Self.Included" />
           <EntitySet Name="ltKeyboards" EntityType="Self.ltKeyboard" />
@@ -910,10 +904,6 @@
           </AssociationSet>
           <AssociationSet Name="FK_Device_Dimension" Association="Self.FK_Device_Dimension">
             <End Role="Dimension" EntitySet="Dimensions" />
-            <End Role="Device" EntitySet="Devices" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Device_Display" Association="Self.FK_Device_Display">
-            <End Role="Display" EntitySet="Displays" />
             <End Role="Device" EntitySet="Devices" />
           </AssociationSet>
           <AssociationSet Name="FK_Device_Graphics" Association="Self.FK_Device_Graphics">
@@ -964,6 +954,13 @@
           </AssociationSet>
           <AssociationSet Name="FK_Device_rCamera" Association="MainModel.FK_Device_rCamera">
             <End Role="rCamera" EntitySet="rCameras" />
+            <End Role="Device" EntitySet="Devices" />
+          </AssociationSet>
+          <EntitySet Name="Cameras" EntityType="MainModel.Camera" />
+          <EntitySet Name="Tables" EntityType="MainModel.Table" />
+          <EntitySet Name="Displays" EntityType="MainModel.Display" />
+          <AssociationSet Name="FK_Device_Display" Association="MainModel.FK_Device_Display">
+            <End Role="Display" EntitySet="Displays" />
             <End Role="Device" EntitySet="Devices" />
           </AssociationSet>
         </EntityContainer>
@@ -1020,6 +1017,45 @@
             </Principal>
             <Dependent Role="Device">
               <PropertyRef Name="rcamera" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Camera">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="resolution" Type="Int32" />
+          <Property Name="megapixels" Type="Int32" />
+          <Property Name="frame_rate" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Display">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="height" Type="Int32" />
+          <Property Name="width" Type="Int32" />
+          <Property Name="refresh_rate" Type="Int32" />
+          <Property Name="size" Type="Double" />
+          <Property Name="color_gamut" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Devices" Relationship="MainModel.FK_Device_Display" FromRole="Display" ToRole="Device" />
+        </EntityType>
+        <Association Name="FK_Device_Display">
+          <End Type="MainModel.Display" Role="Display" Multiplicity="0..1" />
+          <End Type="MainModel.Device" Role="Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Display">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="display" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1097,18 +1133,6 @@
                 <ScalarProperty Name="length" ColumnName="length" />
                 <ScalarProperty Name="width" ColumnName="width" />
                 <ScalarProperty Name="height" ColumnName="height" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Displays">
-            <EntityTypeMapping TypeName="MainModel.Display">
-              <MappingFragment StoreEntitySet="Display">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="height" ColumnName="height" />
-                <ScalarProperty Name="width" ColumnName="width" />
-                <ScalarProperty Name="refresh_rate" ColumnName="refresh_rate" />
-                <ScalarProperty Name="color_gamut" ColumnName="color_gamut" />
-                <ScalarProperty Name="size" ColumnName="size" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1216,6 +1240,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="MainModel.User">
               <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="username" ColumnName="username" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="first_name" ColumnName="first_name" />
                 <ScalarProperty Name="last_name" ColumnName="last_name" />
@@ -1240,6 +1265,35 @@
                 <ScalarProperty Name="frame_rate" ColumnName="frame_rate" />
                 <ScalarProperty Name="megapixels" ColumnName="megapixels" />
                 <ScalarProperty Name="resolution" ColumnName="resolution" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cameras">
+            <EntityTypeMapping TypeName="MainModel.Camera">
+              <MappingFragment StoreEntitySet="Camera">
+                <ScalarProperty Name="frame_rate" ColumnName="frame_rate" />
+                <ScalarProperty Name="megapixels" ColumnName="megapixels" />
+                <ScalarProperty Name="resolution" ColumnName="resolution" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tables">
+            <EntityTypeMapping TypeName="MainModel.Table">
+              <MappingFragment StoreEntitySet="Table">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Displays">
+            <EntityTypeMapping TypeName="MainModel.Display">
+              <MappingFragment StoreEntitySet="Display">
+                <ScalarProperty Name="color_gamut" ColumnName="color_gamut" />
+                <ScalarProperty Name="size" ColumnName="size" />
+                <ScalarProperty Name="refresh_rate" ColumnName="refresh_rate" />
+                <ScalarProperty Name="width" ColumnName="width" />
+                <ScalarProperty Name="height" ColumnName="height" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

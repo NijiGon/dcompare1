@@ -11,10 +11,11 @@ namespace dcompare1
     public partial class Site1 : System.Web.UI.MasterPage
     {
         public string uname;
+        public User u;
         protected void Page_Load(object sender, EventArgs e)
         {
-            User u = Session["user"] as User;
-            uname = u != null ? "Hello, " + u.first_name : "Login";
+            u = Session["user"] as User;
+            uname = u != null ? u.username : "Masuk";
         }
     }
 }

@@ -89,11 +89,11 @@
     <!-- SEARCH -->
         <asp:UpdatePanel ID="updatePanel" runat="server" UpdateMode="Conditional">
             <ContentTemplate>
-                <div id="search" style="margin-left:78px" class="d-flex flex-column justify-content-center align-items-center mt-5 z-1">
+                <div id="search" style="margin-left: 4.5vw" class="d-flex flex-column justify-content-center align-items-center z-1">
                     <p class="h2" style="color: #6300E1;">Mulai bandingkan</p>
                     <input id="searchInput" class="form-control rounded-pill bg-white z-1" style="width: 25vw;" type="search" placeholder="Cari Device" aria-label="Search" style="background-color: #EEEEEE;">
-                    <div class="z-0" style="width: 100%;">
-                        <ul id="searchResults" class="list-unstyled rounded-4 border border-1" style="background-color: white; margin-top: -35px; padding: 12% 0 3% 0 ;border-color: lightgray !important;">
+                    <div class="z-0" style="width: 100%; position: relative;">
+                        <ul id="searchResults" class="list-unstyled rounded-4 border w-100 border-1" style="position: absolute; top: 100%; left: 0; background-color: white; margin-top: -35px; padding: 12% 0 3% 0; border-color: lightgray !important;">
                             <!-- Search results will be dynamically added here -->
                         </ul>
                     </div>
@@ -202,10 +202,10 @@
                 <p><%= d.Graphic.name %></p>
                 <p><%= d.Graphic.type %></p>
                 <p><%= d.Graphic.manufacturer %></p>
-                <p><%= d.Graphic.wattage %> watts</p>
+                <p><%= d.Graphic.wattage %> watt</p>
                 <p><%= d.Graphic.clock_speed %> GHz</p>
                 <p><%= d.Graphic.vram %> GB</p>
-                <p><%= d.Graphic.data_rate %></p>
+                <p><%= d.Graphic.data_rate %> Gbps</p>
             </div>
             </div>
         </div>
@@ -250,9 +250,9 @@
                 <p class="me-5">Jam Hidup</p>
             </div>
             <div id="nr">
-                <p><%= d.Battery1.capacity %> GB</p>
-                <p><%= d.Battery1.wattage %></p>
-                <p><%= d.Battery1.life_hours %> GB</p>
+                <p><%= d.Battery1.capacity %> mAh</p>
+                <p><%= d.Battery1.wattage %> watt</p>
+                <p><%= d.Battery1.life_hours %> Jam</p>
             </div>
             </div>
         </div>
@@ -270,7 +270,7 @@
                 <p class="me-5">Frame Rate</p>
             </div>
             <div id="nr">
-                <p><%= d.fCamera1.resolution %></p>
+                <p><%= d.fCamera1.resolution %>P</p>
                 <p><%= d.fCamera1.megapixels %> MP</p>
                 <p><%= d.fCamera1.frame_rate %> Hz</p>
             </div>
@@ -312,7 +312,7 @@
     <!-- YOUTUBE -->
     <div class="ms-5 mt-3">
     <p id="nb" class="h5 fw-bold fs-4">
-        Powered by
+        Review YouTube
         <svg class="" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M23.4996 3.50708C23.3637 3.02231 23.099 2.58342 22.7336 2.23708C22.3579 1.88008 21.8974 1.62471 21.3956 1.49508C19.5176 1.00008 11.9936 1.00008 11.9936 1.00008C8.85697 0.964389 5.72107 1.12135 2.60364 1.47008C2.10183 1.60929 1.6422 1.87036 1.26564 2.23008C0.895641 2.58608 0.627641 3.02508 0.487641 3.50608C0.151334 5.31782 -0.0120674 7.15742 -0.000359379 9.00008C-0.0123594 10.8411 0.150641 12.6801 0.487641 14.4941C0.624641 14.9731 0.891641 15.4101 1.26264 15.7631C1.63364 16.1161 2.09564 16.3711 2.60364 16.5061C4.50664 17.0001 11.9936 17.0001 11.9936 17.0001C15.1343 17.0358 18.2742 16.8789 21.3956 16.5301C21.8974 16.4004 22.3579 16.1451 22.7336 15.7881C23.0989 15.4418 23.3633 15.0029 23.4986 14.5181C23.8437 12.707 24.0115 10.8667 23.9996 9.02308C24.0256 7.17168 23.858 5.32364 23.4996 3.50708ZM9.60164 12.4241V5.57708L15.8616 9.00108L9.60164 12.4241Z" fill="black"/>
         </svg>
@@ -554,13 +554,15 @@
         </div>
         <div class="mt-5 ms-5">
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label" for="defaultCheck1">Saya telah menyetujui syarat dan ketentuan</label>
+                <%--<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">Saya telah menyetujui syarat dan ketentuan</label>--%>
+                <asp:CheckBox ID="cbAgree" runat="server" Text="Saya telah menyetujui syart dan ketentuan" />
             </div>
             <div>
             <a id="nr" href="#">
                 <%--<button type="button" class="btn text-white fs-5" style="background-color: #353535; width: 100%;">Kirim</button>--%>
                 <asp:Button ID="btnSubmit" class="btn text-white fs-5" style="background-color: #353535; width: 100%;" runat="server" Text="Kirim" OnClick="btnSubmit_Click" />
+                <asp:Label ID="lbError" runat="server" Text=""></asp:Label>
             </a>
             </div>
         </div>
@@ -580,11 +582,11 @@
             </svg>
             </div>
             <div class="ms-3 mt-2">
-            <p id="nb" class="fw-bold"><%= r.User1.first_name + " " + r.User1.last_name %></p> 
+            <p id="nb" class="fw-bold"><%= r.User1.username %></p> 
             </div>
         </div>
          
-        <p id="" style="text-align: justify;"><%= r.comment %></p>
+        <p id="" class="mt-3" style="text-align: justify;"><%= r.comment %></p>
         <div class="d-flex">
             <%for (int i = 0; i < 5; i++) { %>
             <%if (i > r.rating - 1) { %>

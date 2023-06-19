@@ -125,7 +125,7 @@
     #homeBtn, #deviceBtn, #compareBtn, #banner, #search p, thead, #spec-subgrup, #label-sub, #nb{
         font-family: Nexa-bold;
     }
-    th, td, #footer, .dropdown-menu a, #nr{
+    th, td, #footer, .dropdown-menu a, #nr, .profile-info span{
         font-family: Nexa-reg;
     }
     </style>
@@ -137,36 +137,34 @@
             <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow">
                 <div class="container-fluid justify-content-between d-flex">
                 <a id="homeBtn" class="navbar-brand fw-bold fs-4" href="Home.aspx">D'Compare</a>
-                <form class="d-flex" role="search">
+                <%--<form class="d-flex" role="search">
                     <input class="form-control me-2 rounded-pill w-50" type="search" placeholder="Cari Device" aria-label="Search">
-                </form>
-                <%--<asp:UpdatePanel ID="updatePanel" runat="server" UpdateMode="Conditional">
+                </form>--%>
+                <asp:UpdatePanel ID="updatePanel" runat="server" UpdateMode="Conditional">
                     <ContentTemplate>
-                        <div id="search" class="d-flex flex-column justify-content-center align-items-center mt-5 z-1">
-                            <form class="d-flex" role="search">
-                                <input id="searchInput" class="form-control me-2 rounded-pil z-1" style="width: 1000px" type="search" placeholder="Cari Device" aria-label="Search">
-                            </form>
-                            <div class="z-0">
-                                <ul id="searchResults" class="list-unstyled rounded-4 border border-1" style="background-color: white; width:990px; margin-top: -35px; padding: 5% 0 1% 0 ;border-color: lightgray !important;">
+                        <div id="search" style="margin-left: 0px" class="d-flex flex-column justify-content-center align-items-center z-1">
+                            <input id="searchInputNav" class="form-control rounded-pill bg-white z-1" style="width: 25vw;" type="search" placeholder="Cari Device" aria-label="Search" style="background-color: #EEEEEE;">
+                            <div class="z-0" style="width: 100%; position: relative;">
+                                <ul id="searchResultsNav" class="list-unstyled rounded-4 border w-100 border-1" style="position: absolute; top: 100%; left: 0; background-color: white; margin-top: -35px; padding: 12% 0 3% 0; border-color: lightgray !important;">
                                     <!-- Search results will be dynamically added here -->
                                 </ul>
                             </div>
                         </div>
                     </ContentTemplate>
-                </asp:UpdatePanel>--%>
+                </asp:UpdatePanel>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <%--<li class="nav-item dropdown">
-                            <a id="deviceBtn" class="nav-link fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Device</a>
+                        <li class="nav-item dropdown">
+                            <a id="deviceBtn" class="nav-link fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Perangkat</a>
                             <ul class="dropdown-menu">
                                 <li id="label-sub" class="fw-bold ms-3">HandPhone</li>
-                                <li><a class="dropdown-item" href="#">Iphone</a></li>
-                                <li><a class="dropdown-item" href="#">Samsung</a></li>
-                                <li><a class="dropdown-item" href="#">Xiaomi</a></li>
+                                <li><a class="dropdown-item" href="ViewDevices.aspx?brand=Iphone">Iphone</a></li>
+                                <li><a class="dropdown-item" href="ViewDevices.aspx?brand=Samsung">Samsung</a></li>
+                                <li><a class="dropdown-item" href="ViewDevices.aspx?brand=Xiaomi">Xiaomi</a></li>
                           
                                 <li class="dropdown-divider"></li>
   
@@ -175,17 +173,21 @@
                                 <li><a class="dropdown-item" href="#">Asus</a></li>
                                 <li><a class="dropdown-item" href="#">Lenovo</a></li>
                             </ul>
+                        </li>
+                        <%--<li class="nav-item">
+                            <a id="deviceBtn" class="nav-link fw-bold" href="ViewDevices.aspx">Semua Perangkat</a>
                         </li>--%>
                         <li class="nav-item">
-                            <a id="deviceBtn" class="nav-link fw-bold" href="ViewDevices.aspx">Devices</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="compareBtn" class="nav-link fw-bold" href="#">Compare</a>
+                            <a id="compareBtn" class="nav-link fw-bold" href="#">Bandingkan</a>
                         </li>
 
-                        <li id="login" class="nav-item me-auto d-flex">
+                        <li id="login" class="nav-item float-end d-flex">
                             <div id="line" class="vr my-2"></div>
-                            <a href="Login.aspx" style="min-width: 200px;" class="nav-link fw-bold"><%= uname %></a>
+                            <%if (u == null) { %>
+                            <a href="Login.aspx" style="min-width: 175px;" class="nav-link fw-bold">Login</a>
+                            <%} else { %>
+                            <a href="EditProfile.aspx" style="min-width: 175px;" class="nav-link fw-bold"><%= u.username %></a>
+                            <%} %>
                         </li>
                     </ul>                  
                 </div>               
@@ -193,13 +195,13 @@
             </nav>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-            <div class="footer-basic bg-dark">
-                <footer style="margin-bottom: -20px; margin-top: -20px;">
+            <div class="footer-basic bg-dark" style="position: sticky">
+                <footer style="margin-bottom: -20px; margin-top: -10px;">
                     <div class="social" style="">
-                      <a href="#"><i class="icon ion-social-instagram" style="color: white;"></i></a>
-                      <a href="#"><i class="icon ion-social-twitter" style="color: white;"></i></a>
-                      <a href="#"><i class="icon ion-social-facebook" style="color: white;"></i></a>
-                      <a href="#"><i class="icon ion-social-whatsapp" style="color: white;"></i></a>
+                      <a href="https://www.instagram.com/accounts/login/"><i class="icon ion-social-instagram" style="color: white;"></i></a>
+                      <a href="https://twitter.com/"><i class="icon ion-social-twitter" style="color: white;"></i></a>
+                      <a href="https://id-id.facebook.com/"><i class="icon ion-social-facebook" style="color: white;"></i></a>
+                      <a href="https://www.whatsapp.com/"><i class="icon ion-social-whatsapp" style="color: white;"></i></a>
                     </div>
                     <ul class="list-inline">
                         <li class="list-inline-item text-white h6"><a href="ContactUs.aspx">Hubungi Kami</a></li>
@@ -210,24 +212,33 @@
             </div>
         </div>
     </form>
-    <%--<script type="text/javascript">
-        function searchDevices() {
-            var searchInput = document.getElementById('searchInput');
-            var searchResults = document.getElementById('searchResults');
+    <script type="text/javascript">
+        document.getElementById('searchResultsNav').style.display = "none";
+        function searchDevicesNav() {
+            var searchInput = document.getElementById('searchInputNav');
+            var searchResults = document.getElementById('searchResultsNav');
             var searchText = searchInput.value;
             // Make an AJAX request to the server
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'Search.aspx?keywords=' + searchText, true);
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    // Update the search results container with the received HTML
-                    searchResults.innerHTML = xhr.responseText;
-                }
-            };
+            if (searchText === "") {
+                searchResults.style.display = "none";
+            } else {
+                searchResults.style.display = "block";
+
+                // Make an AJAX request to the server
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', 'Search.aspx?keywords=' + searchText, true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        // Update the search results container with the received HTML
+                        searchResults.innerHTML = xhr.responseText;
+                    }
+                };
+                xhr.send();
+            }
             xhr.send();
         }
 
-        document.getElementById('searchInput').addEventListener('keyup', searchDevices);
-    </script>--%>
+        document.getElementById('searchInputNav').addEventListener('keyup', searchDevicesNav);
+    </script>
 </body>
 </html>

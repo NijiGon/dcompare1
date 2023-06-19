@@ -18,9 +18,8 @@ namespace dcompare1.Views
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            MainEntities10 db = DatabaseSingleton.getInstance();
 
-            User u = (from user in db.Users where tbEmail.Text == user.email && tbPass.Text == user.password select user).FirstOrDefault();
+            User u = UserRepo.FindUser(tbEmail.Text, tbPass.Text);
 
             if (u != null)
             {
@@ -28,6 +27,7 @@ namespace dcompare1.Views
                 Response.Redirect("Home.aspx");
                 return;
             }
+            lbError.Text = "Incorrect combination of email and password.";
         }
     }
 }

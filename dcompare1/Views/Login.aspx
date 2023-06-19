@@ -16,18 +16,21 @@
                     <img src="../Asset/logo/WELCOME.png" class="w-75 mb-3" alt="Alternate Text" />
                     <div class="mb-3">
                         <label for="e-mail" class="form-label">Email</label>
-                        <asp:TextBox ID="tbEmail" class="form-control" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="tbEmail" class="form-control" placeholder="john.smith32@gmail.com" runat="server"></asp:TextBox>
                       </div>
                     <div class="mb-3">
-                        <label for="pass" class="form-label">Password</label>
+                        <label for="pass" class="form-label">Kata Sandi</label>
                         <%--<input type="password" class="form-control" id="pass"/>--%>
-                        <asp:TextBox ID="tbPass" class="form-control" runat="server" TextMode="Password" ></asp:TextBox>
+                        <asp:TextBox ID="tbPass" class="form-control" runat="server" placeholder="********" TextMode="Password" ></asp:TextBox>
                       </div>
                     <%--<button type="submit" class="btn btn-primary w-100 bg">Masuk</button>--%>
                     <asp:Button ID="btnSubmit" runat="server" Text="Masuk" class="btn btn-primary w-100 bg" OnClick="btnSubmit_Click" />
                 </form>
+                <div class="text-center text-danger fw-bold mt-3">
+                    <asp:Label ID="lbError" runat="server" Text=""></asp:Label>
+                </div>
                 <div>
-                    <p class="text-center mt-3">belum punya akun? <a href="Register.aspx" class="fw-bold text-decoration-none text-black">Daftar</a></p>
+                    <p class="text-center mt-3">Belum punya akun? <a href="Register.aspx" class="fw-bold text-decoration-none text-black">Daftar</a></p>
                 </div>
             </div>
         </div>

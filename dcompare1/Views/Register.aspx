@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-     <title></title>
+        <title></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </head>
@@ -15,28 +15,39 @@
                 <form runat="server">
                     <img src="../Asset/logo/WELCOME.png" class="w-75 mb-3" alt="Alternate Text" />
                 <div class="d-flex justify-content-between">
-                  <div class="mb-3 me-3">
+                    <div class="mb-3 me-3">
                     <label for="tbDepan" class="form-label">Nama Depan</label>
                     <%--<input type="text" class="form-control" id="namaDepan" aria-describedby="emailHelp"/>--%>
-                    <asp:TextBox ID="tbDepan" CssClass="form-control" runat="server"></asp:TextBox>
-                  </div>
-                  <div class="mb-3">
+                        <asp:TextBox ID="tbDepan" CssClass="form-control" placeholder="John" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="mb-3">
                     <label for="tbBelakang" class="form-label">Nama Belakang</label>
                     <%--<input type="text" class="form-control" id="namaBelakang"/>--%>
-                    <asp:TextBox ID="tbBelakang" CssClass="form-control" runat="server"></asp:TextBox>
-                  </div>
+                        <asp:TextBox ID="tbBelakang" placeholder="Smith" CssClass="form-control" runat="server"></asp:TextBox>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="tbUsername" class="form-label">Username</label>
+                    <%--<input type="email" class="form-control " id="e-mail"/>--%>
+                    <asp:TextBox ID="tbUsername" CssClass="form-control" placeholder="smithey323" runat="server"></asp:TextBox>
                 </div>
                 <div class="mb-3">
                     <label for="tbEmail" class="form-label">Email</label>
                     <%--<input type="email" class="form-control " id="e-mail"/>--%>
-                    <asp:TextBox ID="tbEmail" CssClass="form-control" runat="server"></asp:TextBox>
-                  </div>
+                    <asp:TextBox ID="tbEmail" CssClass="form-control" placeholder="john.smith32@gmail.com" runat="server"></asp:TextBox>
+                </div>
                 <div class="mb-3">
-                    <label for="tbPass" class="form-label">Password</label>
+                    <label for="tbPass" class="form-label">Kata Sandi</label>
                     <%--<input type="password" class="form-control" id="pass"/>--%>
-                    <asp:TextBox ID="tbPass" CssClass="form-control" runat="server" TextMode="Password"></asp:TextBox>
-                  </div>
+                    <asp:TextBox ID="tbPass" CssClass="form-control" runat="server" placeholder="********" TextMode="Password"></asp:TextBox>
+                </div>
                 <%--<button type="submit" class="btn btn-primary w-100 bg">Daftar</button>--%>
+                <div class="text-center text-danger fw-bold mt-3">
+                    <asp:Label ID="lbError" runat="server" Text=""></asp:Label>
+                </div>
+                <div>
+                    <p class="text-center mt-3">Sudah punya akun? <a href="Login.aspx" class="fw-bold text-decoration-none text-black">Login</a></p>
+                </div>
                 <asp:Button ID="btnRegister" CssClass="btn btn-primary w-100" runat="server" Text="Daftar" OnClick="btnRegister_Click" />
             </form>
             </div>

@@ -46,7 +46,6 @@ namespace dcompare1.Model
         public virtual Battery Battery1 { get; set; }
         public virtual Connectivity Connectivity1 { get; set; }
         public virtual Dimension Dimension1 { get; set; }
-        public virtual Display Display1 { get; set; }
         public virtual Graphic Graphic { get; set; }
         public virtual Included Included1 { get; set; }
         public virtual Port Port1 { get; set; }
@@ -59,5 +58,6 @@ namespace dcompare1.Model
         public virtual Memory Memory1 { get; set; }
         public virtual fCamera fCamera1 { get; set; }
         public virtual rCamera rCamera1 { get; set; }
+        public virtual Display Display1 { get; set; }
     }
 }

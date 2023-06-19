@@ -87,8 +87,8 @@
             <div id="search" class="d-flex flex-column justify-content-center align-items-center mt-5 z-1">
                 <p class="h2" style="color: #6300E1;">Mulai bandingkan</p>
                 <input id="searchInput" class="form-control rounded-pill bg-white z-1" style="width: 25vw;" type="search" placeholder="Cari Device" aria-label="Search" style="background-color: #EEEEEE;">
-                <div class="z-0" style="width: 25%;">
-                    <ul id="searchResults" class="list-unstyled rounded-4 border border-1" style="background-color: white; margin-top: -35px; padding: 12% 0 3% 0 ;border-color: lightgray !important;">
+                <div class="z-0" style="width: 25%; position:relative">
+                    <ul id="searchResults" class="list-unstyled rounded-4 border w-100 border-1" style="position: absolute; top: 100%; left: 0; background-color: white; margin-top: -35px; padding: 12% 0 3% 0; border-color: lightgray !important;">
                         <!-- Search results will be dynamically added here -->
                     </ul>
                 </div>
@@ -295,7 +295,7 @@
             <% if (audioWinner == 1){ %>
             <td class="border border-4 border-bottom-0"><%= d.Audio1.name %></td>
             <td class=""><%= d2.Audio1.name %></td>
-            <%} else if (displayWinner == 2){ %>
+            <%} else if (audioWinner == 2){ %>
             <td class="border-end"><%= d.Audio1.name %></td>
             <td class="border border-4 border-bottom-0"><%= d2.Audio1.name %></td>
             <%} else {%>
@@ -310,7 +310,7 @@
             <% if (audioWinner == 1){ %>
             <td class="border border-4 border-top-0 border-bottom-0"><%= d.Audio1.type %></td>
             <td class=""><%= d2.Audio1.type %></td>
-            <%} else if (displayWinner == 2){ %>
+            <%} else if (audioWinner == 2){ %>
             <td class="border-end"><%= d.Audio1.type %></td>
             <td class="border border-4 border-top-0 border-bottom-0"><%= d2.Audio1.type %></td>
             <%} else {%>
@@ -325,7 +325,7 @@
             <% if (audioWinner == 1){ %>
             <td class="border border-4 border-top-0 border-bottom-0"><%= d.Audio1.microphone %></td>
             <td class=""><%= d2.Audio1.microphone %></td>
-            <%} else if (displayWinner == 2){ %>
+            <%} else if (audioWinner == 2){ %>
             <td class="border-end"><%= d.Audio1.microphone %></td>
             <td class="border border-4 border-top-0 border-bottom-0"><%= d2.Audio1.microphone %></td>
             <%} else {%>
@@ -340,7 +340,7 @@
             <% if (audioWinner == 1){ %>
             <td class="border border-4 border-top-0"><%= d.Audio1.quantity %></td>
             <td class=""><%= d2.Audio1.quantity%></td>
-            <%} else if (displayWinner == 2){ %>
+            <%} else if (audioWinner == 2){ %>
             <td class="border-end"><%= d.Audio1.quantity %></td>
             <td class="border border-4 border-top-0"><%= d2.Audio1.quantity%></td>
             <%} else {%>

@@ -18,13 +18,15 @@ namespace dcompare1.Views
         public string[] sp = new string[100];
         public List<Device> devices = new List<Device>();
         public List<Device> newdevices = new List<Device>();
-        public string sort, pt;
+        public string sort, brand;
         protected void Page_Load(object sender, EventArgs e)
         {
             sort = Request.QueryString["sort"];
-            pt = Request.QueryString["pricetype"];
-            devices = DeviceRepo.GetDevices();
-            GetSorted(sort, pt, ref devices);
+            brand = Request.QueryString["brand"];
+            if (brand == null)
+                devices = DeviceRepo.GetDevices();
+            else devices = DeviceRepo.GetDevicesByBrand(brand);
+            GetSorted(sort, ref devices);
             foreach (var d in devices)
             {
                 ratings[d.Id] = DeviceRepo.GetRating(d.Id);
@@ -47,7 +49,7 @@ namespace dcompare1.Views
             // gridView.DataBind();
         }
 
-        protected static void GetSorted(string sort, string pt, ref List<Device> devices)
+        protected static void GetSorted(string sort, ref List<Device> devices)
         {
             if(sort != null)
             {

@@ -119,12 +119,11 @@
     </Content>
     <Content Include="Views\AboutUs.aspx" />
     <Content Include="Views\Compare1.aspx" />
-    <Content Include="Views\Compare1Device.aspx" />
     <Content Include="Views\Compare2.aspx" />
     <Content Include="Views\Compare3.aspx" />
     <Content Include="Views\Compare4.aspx" />
     <Content Include="Views\ContactUs.aspx" />
-    <Content Include="Views\HomeView.aspx" />
+    <Content Include="Views\EditProfile.aspx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\Register.aspx" />
     <Content Include="Views\Home.aspx" />
@@ -152,6 +151,9 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Battery.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Camera.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Connectivity.cs">
@@ -214,6 +216,9 @@
     <Compile Include="Model\Storage.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Table.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\User.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -236,13 +241,6 @@
     </Compile>
     <Compile Include="Views\Compare1.aspx.designer.cs">
       <DependentUpon>Compare1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Compare1Device.aspx.cs">
-      <DependentUpon>Compare1Device.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Compare1Device.aspx.designer.cs">
-      <DependentUpon>Compare1Device.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Compare2.aspx.cs">
       <DependentUpon>Compare2.aspx</DependentUpon>
@@ -272,12 +270,12 @@
     <Compile Include="Views\ContactUs.aspx.designer.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\HomeView.aspx.cs">
-      <DependentUpon>HomeView.aspx</DependentUpon>
+    <Compile Include="Views\EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\HomeView.aspx.designer.cs">
-      <DependentUpon>HomeView.aspx</DependentUpon>
+    <Compile Include="Views\EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

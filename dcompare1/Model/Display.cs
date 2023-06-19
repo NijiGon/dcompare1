@@ -24,8 +24,8 @@ namespace dcompare1.Model
         public Nullable<int> height { get; set; }
         public Nullable<int> width { get; set; }
         public Nullable<int> refresh_rate { get; set; }
-        public Nullable<double> color_gamut { get; set; }
         public Nullable<double> size { get; set; }
+        public string color_gamut { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Device> Devices { get; set; }

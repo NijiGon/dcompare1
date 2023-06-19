@@ -605,7 +605,7 @@
             <td class="<% if (storageWinner.ToString().Contains('2')) Response.Write(type5); else Response.Write(type2);  %>"><%= d2.Storage1.size %> </td>
             <td class="<% if (storageWinner.ToString().Contains('3')) Response.Write(type5); else Response.Write(type2);  %>"><%= d3.Storage1.size %> </td>
             <td class="<% if (storageWinner.ToString().Contains('4')) Response.Write(type5); else Response.Write(type1);  %>"><%= d4.Storage1.size %> </td>
-        </tr>storageWinner
+        </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Tipe</p>    
@@ -659,7 +659,7 @@
             <td class="<% if (batteryWinner.ToString().Contains('2')) Response.Write(type5); else Response.Write(type2);  %>"><%= d2.Battery1.capacity %> </td>
             <td class="<% if (batteryWinner.ToString().Contains('3')) Response.Write(type5); else Response.Write(type2);  %>"><%= d3.Battery1.capacity %> </td>
             <td class="<% if (batteryWinner.ToString().Contains('4')) Response.Write(type5); else Response.Write(type1);  %>"><%= d4.Battery1.capacity %> </td>
-        </tr>storageWinner
+        </tr>
         <tr class="border-bottom">
             <th scope="row" class="">
                 <p class="mb-minus5 fw-normal">Watt</p>    

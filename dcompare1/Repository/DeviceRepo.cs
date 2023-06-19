@@ -13,6 +13,10 @@ namespace dcompare1.Repository
         {
             return (from d in db.Devices select d).ToList();
         }
+        public static List<Device> GetDevicesByBrand(string b)
+        {
+            return (from d in db.Devices where d.name.Contains(b) select d).ToList();
+        }
 
         public static double GetRating(int id)
         {

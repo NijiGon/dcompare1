@@ -36,5 +36,9 @@ namespace dcompare1.Repository
                 db.SaveChanges();
             }
         }
+        public static List<Review> GetCommentsByUser(int id)
+        {
+            return (from r in db.Reviews where r.user == id select r).ToList();
+        }
     }
 }

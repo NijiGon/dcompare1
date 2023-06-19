@@ -19,11 +19,13 @@ namespace dcompare1
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            if(UserValidator.UserValidation(tbDepan.Text, tbBelakang.Text, tbPass.Text, tbEmail.Text))
+            string errorCode = UserValidator.UserValidation(tbDepan.Text, tbBelakang.Text, tbPass.Text, tbEmail.Text, tbUsername.Text);
+            if (string.IsNullOrEmpty(errorCode))
             {
-                UserRepo.addUser(tbDepan.Text, tbBelakang.Text, tbPass.Text, tbEmail.Text);
+                UserRepo.addUser(tbDepan.Text, tbBelakang.Text, tbPass.Text, tbEmail.Text, tbUsername.Text);
                 Response.Redirect("Login.aspx");
             }
+            lbError.Text = errorCode;
         }
     }
 }

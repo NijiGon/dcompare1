@@ -10,7 +10,6 @@
         <EntityTypeShape EntityType="MainModel.Connectivity" Width="1.5" PointX="0.75" PointY="11.5" IsExpanded="true" />
         <EntityTypeShape EntityType="MainModel.Device" Width="1.5" PointX="3.375" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MainModel.Dimension" Width="1.5" PointX="0.75" PointY="14" IsExpanded="true" />
-        <EntityTypeShape EntityType="MainModel.Display" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MainModel.Graphic" Width="1.5" PointX="0.75" PointY="19.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MainModel.Included" Width="1.5" PointX="0.75" PointY="23.375" IsExpanded="true" />
         <EntityTypeShape EntityType="MainModel.ltKeyboard" Width="1.5" PointX="0.75" PointY="25.625" IsExpanded="true" />
@@ -25,7 +24,6 @@
         <AssociationConnector Association="MainModel.FK_Device_Battery" ManuallyRouted="false" />
         <AssociationConnector Association="MainModel.FK_Device_Connectivity" ManuallyRouted="false" />
         <AssociationConnector Association="MainModel.FK_Device_Dimension" ManuallyRouted="false" />
-        <AssociationConnector Association="MainModel.FK_Device_Display" ManuallyRouted="false" />
         <AssociationConnector Association="MainModel.FK_Device_Graphics" ManuallyRouted="false" />
         <AssociationConnector Association="MainModel.FK_Device_Included" ManuallyRouted="false" />
         <AssociationConnector Association="MainModel.FK_Device_Port" ManuallyRouted="false" />
@@ -40,6 +38,10 @@
         <EntityTypeShape EntityType="MainModel.rCamera" Width="1.5" PointX="7.375" PointY="0.875" />
         <AssociationConnector Association="MainModel.FK_Device_fCamera" />
         <AssociationConnector Association="MainModel.FK_Device_rCamera" />
+        <EntityTypeShape EntityType="MainModel.Camera" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MainModel.Table" Width="1.5" PointX="5.75" PointY="3.75" />
+        <EntityTypeShape EntityType="MainModel.Display" Width="1.5" PointX="8.375" PointY="4" />
+        <AssociationConnector Association="MainModel.FK_Device_Display" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

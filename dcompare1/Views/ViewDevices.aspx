@@ -83,11 +83,11 @@
                 <div class="dropdown">
                     <button class="btn dropdown-toggle border border-secondary-subtle text-start" style="width: 100%;" type="button" data-bs-toggle="dropdown" aria-expanded="false">Berdasarkan</button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="ViewDevices.aspx?sort=price_dsc">Harga Tertinggi</a></li>
-                        <li><a class="dropdown-item" href="ViewDevices.aspx?sort=price_asc">Harga Terendah</a></li>
-                        <li><a class="dropdown-item" href="ViewDevices.aspx?sort=rating_dsc">Ulasan (tinggi ke rendah)</a></li>
-                        <li><a class="dropdown-item" href="ViewDevices.aspx?sort=alph_asc">A - Z</a></li>
-                        <li><a class="dropdown-item" href="ViewDevices.aspx?sort=alph_dsc">Z - A</a></li>
+                        <li><a class="dropdown-item" href="ViewDevices.aspx?sort=price_dsc&brand=<%= brand %>">Harga Tertinggi</a></li>
+                        <li><a class="dropdown-item" href="ViewDevices.aspx?sort=price_asc&brand=<%= brand %>">Harga Terendah</a></li>
+                        <li><a class="dropdown-item" href="ViewDevices.aspx?sort=rating_dsc&brand=<%= brand %>">Ulasan (tinggi ke rendah)</a></li>
+                        <li><a class="dropdown-item" href="ViewDevices.aspx?sort=alph_asc&brand=<%= brand %>">A - Z</a></li>
+                        <li><a class="dropdown-item" href="ViewDevices.aspx?sort=alph_dsc&brand=<%= brand %>">Z - A</a></li>
                     </ul>
                 </div>
             </div>
@@ -97,7 +97,7 @@
                     <div class="col-2" style="min-width:300px; max-width: 1100px;">
                         <a href="Compare1.aspx?id=<%= d.Id %>" class="no-underline mb-5 d-flex align-items-center justify-content-center flex-column">
                             <img class="" style="height: 300px;" src="../Asset/devices/phones/<%= d.image %>" alt="">
-                            <p class="w-50 fs-6 mt-2 mb-0 d-flex align-items-center justify-content-center" style="font-family: Nexa-bold; min-height:50px;"><%= d.name %></p>
+                            <p class="w-50 fs-5 mt-2 mb-0 d-flex align-items-center justify-content-center" style="font-family: Nexa-bold; min-height:50px;"><%= d.name %></p>
                             <p class="rounded-pill fs-7 py-1 text-white mt-4 w-50" style="font-family: Nexa-bold; background-color: #6300E1;"><%= sp[d.Id] %></p>
                             <div class="d-flex justify-content-center border border-2 border-black rounded-pill px-3 py-1 bg-white w-50" margin-top: -10px;">
                                 <svg id="bintang" class="me-2" style="margin-top:1px" width="18" height="18" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">

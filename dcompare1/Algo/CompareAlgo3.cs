@@ -220,8 +220,6 @@ namespace dcompare1.Algo
             conditional(temp, ref sub1, ref sub2, ref sub3, ref sub4);
             temp = chooseWinner4Device(d.Display1.refresh_rate, d2.Display1.refresh_rate, d3.Display1.refresh_rate, d4.Display1.refresh_rate);
             conditional(temp, ref sub1, ref sub2, ref sub3, ref sub4);
-            temp = chooseWinner4Device(d.Display1.color_gamut, d2.Display1.color_gamut, d3.Display1.color_gamut, d4.Display1.color_gamut);
-            conditional(temp, ref sub1, ref sub2, ref sub3, ref sub4);
             temp = chooseWinner4Device(d.Display1.size, d2.Display1.size, d3.Display1.size, d4.Display1.size);
             conditional(temp, ref sub1, ref sub2, ref sub3, ref sub4);
             return chooseWinner4Device(sub1, sub2, sub3, sub4);
